@@ -1,0 +1,6 @@
+framework module Pods_WhatsAppTests {
+  umbrella header "Pods-WhatsAppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
