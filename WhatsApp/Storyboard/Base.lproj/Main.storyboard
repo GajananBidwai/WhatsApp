@@ -214,7 +214,11 @@
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem title="Chats" id="do6-c6-gbz">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="edit" id="x3Z-ct-axy"/>
+                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="edit" id="x3Z-ct-axy">
+                                            <connections>
+                                                <action selector="editButton:" destination="BL9-7P-sOi" id="IOo-Jd-b68"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" image="Shape" style="plain" id="Frt-Gh-wM0"/>
                                     </navigationItem>
                                 </items>

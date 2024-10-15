@@ -267,6 +267,7 @@
 				A9F4C95D2CBCF3000003CF24 /* Extension */,
 				A9F4C95C2CBCF2FD0003CF24 /* Helper */,
 				A9F4C95B2CBCF2FA0003CF24 /* Screen */,
+				A9F4C9592CBCF2F00003CF24 /* Resources */,
 				A9F4C95A2CBCF2F50003CF24 /* Storyboard */,
 				A9F4C9372CBCF2E50003CF24 /* Info.plist */,
 				A9F4C92F2CBCF2E30003CF24 /* WhatsApp.xcdatamodeld */,
@@ -351,7 +352,6 @@
 		A9F4C9622CBD39390003CF24 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				A9F4C9592CBCF2F00003CF24 /* Resources */,
 				A9F4C9652CBD39480003CF24 /* View */,
 				A9F4C9642CBD39460003CF24 /* Model */,
 				A9F4C9632CBD39440003CF24 /* View Model */,
