@@ -8,6 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		4BC58D39A7442CA7439B8776 /* Pods_WhatsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236FC6E583B8C0D70EB87145 /* Pods_WhatsApp.framework */; };
+		A993F22C2CBE6B3500490B6D /* WhatsAppChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A993F22B2CBE6B3500490B6D /* WhatsAppChatsViewController.swift */; };
+		A993F22E2CBE7C2A00490B6D /* Chats.swift in Sources */ = {isa = PBXBuildFile; fileRef = A993F22D2CBE7C2A00490B6D /* Chats.swift */; };
+		A993F2312CBE7F1700490B6D /* ChatsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A993F2302CBE7F1700490B6D /* ChatsTableViewCell.xib */; };
+		A993F2322CBE7F1700490B6D /* ChatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A993F22F2CBE7F1700490B6D /* ChatsTableViewCell.swift */; };
+		A993F2342CBE827300490B6D /* CellConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A993F2332CBE827300490B6D /* CellConstant.swift */; };
+		A993F2452CBE871000490B6D /* COPYRIGHT.txt in Resources */ = {isa = PBXBuildFile; fileRef = A993F2362CBE871000490B6D /* COPYRIGHT.txt */; };
+		A993F2462CBE871000490B6D /* SFPro_Font_License.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A993F2372CBE871000490B6D /* SFPro_Font_License.rtf */; };
+		A993F2472CBE871000490B6D /* SFProText-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A993F2382CBE871000490B6D /* SFProText-Bold.ttf */; };
+		A993F2482CBE871000490B6D /* SFProText-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A993F2392CBE871000490B6D /* SFProText-BoldItalic.ttf */; };
+		A993F2492CBE871000490B6D /* SFProText-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A993F23A2CBE871000490B6D /* SFProText-Heavy.ttf */; };
+		A993F24A2CBE871000490B6D /* SFProText-HeavyItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A993F23B2CBE871000490B6D /* SFProText-HeavyItalic.ttf */; };
+		A993F24B2CBE871000490B6D /* SFProText-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A993F23C2CBE871000490B6D /* SFProText-Light.ttf */; };
+		A993F24C2CBE871000490B6D /* SFProText-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A993F23D2CBE871000490B6D /* SFProText-LightItalic.ttf */; };
+		A993F24D2CBE871000490B6D /* SFProText-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A993F23E2CBE871000490B6D /* SFProText-Medium.ttf */; };
+		A993F24E2CBE871000490B6D /* SFProText-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A993F23F2CBE871000490B6D /* SFProText-MediumItalic.ttf */; };
+		A993F24F2CBE871000490B6D /* SFProText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A993F2402CBE871000490B6D /* SFProText-Regular.ttf */; };
+		A993F2502CBE871000490B6D /* SFProText-RegularItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A993F2412CBE871000490B6D /* SFProText-RegularItalic.ttf */; };
+		A993F2512CBE871000490B6D /* SFProText-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A993F2422CBE871000490B6D /* SFProText-Semibold.ttf */; };
+		A993F2522CBE871000490B6D /* SFProText-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A993F2432CBE871000490B6D /* SFProText-SemiboldItalic.ttf */; };
 		A9F4C9272CBCF2E30003CF24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F4C9262CBCF2E30003CF24 /* AppDelegate.swift */; };
 		A9F4C9292CBCF2E30003CF24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F4C9282CBCF2E30003CF24 /* SceneDelegate.swift */; };
 		A9F4C92E2CBCF2E30003CF24 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A9F4C92D2CBCF2E30003CF24 /* Base */; };
@@ -47,6 +66,25 @@
 		55A617C921809E38A27EFE06 /* Pods_WhatsApp_WhatsAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatsApp_WhatsAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58FEFD52988F41BED9864B49 /* Pods-WhatsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsAppTests.release.xcconfig"; path = "Target Support Files/Pods-WhatsAppTests/Pods-WhatsAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		9B8350A02209240F9E454448 /* Pods-WhatsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsAppTests.debug.xcconfig"; path = "Target Support Files/Pods-WhatsAppTests/Pods-WhatsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A993F22B2CBE6B3500490B6D /* WhatsAppChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsAppChatsViewController.swift; sourceTree = "<group>"; };
+		A993F22D2CBE7C2A00490B6D /* Chats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chats.swift; sourceTree = "<group>"; };
+		A993F22F2CBE7F1700490B6D /* ChatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsTableViewCell.swift; sourceTree = "<group>"; };
+		A993F2302CBE7F1700490B6D /* ChatsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatsTableViewCell.xib; sourceTree = "<group>"; };
+		A993F2332CBE827300490B6D /* CellConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellConstant.swift; sourceTree = "<group>"; };
+		A993F2362CBE871000490B6D /* COPYRIGHT.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYRIGHT.txt; sourceTree = "<group>"; };
+		A993F2372CBE871000490B6D /* SFPro_Font_License.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = SFPro_Font_License.rtf; sourceTree = "<group>"; };
+		A993F2382CBE871000490B6D /* SFProText-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Bold.ttf"; sourceTree = "<group>"; };
+		A993F2392CBE871000490B6D /* SFProText-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-BoldItalic.ttf"; sourceTree = "<group>"; };
+		A993F23A2CBE871000490B6D /* SFProText-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Heavy.ttf"; sourceTree = "<group>"; };
+		A993F23B2CBE871000490B6D /* SFProText-HeavyItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-HeavyItalic.ttf"; sourceTree = "<group>"; };
+		A993F23C2CBE871000490B6D /* SFProText-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Light.ttf"; sourceTree = "<group>"; };
+		A993F23D2CBE871000490B6D /* SFProText-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-LightItalic.ttf"; sourceTree = "<group>"; };
+		A993F23E2CBE871000490B6D /* SFProText-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Medium.ttf"; sourceTree = "<group>"; };
+		A993F23F2CBE871000490B6D /* SFProText-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-MediumItalic.ttf"; sourceTree = "<group>"; };
+		A993F2402CBE871000490B6D /* SFProText-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Regular.ttf"; sourceTree = "<group>"; };
+		A993F2412CBE871000490B6D /* SFProText-RegularItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-RegularItalic.ttf"; sourceTree = "<group>"; };
+		A993F2422CBE871000490B6D /* SFProText-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Semibold.ttf"; sourceTree = "<group>"; };
+		A993F2432CBE871000490B6D /* SFProText-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-SemiboldItalic.ttf"; sourceTree = "<group>"; };
 		A9F4C9232CBCF2E30003CF24 /* WhatsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9F4C9262CBCF2E30003CF24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9F4C9282CBCF2E30003CF24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +156,86 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A993F2252CBE6AD500490B6D /* WhatsAppChats */ = {
+			isa = PBXGroup;
+			children = (
+				A993F2282CBE6B0300490B6D /* View */,
+				A993F2272CBE6B0100490B6D /* Model */,
+				A993F2262CBE6AFF00490B6D /* ViewModel */,
+			);
+			path = WhatsAppChats;
+			sourceTree = "<group>";
+		};
+		A993F2262CBE6AFF00490B6D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A993F2272CBE6B0100490B6D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A993F22D2CBE7C2A00490B6D /* Chats.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A993F2282CBE6B0300490B6D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A993F22A2CBE6B1B00490B6D /* Cell */,
+				A993F2292CBE6B1800490B6D /* View Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A993F2292CBE6B1800490B6D /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A993F22B2CBE6B3500490B6D /* WhatsAppChatsViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		A993F22A2CBE6B1B00490B6D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A993F22F2CBE7F1700490B6D /* ChatsTableViewCell.swift */,
+				A993F2302CBE7F1700490B6D /* ChatsTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A993F2352CBE870000490B6D /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				A993F2442CBE871000490B6D /* San Francisco Pro Text */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		A993F2442CBE871000490B6D /* San Francisco Pro Text */ = {
+			isa = PBXGroup;
+			children = (
+				A993F2362CBE871000490B6D /* COPYRIGHT.txt */,
+				A993F2372CBE871000490B6D /* SFPro_Font_License.rtf */,
+				A993F2382CBE871000490B6D /* SFProText-Bold.ttf */,
+				A993F2392CBE871000490B6D /* SFProText-BoldItalic.ttf */,
+				A993F23A2CBE871000490B6D /* SFProText-Heavy.ttf */,
+				A993F23B2CBE871000490B6D /* SFProText-HeavyItalic.ttf */,
+				A993F23C2CBE871000490B6D /* SFProText-Light.ttf */,
+				A993F23D2CBE871000490B6D /* SFProText-LightItalic.ttf */,
+				A993F23E2CBE871000490B6D /* SFProText-Medium.ttf */,
+				A993F23F2CBE871000490B6D /* SFProText-MediumItalic.ttf */,
+				A993F2402CBE871000490B6D /* SFProText-Regular.ttf */,
+				A993F2412CBE871000490B6D /* SFProText-RegularItalic.ttf */,
+				A993F2422CBE871000490B6D /* SFProText-Semibold.ttf */,
+				A993F2432CBE871000490B6D /* SFProText-SemiboldItalic.ttf */,
+			);
+			path = "San Francisco Pro Text";
+			sourceTree = "<group>";
+		};
 		A9F4C91A2CBCF2E30003CF24 = {
 			isa = PBXGroup;
 			children = (
@@ -143,13 +261,13 @@
 		A9F4C9252CBCF2E30003CF24 /* WhatsApp */ = {
 			isa = PBXGroup;
 			children = (
+				A993F2352CBE870000490B6D /* Font */,
 				A9F4C95F2CBCF3800003CF24 /* Application */,
 				A9F4C95E2CBCF3030003CF24 /* Constant */,
 				A9F4C95D2CBCF3000003CF24 /* Extension */,
 				A9F4C95C2CBCF2FD0003CF24 /* Helper */,
 				A9F4C95B2CBCF2FA0003CF24 /* Screen */,
 				A9F4C95A2CBCF2F50003CF24 /* Storyboard */,
-				A9F4C9592CBCF2F00003CF24 /* Resources */,
 				A9F4C9372CBCF2E50003CF24 /* Info.plist */,
 				A9F4C92F2CBCF2E30003CF24 /* WhatsApp.xcdatamodeld */,
 			);
@@ -193,6 +311,7 @@
 		A9F4C95B2CBCF2FA0003CF24 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				A993F2252CBE6AD500490B6D /* WhatsAppChats */,
 				A9F4C9622CBD39390003CF24 /* Authentication */,
 			);
 			path = Screen;
@@ -215,6 +334,7 @@
 		A9F4C95E2CBCF3030003CF24 /* Constant */ = {
 			isa = PBXGroup;
 			children = (
+				A993F2332CBE827300490B6D /* CellConstant.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -231,6 +351,7 @@
 		A9F4C9622CBD39390003CF24 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				A9F4C9592CBCF2F00003CF24 /* Resources */,
 				A9F4C9652CBD39480003CF24 /* View */,
 				A9F4C9642CBD39460003CF24 /* Model */,
 				A9F4C9632CBD39440003CF24 /* View Model */,
@@ -386,9 +507,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A993F24A2CBE871000490B6D /* SFProText-HeavyItalic.ttf in Resources */,
+				A993F2462CBE871000490B6D /* SFPro_Font_License.rtf in Resources */,
+				A993F2452CBE871000490B6D /* COPYRIGHT.txt in Resources */,
 				A9F4C9332CBCF2E50003CF24 /* Assets.xcassets in Resources */,
+				A993F2312CBE7F1700490B6D /* ChatsTableViewCell.xib in Resources */,
+				A993F24B2CBE871000490B6D /* SFProText-Light.ttf in Resources */,
+				A993F2492CBE871000490B6D /* SFProText-Heavy.ttf in Resources */,
 				A9F4C9362CBCF2E50003CF24 /* Base in Resources */,
 				A9F4C92E2CBCF2E30003CF24 /* Base in Resources */,
+				A993F2512CBE871000490B6D /* SFProText-Semibold.ttf in Resources */,
+				A993F24E2CBE871000490B6D /* SFProText-MediumItalic.ttf in Resources */,
+				A993F2472CBE871000490B6D /* SFProText-Bold.ttf in Resources */,
+				A993F2502CBE871000490B6D /* SFProText-RegularItalic.ttf in Resources */,
+				A993F2522CBE871000490B6D /* SFProText-SemiboldItalic.ttf in Resources */,
+				A993F2482CBE871000490B6D /* SFProText-BoldItalic.ttf in Resources */,
+				A993F24D2CBE871000490B6D /* SFProText-Medium.ttf in Resources */,
+				A993F24F2CBE871000490B6D /* SFProText-Regular.ttf in Resources */,
+				A993F24C2CBE871000490B6D /* SFProText-LightItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,9 +653,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9F4C9312CBCF2E30003CF24 /* WhatsApp.xcdatamodeld in Sources */,
+				A993F2322CBE7F1700490B6D /* ChatsTableViewCell.swift in Sources */,
+				A993F2342CBE827300490B6D /* CellConstant.swift in Sources */,
 				A9F4C96F2CBD39B60003CF24 /* AuthenticationViewController.swift in Sources */,
+				A993F22E2CBE7C2A00490B6D /* Chats.swift in Sources */,
 				A9F4C9272CBCF2E30003CF24 /* AppDelegate.swift in Sources */,
 				A9F4C9292CBCF2E30003CF24 /* SceneDelegate.swift in Sources */,
+				A993F22C2CBE6B3500490B6D /* WhatsAppChatsViewController.swift in Sources */,
 				A9FD51562CBE407A007D076F /* GlobalConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
