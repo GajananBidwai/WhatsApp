@@ -12,10 +12,8 @@ class AuthenticationViewController: UIViewController {
     
     @IBOutlet weak var countryCodeTextField: UITextField!
     @IBOutlet weak var mobileNumberTextField: UITextField!
-    @IBOutlet weak var nextButton: UIButton!
-    
     @IBOutlet weak var countryCodeBtn: UIButton!
-    
+    @IBOutlet weak var doneButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +21,8 @@ class AuthenticationViewController: UIViewController {
         self.countryCodes = getAllCountryCodes()
         picker()
         countryCodeBtn.addTarget(self, action: #selector(openCountryPicker), for: .touchUpInside)
-        
+        mobileNumberTextField.delegate = self
+        doneButton.isEnabled = false
     }
     @objc func openCountryPicker(){
         self.countryCodes = getAllCountryCodes()
@@ -32,6 +31,11 @@ class AuthenticationViewController: UIViewController {
     @IBAction func countryCodeButton(_ sender: Any) {
 //        self.countryCodes = getAllCountryCodes()
 //        picker()
+    }
+    
+    
+    @IBAction func doneButtonTap(_ sender: Any) {
+        
     }
     
   
@@ -58,7 +62,7 @@ class AuthenticationViewController: UIViewController {
     
 
 }
-extension AuthenticationViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+extension AuthenticationViewController: UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     // MARK: - UIPickerView Delegate Methods
     
@@ -79,6 +83,23 @@ extension AuthenticationViewController: UIPickerViewDelegate, UIPickerViewDataSo
         let code = countryCodes[row]
         countryCodeTextField.text = "+\(code[1])"
     }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let allowedCharacters = CharacterSet(charactersIn: "0123456789")
+        let characterSet = CharacterSet(charactersIn: string)
+        if !allowedCharacters.isSuperset(of: characterSet) {
+            return false
+        }
+        let currentText = textField.text ?? ""
+        guard let stringRange = Range(range, in: currentText) else { return false }
+        let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
+        
+        let isValidLength = updatedText.count <= 10
+        
+        doneButton.isEnabled = updatedText.count == 10
+        return updatedText.count <= 10
+    }
+
 }
 
 

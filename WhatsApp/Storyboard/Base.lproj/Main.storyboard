@@ -84,7 +84,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XVo-RJ-uT9">
                                                 <rect key="frame" x="67" y="0.0" width="316" height="45"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -119,25 +119,6 @@
                                     <constraint firstAttribute="height" constant="120" id="ylv-HK-DTB"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmg-aK-JIq">
-                                <rect key="frame" x="101.66666666666669" y="545" width="200" height="40"/>
-                                <color key="backgroundColor" systemColor="tintColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="1Wg-BR-7h5"/>
-                                    <constraint firstAttribute="height" constant="40" id="nSk-8n-bO7"/>
-                                </constraints>
-                                <color key="tintColor" systemColor="tintColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Next">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pTJ-wg-Hz4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -145,23 +126,24 @@
                             <constraint firstItem="w1h-cC-hl3" firstAttribute="leading" secondItem="pTJ-wg-Hz4" secondAttribute="leading" constant="40" id="F2A-Qh-aYu"/>
                             <constraint firstItem="wNA-aq-nZC" firstAttribute="leading" secondItem="pTJ-wg-Hz4" secondAttribute="leading" id="JrD-ej-ZNy"/>
                             <constraint firstItem="w1h-cC-hl3" firstAttribute="top" secondItem="pTJ-wg-Hz4" secondAttribute="top" constant="20" id="MBU-WJ-CFJ"/>
-                            <constraint firstItem="vmg-aK-JIq" firstAttribute="centerX" secondItem="vxl-zI-UbF" secondAttribute="centerX" id="aBw-Ra-9NL"/>
                             <constraint firstItem="pTJ-wg-Hz4" firstAttribute="trailing" secondItem="w1h-cC-hl3" secondAttribute="trailing" constant="30" id="gp2-g2-ER3"/>
                             <constraint firstItem="wNA-aq-nZC" firstAttribute="top" secondItem="w1h-cC-hl3" secondAttribute="bottom" constant="90" id="h3C-MJ-dGd"/>
                             <constraint firstItem="pTJ-wg-Hz4" firstAttribute="trailing" secondItem="wNA-aq-nZC" secondAttribute="trailing" id="u6O-Rc-Yml"/>
-                            <constraint firstItem="vmg-aK-JIq" firstAttribute="top" secondItem="XVo-RJ-uT9" secondAttribute="bottom" constant="200" id="vRM-Uk-BX6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Phone Number" id="Ipl-89-dLk">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="VxC-92-erK">
-                            <color key="tintColor" red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" systemColor="tintColor"/>
+                            <connections>
+                                <action selector="doneButtonTap:" destination="Sid-6I-CiX" id="2aG-yo-I1e"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="countryCodeBtn" destination="brg-zt-9vu" id="g4N-da-sWe"/>
                         <outlet property="countryCodeTextField" destination="ide-F8-FMf" id="Tku-4K-3Lo"/>
+                        <outlet property="doneButton" destination="VxC-92-erK" id="VGL-UQ-d3N"/>
                         <outlet property="mobileNumberTextField" destination="XVo-RJ-uT9" id="3tb-z1-3Xd"/>
-                        <outlet property="nextButton" destination="vmg-aK-JIq" id="h1E-he-Udt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fqg-zU-9G5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -190,16 +172,16 @@
     <resources>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
