@@ -166,15 +166,54 @@
             </objects>
             <point key="canvasLocation" x="848" y="744"/>
         </scene>
-        <!--View Controller-->
+        <!--Whats App Call View Controller-->
         <scene sceneID="whU-wX-pqJ">
             <objects>
-                <viewController id="061-sW-3eo" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WhatsAppCallViewController" id="061-sW-3eo" customClass="WhatsAppCallViewController" customModule="WhatsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Sc-Y0-f88">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="slc-t6-feE">
+                                <rect key="frame" x="0.0" y="59" width="393" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="8iW-zs-Dwe"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem id="eCx-Ac-cyF">
+                                        <nil key="title"/>
+                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="edit" id="i9k-zL-vwS"/>
+                                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="kdk-c0-TMw">
+                                            <rect key="frame" x="118" y="5.6666666666666679" width="157" height="33"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <segments>
+                                                <segment title="All"/>
+                                                <segment title="Missed"/>
+                                            </segments>
+                                            <color key="tintColor" systemColor="tintColor"/>
+                                            <color key="selectedSegmentTintColor" systemColor="tintColor"/>
+                                        </segmentedControl>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="Call Icon" style="plain" id="KQ6-H2-Qo1"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9YT-cq-31i">
+                                <rect key="frame" x="0.0" y="99" width="393" height="670"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="2nQ-BW-NXt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2nQ-BW-NXt" firstAttribute="bottom" secondItem="9YT-cq-31i" secondAttribute="bottom" id="1vH-cb-meu"/>
+                            <constraint firstItem="2nQ-BW-NXt" firstAttribute="trailing" secondItem="9YT-cq-31i" secondAttribute="trailing" id="HI8-1f-Ar9"/>
+                            <constraint firstItem="slc-t6-feE" firstAttribute="leading" secondItem="2nQ-BW-NXt" secondAttribute="leading" id="VuF-hM-gk4"/>
+                            <constraint firstItem="9YT-cq-31i" firstAttribute="top" secondItem="slc-t6-feE" secondAttribute="bottom" id="fhr-ni-BFO"/>
+                            <constraint firstItem="slc-t6-feE" firstAttribute="top" secondItem="2nQ-BW-NXt" secondAttribute="top" id="kmC-A5-Jx3"/>
+                            <constraint firstAttribute="trailing" secondItem="slc-t6-feE" secondAttribute="trailing" id="vam-EG-Nbj"/>
+                            <constraint firstItem="9YT-cq-31i" firstAttribute="leading" secondItem="2nQ-BW-NXt" secondAttribute="leading" id="ysy-xS-igI"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="Tab 2" selectedImage="Tab 2" id="Bet-bQ-QgT"/>
                 </viewController>
@@ -249,15 +288,56 @@
                                     <outlet property="delegate" destination="BL9-7P-sOi" id="uKR-ty-EhS"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P2e-UU-ySa">
+                                <rect key="frame" x="0.0" y="772" width="393" height="80"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="jBv-I3-Fhy">
+                                        <rect key="frame" x="0.0" y="8" width="393" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUf-Qb-QoX">
+                                                <rect key="frame" x="0.0" y="0.0" width="131" height="50"/>
+                                                <color key="tintColor" red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Archive"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yI-XV-0T7">
+                                                <rect key="frame" x="131" y="0.0" width="131" height="50"/>
+                                                <color key="tintColor" red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Read All"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gS0-zb-99O">
+                                                <rect key="frame" x="262" y="0.0" width="131" height="50"/>
+                                                <color key="tintColor" red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Delete"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="zL9-RZ-VMw"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.65098039215686276" green="0.65098039215686276" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="jBv-I3-Fhy" secondAttribute="trailing" id="UIP-RX-Gel"/>
+                                    <constraint firstAttribute="height" constant="80" id="fk6-Rr-qZL"/>
+                                    <constraint firstItem="jBv-I3-Fhy" firstAttribute="leading" secondItem="P2e-UU-ySa" secondAttribute="leading" id="mab-sE-RXB"/>
+                                    <constraint firstItem="jBv-I3-Fhy" firstAttribute="top" secondItem="P2e-UU-ySa" secondAttribute="top" constant="8" id="p8I-wX-HQ9"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3bC-QP-FgY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="lel-F0-Whw" firstAttribute="top" secondItem="Ebp-y2-WUb" secondAttribute="bottom" id="0wg-Nr-TEa"/>
                             <constraint firstItem="Ebp-y2-WUb" firstAttribute="top" secondItem="BuM-iW-zH0" secondAttribute="bottom" id="3S4-ij-mUI"/>
+                            <constraint firstAttribute="bottom" secondItem="P2e-UU-ySa" secondAttribute="bottom" id="5Ea-zI-BUj"/>
                             <constraint firstItem="3bC-QP-FgY" firstAttribute="bottom" secondItem="lel-F0-Whw" secondAttribute="bottom" id="Erf-KC-6Pi"/>
                             <constraint firstItem="Ebp-y2-WUb" firstAttribute="leading" secondItem="3bC-QP-FgY" secondAttribute="leading" id="IbI-Nm-cDc"/>
                             <constraint firstItem="3bC-QP-FgY" firstAttribute="trailing" secondItem="lel-F0-Whw" secondAttribute="trailing" id="N02-xD-yed"/>
+                            <constraint firstAttribute="trailing" secondItem="P2e-UU-ySa" secondAttribute="trailing" id="Oho-Xa-zNj"/>
+                            <constraint firstItem="P2e-UU-ySa" firstAttribute="leading" secondItem="V76-th-qTf" secondAttribute="leading" id="PSk-D4-LuR"/>
                             <constraint firstItem="lel-F0-Whw" firstAttribute="leading" secondItem="3bC-QP-FgY" secondAttribute="leading" id="PZQ-mt-WWJ"/>
                             <constraint firstItem="BuM-iW-zH0" firstAttribute="trailing" secondItem="3bC-QP-FgY" secondAttribute="trailing" id="Wl6-DO-mBi"/>
                             <constraint firstItem="BuM-iW-zH0" firstAttribute="leading" secondItem="3bC-QP-FgY" secondAttribute="leading" id="aAc-Qe-DKv"/>
@@ -267,12 +347,19 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="Tab 4 (1)" selectedImage="Tab 4 (1)" id="dm7-Ve-U6Q"/>
                     <connections>
+                        <outlet property="activeButtonContainerView" destination="P2e-UU-ySa" id="4LI-hp-5qR"/>
+                        <outlet property="archiveButton" destination="NUf-Qb-QoX" id="y7F-d1-om4"/>
+                        <outlet property="boradCastButton" destination="aN3-BM-Omh" id="YdT-qD-tzX"/>
+                        <outlet property="deleteButton" destination="gS0-zb-99O" id="pvH-wA-kqq"/>
+                        <outlet property="editIconButton" destination="Frt-Gh-wM0" id="SCW-qE-HM8"/>
+                        <outlet property="newGroupButton" destination="Ppi-am-wZW" id="em8-uJ-Vvb"/>
+                        <outlet property="readAllButton" destination="2yI-XV-0T7" id="rgy-mS-ldn"/>
                         <outlet property="whatsAppChatsTableView" destination="lel-F0-Whw" id="2wy-d2-yG5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kzy-5I-Mig" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3390" y="758"/>
+            <point key="canvasLocation" x="3388.5496183206105" y="757.74647887323943"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ncK-W3-pX5">
@@ -294,7 +381,7 @@
         <scene sceneID="3fQ-0H-MEG">
             <objects>
                 <tabBarController id="RMO-s0-pPf" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="Rectangle" id="K8s-A4-2KB">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K8s-A4-2KB">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </tabBar>
@@ -330,7 +417,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Rectangle" width="375" height="84"/>
+        <image name="Call Icon" width="24" height="24"/>
         <image name="Shape" width="23" height="23"/>
         <image name="Tab 1" width="75" height="49"/>
         <image name="Tab 2" width="75" height="49"/>
@@ -339,16 +426,16 @@
         <image name="Tab 5" width="75" height="49"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
