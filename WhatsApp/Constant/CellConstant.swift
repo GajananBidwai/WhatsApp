@@ -10,5 +10,6 @@ import Foundation
 struct CellConstant{
     struct CellIdentifier{
         static let chatsTableViewCell = "ChatsTableViewCell"
+        static let WhatsAppCallTableViewCell = "WhatsAppCallTableViewCell"
     }
 }

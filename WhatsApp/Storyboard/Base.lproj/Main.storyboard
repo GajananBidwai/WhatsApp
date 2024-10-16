@@ -201,6 +201,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9YT-cq-31i">
                                 <rect key="frame" x="0.0" y="99" width="393" height="670"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="061-sW-3eo" id="HNN-B0-hPq"/>
+                                    <outlet property="delegate" destination="061-sW-3eo" id="eOa-DX-ZwK"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2nQ-BW-NXt"/>
@@ -216,6 +220,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="Tab 2" selectedImage="Tab 2" id="Bet-bQ-QgT"/>
+                    <connections>
+                        <outlet property="whatsAppCallsTableViewCell" destination="9YT-cq-31i" id="9LC-WB-3jQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ak-A1-yif" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
