@@ -19,7 +19,7 @@ class WhatsAppCallTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+       
        
     }
     func configureData(){
