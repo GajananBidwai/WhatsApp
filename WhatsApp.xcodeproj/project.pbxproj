@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4BC58D39A7442CA7439B8776 /* Pods_WhatsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236FC6E583B8C0D70EB87145 /* Pods_WhatsApp.framework */; };
+		A92065F82CC0E00F00A25C76 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92065F72CC0E00F00A25C76 /* ChatViewController.swift */; };
 		A993F22C2CBE6B3500490B6D /* WhatsAppChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A993F22B2CBE6B3500490B6D /* WhatsAppChatsViewController.swift */; };
 		A993F22E2CBE7C2A00490B6D /* Chats.swift in Sources */ = {isa = PBXBuildFile; fileRef = A993F22D2CBE7C2A00490B6D /* Chats.swift */; };
 		A993F2312CBE7F1700490B6D /* ChatsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A993F2302CBE7F1700490B6D /* ChatsTableViewCell.xib */; };
@@ -70,6 +71,7 @@
 		55A617C921809E38A27EFE06 /* Pods_WhatsApp_WhatsAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatsApp_WhatsAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58FEFD52988F41BED9864B49 /* Pods-WhatsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsAppTests.release.xcconfig"; path = "Target Support Files/Pods-WhatsAppTests/Pods-WhatsAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		9B8350A02209240F9E454448 /* Pods-WhatsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsAppTests.debug.xcconfig"; path = "Target Support Files/Pods-WhatsAppTests/Pods-WhatsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A92065F72CC0E00F00A25C76 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		A993F22B2CBE6B3500490B6D /* WhatsAppChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsAppChatsViewController.swift; sourceTree = "<group>"; };
 		A993F22D2CBE7C2A00490B6D /* Chats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chats.swift; sourceTree = "<group>"; };
 		A993F22F2CBE7F1700490B6D /* ChatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsTableViewCell.swift; sourceTree = "<group>"; };
@@ -162,6 +164,46 @@
 				B3CA13AA5AEF363EAA66E761 /* Pods_WhatsAppTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A92065F22CC0DFCA00A25C76 /* ChatViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A92065F52CC0DFDD00A25C76 /* View */,
+				A92065F42CC0DFD900A25C76 /* Model */,
+				A92065F32CC0DFD700A25C76 /* View Model */,
+			);
+			path = ChatViewController;
+			sourceTree = "<group>";
+		};
+		A92065F32CC0DFD700A25C76 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		A92065F42CC0DFD900A25C76 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A92065F52CC0DFDD00A25C76 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A92065F62CC0DFF100A25C76 /* View Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A92065F62CC0DFF100A25C76 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A92065F72CC0E00F00A25C76 /* ChatViewController.swift */,
+			);
+			path = "View Controller";
 			sourceTree = "<group>";
 		};
 		A993F2252CBE6AD500490B6D /* WhatsAppChats */ = {
@@ -371,6 +413,7 @@
 		A9F4C95B2CBCF2FA0003CF24 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				A92065F22CC0DFCA00A25C76 /* ChatViewController */,
 				A9F3D7922CBFC8CC00E541DF /* WhatsAppCallViewController */,
 				A993F2252CBE6AD500490B6D /* WhatsAppChats */,
 				A9F4C9622CBD39390003CF24 /* Authentication */,
@@ -722,6 +765,7 @@
 				A993F22E2CBE7C2A00490B6D /* Chats.swift in Sources */,
 				A9F4C9272CBCF2E30003CF24 /* AppDelegate.swift in Sources */,
 				A9F4C9292CBCF2E30003CF24 /* SceneDelegate.swift in Sources */,
+				A92065F82CC0E00F00A25C76 /* ChatViewController.swift in Sources */,
 				A993F22C2CBE6B3500490B6D /* WhatsAppChatsViewController.swift in Sources */,
 				A9FD51562CBE407A007D076F /* GlobalConstants.swift in Sources */,
 				A9F3D79B2CBFC97400E541DF /* WhatsAppCallViewController.swift in Sources */,

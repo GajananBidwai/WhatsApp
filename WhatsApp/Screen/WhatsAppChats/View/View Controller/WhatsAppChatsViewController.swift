@@ -40,7 +40,7 @@ class WhatsAppChatsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         activeButtonContainerView.isHidden = true
-        
+       
     }
     
     @IBAction func editButton(_ sender: Any) {
@@ -112,16 +112,26 @@ extension WhatsAppChatsViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            // Toggle selection
-            if selectedIndices.contains(indexPath) {
-                selectedIndices.remove(indexPath)
-            } else {
-                selectedIndices.insert(indexPath)
-            }
-            tableView.reloadRows(at: [indexPath], with: .automatic)
             
-            // Update action buttons
-            updateActionButtons()
+        let chatViewController = self.storyboard?.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
+        
+        
+        chatViewController.name = chats[indexPath.row].name
+        navigationController?.navigationBar.isHidden = true
+        
+      //  self.navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationController?.pushViewController(chatViewController, animated: true)
+        
+        
+//            if selectedIndices.contains(indexPath) {
+//                selectedIndices.remove(indexPath)
+//            } else {
+//                selectedIndices.insert(indexPath)
+//            }
+//            tableView.reloadRows(at: [indexPath], with: .automatic)
+//            
+//            // Update action buttons
+//            updateActionButtons()
         }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -176,19 +186,33 @@ extension WhatsAppChatsViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let moreAction = UIContextualAction(style: .normal, title: "More") { (action, view, completionHandler) in
+            
+            let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+            let muteAction = UIAlertAction(title: "Mute", style: .default)
+            let contactInfo = UIAlertAction(title: "Contact Info", style: .default)
+            let exportChat = UIAlertAction(title: "Export Chat", style: .default)
+            let clearChat = UIAlertAction(title: "Clear Chat", style: .default)
+            let deleteChat = UIAlertAction(title: "Delete Chat", style: .destructive)
+            let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+            alertController.addAction(muteAction)
+            alertController.addAction(contactInfo)
+            alertController.addAction(exportChat)
+            alertController.addAction(clearChat)
+            alertController.addAction(deleteChat)
+            alertController.addAction(cancel)
+            self.present(alertController, animated: true)
+            completionHandler(true)
+        }
+        moreAction.image = UIImage(named: "More")
+        
         let archiveAction = UIContextualAction(style: .normal, title: "Archive") { (action, view, completionHandler) in
             
             completionHandler(true)
         }
-        
         archiveAction.image = UIImage(named: "Archive")
-        
-        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completionHandler) in
-            // Handle delete action
-            completionHandler(true)
-        }
-        deleteAction.image = UIImage(named: "More")
-        let configuration = UISwipeActionsConfiguration(actions: [deleteAction, archiveAction])
+        let configuration = UISwipeActionsConfiguration(actions: [archiveAction, moreAction])
         return configuration
     }
     
