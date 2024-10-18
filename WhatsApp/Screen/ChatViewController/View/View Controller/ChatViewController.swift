@@ -19,12 +19,13 @@ class ChatViewController: UIViewController {
     
     @IBOutlet weak var userInputTextField: UITextField!
     
-    var name: String?
+    
+    var chats: Chats?
     override func viewDidLoad() {
         super.viewDidLoad()
         addButtonInTextField()
         self.navigationItem.setHidesBackButton(true, animated: true)
-        nameLabel.text = name
+        nameLabel.text = chats?.name
         
     }
     
@@ -47,6 +48,7 @@ class ChatViewController: UIViewController {
         let contactAction = UIAlertAction(title: "Contact", style: .default) { _ in
             let whatsAppContactInfoViewController = self.storyboard?.instantiateViewController(withIdentifier: "WhatsAppContactInfoViewController") as! WhatsAppContactInfoViewController
             
+            whatsAppContactInfoViewController.chats = self.chats
             
             self.navigationController?.pushViewController(whatsAppContactInfoViewController, animated: true)
         }

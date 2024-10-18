@@ -116,7 +116,8 @@ extension WhatsAppChatsViewController: UITableViewDataSource{
         let chatViewController = self.storyboard?.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
         
         
-        chatViewController.name = chats[indexPath.row].name
+      
+        chatViewController.chats = chats[indexPath.row]
         navigationController?.navigationBar.isHidden = true
         
       //  self.navigationController?.setNavigationBarHidden(false, animated: true)

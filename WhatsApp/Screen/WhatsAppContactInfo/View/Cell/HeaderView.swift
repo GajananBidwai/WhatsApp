@@ -9,19 +9,26 @@ import UIKit
 
 class HeaderView: UIView {
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var contactLabel: UILabel!
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        loadNib()
+       loadNib()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+       loadNib()
     }
-    
-    func loadNib(){
-        loadNib()
-        Bundle.main.loadNibNamed("HeaderView", owner: self)
-    }
+    func loadNib() {
+            if let view = Bundle.main.loadNibNamed("HeaderView", owner: self)?.first as? UIView {
+                view.frame = self.bounds
+                view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+                addSubview(view)
+            }
+        }
+   
 
 }

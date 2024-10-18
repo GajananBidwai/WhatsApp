@@ -383,6 +383,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7eZ-uc-OLv">
                                 <rect key="frame" x="0.0" y="99" width="393" height="719"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="cNW-hg-s9Z" id="zRo-td-vqI"/>
+                                    <outlet property="delegate" destination="cNW-hg-s9Z" id="ycU-1f-I4w"/>
+                                </connections>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75j-lR-ma7">
                                 <rect key="frame" x="0.0" y="59" width="393" height="40"/>
@@ -390,7 +394,12 @@
                                     <constraint firstAttribute="height" constant="40" id="snQ-sF-HNI"/>
                                 </constraints>
                                 <items>
-                                    <navigationItem title="Title" id="43x-eJ-hqX">
+                                    <navigationItem title="Contact Info" id="43x-eJ-hqX">
+                                        <barButtonItem key="leftBarButtonItem" image="chevron.left" catalog="system" style="plain" id="z8l-ch-nHq">
+                                            <connections>
+                                                <action selector="backButton:" destination="cNW-hg-s9Z" id="nqW-su-ru8"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="edit" id="T2m-b2-ZCX"/>
                                     </navigationItem>
                                 </items>
@@ -408,6 +417,9 @@
                             <constraint firstItem="75j-lR-ma7" firstAttribute="leading" secondItem="gXK-6R-Ljd" secondAttribute="leading" id="u66-GZ-tEP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contactInfoTableView" destination="7eZ-uc-OLv" id="6nd-YN-WQs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FTa-dy-qON" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
