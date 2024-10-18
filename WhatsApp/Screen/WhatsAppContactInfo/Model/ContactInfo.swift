@@ -11,3 +11,4 @@ struct ContactInfo{
     var title: String
     var subtitle: String
 }
+

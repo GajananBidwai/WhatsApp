@@ -35,6 +35,13 @@ class ChatViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func navigateToContactInfo(_ sender: Any) {
+        let whatsAppContactInfoViewController = self.storyboard?.instantiateViewController(identifier: "WhatsAppContactInfoViewController") as! WhatsAppContactInfoViewController
+        
+        self.navigationController?.pushViewController(whatsAppContactInfoViewController, animated: true)
+    }
+    
+    
     @IBAction func plusButtonAction(_ sender: Any) {
         
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
