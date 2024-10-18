@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import IQKeyboardManagerSwift
 class ChatViewController: UIViewController {
 
     
@@ -28,6 +28,8 @@ class ChatViewController: UIViewController {
         
     }
     
+
+    
     @IBAction func backButtonAction(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
@@ -42,7 +44,12 @@ class ChatViewController: UIViewController {
         let photosImage = UIImage(named: "Photos")
         let cameraImage = UIImage(named: "Camera")
         
-        let contactAction = UIAlertAction(title: "Contact", style: .default)
+        let contactAction = UIAlertAction(title: "Contact", style: .default) { _ in
+            let whatsAppContactInfoViewController = self.storyboard?.instantiateViewController(withIdentifier: "WhatsAppContactInfoViewController") as! WhatsAppContactInfoViewController
+            
+            
+            self.navigationController?.pushViewController(whatsAppContactInfoViewController, animated: true)
+        }
         let locationAction = UIAlertAction(title: "Location", style: .default)
         let documentAction = UIAlertAction(title: "Document", style: .default)
         let photosAction = UIAlertAction(title: "Photo & Video Library", style: .default)

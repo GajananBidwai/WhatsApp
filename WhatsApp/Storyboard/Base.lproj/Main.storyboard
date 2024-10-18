@@ -372,6 +372,47 @@
             </objects>
             <point key="canvasLocation" x="3388.5496183206105" y="757.74647887323943"/>
         </scene>
+        <!--Whats App Contact Info View Controller-->
+        <scene sceneID="zj8-SA-7No">
+            <objects>
+                <viewController storyboardIdentifier="WhatsAppContactInfoViewController" id="cNW-hg-s9Z" customClass="WhatsAppContactInfoViewController" customModule="WhatsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gXK-6R-Ljd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7eZ-uc-OLv">
+                                <rect key="frame" x="0.0" y="99" width="393" height="719"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75j-lR-ma7">
+                                <rect key="frame" x="0.0" y="59" width="393" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="snQ-sF-HNI"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Title" id="43x-eJ-hqX">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="edit" id="T2m-b2-ZCX"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wPK-IJ-3nc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="75j-lR-ma7" firstAttribute="top" secondItem="wPK-IJ-3nc" secondAttribute="top" id="013-jE-F4u"/>
+                            <constraint firstItem="wPK-IJ-3nc" firstAttribute="trailing" secondItem="7eZ-uc-OLv" secondAttribute="trailing" id="0GZ-P5-5sd"/>
+                            <constraint firstItem="7eZ-uc-OLv" firstAttribute="leading" secondItem="wPK-IJ-3nc" secondAttribute="leading" id="SYD-en-Bk3"/>
+                            <constraint firstItem="7eZ-uc-OLv" firstAttribute="top" secondItem="75j-lR-ma7" secondAttribute="bottom" id="cpV-qX-GEh"/>
+                            <constraint firstItem="wPK-IJ-3nc" firstAttribute="bottom" secondItem="7eZ-uc-OLv" secondAttribute="bottom" id="fr5-BU-ISe"/>
+                            <constraint firstItem="wPK-IJ-3nc" firstAttribute="trailing" secondItem="75j-lR-ma7" secondAttribute="trailing" id="k1F-yN-VHH"/>
+                            <constraint firstItem="75j-lR-ma7" firstAttribute="leading" secondItem="gXK-6R-Ljd" secondAttribute="leading" id="u66-GZ-tEP"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FTa-dy-qON" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3365.6488549618321" y="1483.8028169014085"/>
+        </scene>
         <!--Chat View Controller-->
         <scene sceneID="nEK-Cj-Dkb">
             <objects>
@@ -523,7 +564,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g0V-xS-Xgj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4315.2671755725187" y="1445.7746478873239"/>
+            <point key="canvasLocation" x="4456" y="1449"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ncK-W3-pX5">
