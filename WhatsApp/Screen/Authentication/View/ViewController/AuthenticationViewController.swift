@@ -35,9 +35,9 @@ class AuthenticationViewController: UIViewController {
     
     
     @IBAction func doneButtonTap(_ sender: Any) {
-        let whatsAppChatsViewController = self.storyboard?.instantiateViewController(withIdentifier: "WhatsAppChatsViewController") as! WhatsAppChatsViewController
+        let whatsAppTabBarController = self.storyboard?.instantiateViewController(withIdentifier: "WhatsAppTabBarController") as! WhatsAppTabBarController
         
-        navigationController?.pushViewController(whatsAppChatsViewController, animated: true)
+        navigationController?.pushViewController(whatsAppTabBarController, animated: true)
     }
     
   

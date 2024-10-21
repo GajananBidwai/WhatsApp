@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.playInputClicks = false
         IQKeyboardManager.shared.keyboardDistanceFromTextField = 5
         IQKeyboardManager.shared.toolbarConfiguration.placeholderConfiguration.showPlaceholder = false
-
+    
   
         return true
     }

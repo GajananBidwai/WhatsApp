@@ -590,26 +590,58 @@
             </objects>
             <point key="canvasLocation" x="4455.7251908396947" y="1448.5915492957747"/>
         </scene>
-        <!--View Controller-->
+        <!--Whats App Settings View Controller-->
         <scene sceneID="ncK-W3-pX5">
             <objects>
-                <viewController id="5dd-vD-ljS" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WhatsAppSettingsViewController" id="5dd-vD-ljS" customClass="WhatsAppSettingsViewController" customModule="WhatsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YHu-oS-Qx8">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7bY-EX-Bki">
+                                <rect key="frame" x="0.0" y="59" width="393" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Yrb-6q-Zbd"/>
+                                </constraints>
+                                <color key="barTintColor" systemColor="systemGray6Color"/>
+                                <items>
+                                    <navigationItem title="Settings" id="YeF-CH-HZ5"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NUJ-Tm-vPr">
+                                <rect key="frame" x="0.0" y="99" width="393" height="670"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="5dd-vD-ljS" id="Oin-gQ-WOm"/>
+                                    <outlet property="delegate" destination="5dd-vD-ljS" id="ZaV-cz-8q1"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Pal-nS-wsB"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="Pal-nS-wsB" firstAttribute="bottom" secondItem="NUJ-Tm-vPr" secondAttribute="bottom" id="3Pt-KR-A9P"/>
+                            <constraint firstItem="NUJ-Tm-vPr" firstAttribute="top" secondItem="7bY-EX-Bki" secondAttribute="bottom" id="I3R-93-spe"/>
+                            <constraint firstAttribute="trailing" secondItem="7bY-EX-Bki" secondAttribute="trailing" id="IDj-q1-haV"/>
+                            <constraint firstItem="NUJ-Tm-vPr" firstAttribute="leading" secondItem="Pal-nS-wsB" secondAttribute="leading" id="PVU-sv-Ral"/>
+                            <constraint firstItem="7bY-EX-Bki" firstAttribute="top" secondItem="Pal-nS-wsB" secondAttribute="top" id="gWl-9x-YnR"/>
+                            <constraint firstItem="Pal-nS-wsB" firstAttribute="trailing" secondItem="NUJ-Tm-vPr" secondAttribute="trailing" id="oQo-d0-3R0"/>
+                            <constraint firstItem="7bY-EX-Bki" firstAttribute="leading" secondItem="Pal-nS-wsB" secondAttribute="leading" id="wP6-9w-Jgj"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="Tab 5" selectedImage="Tab 5" id="rcz-4D-pWU"/>
+                    <connections>
+                        <outlet property="WhatsAppSettingsTableView" destination="NUJ-Tm-vPr" id="ABZ-vW-DiQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lja-iT-ud0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4418" y="734"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Whats App Tab Bar Controller-->
         <scene sceneID="3fQ-0H-MEG">
             <objects>
-                <tabBarController id="RMO-s0-pPf" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="WhatsAppTabBarController" id="RMO-s0-pPf" customClass="WhatsAppTabBarController" customModule="WhatsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K8s-A4-2KB">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -661,16 +693,19 @@
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
         <image name="video" catalog="system" width="128" height="82"/>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
