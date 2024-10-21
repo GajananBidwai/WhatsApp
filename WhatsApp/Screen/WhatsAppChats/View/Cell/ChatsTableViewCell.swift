@@ -32,5 +32,12 @@ class ChatsTableViewCell: UITableViewCell {
         selectionIndicatorImageView.isHidden = true
     }
     
+    func configureData(chat: Chats?){
+        userNameLabel.text = chat?.name
+        userDescription.text = chat?.description
+        dateLabel.text = chat?.date
+        
+    }
+    
 }
 

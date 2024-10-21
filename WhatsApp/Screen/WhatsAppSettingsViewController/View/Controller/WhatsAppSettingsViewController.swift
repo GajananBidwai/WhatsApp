@@ -37,6 +37,7 @@ class WhatsAppSettingsViewController: UIViewController {
         WhatsAppSettingsTableView.tableHeaderView = settingsHeaderView
         self.navigationController?.navigationBar.isHidden = true
         
+        
     }
     
 }
@@ -69,6 +70,17 @@ extension WhatsAppSettingsViewController: UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return section == 2 ? 0 : 30
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 1{
+            if indexPath.row == 0{
+                let whatsAppAccountViewController = self.storyboard?.instantiateViewController(identifier: "WhatsAppAccountViewController") as! WhatsAppAccountViewController
+                
+                self.navigationController?.pushViewController(whatsAppAccountViewController, animated: true)
+                
+            }
+        }
     }
     
     

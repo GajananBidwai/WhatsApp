@@ -13,18 +13,18 @@ class ContactInfoTableViewCell: UITableViewCell {
     @IBOutlet weak var functionalityNameLabel: UILabel!
     @IBOutlet weak var funtionalityStatusLabel: UILabel!
     
-  //  var contactInfo: ContactInfo?
+   // var contactInfo: ContactInfo?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-//    func configureData(){
-//        functionalityIcon.image = contactInfo?.image
-//        functionalityNameLabel.text = contactInfo?.title
-//        funtionalityStatusLabel.text = contactInfo?.subtitle
-//    }
+    func configureData(contactInfo: ContactInfo?){
+        functionalityIcon.image = contactInfo?.image
+        functionalityNameLabel.text = contactInfo?.title
+        funtionalityStatusLabel.text = contactInfo?.subtitle
+    }
 
     
     

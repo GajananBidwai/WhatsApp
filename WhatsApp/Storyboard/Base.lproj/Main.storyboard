@@ -423,7 +423,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FTa-dy-qON" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3365.6488549618321" y="1483.8028169014085"/>
+            <point key="canvasLocation" x="3389" y="1449"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="nEK-Cj-Dkb">
@@ -637,6 +637,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lja-iT-ud0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4418" y="734"/>
+        </scene>
+        <!--Whats App Account View Controller-->
+        <scene sceneID="2X4-Fc-YmP">
+            <objects>
+                <viewController storyboardIdentifier="WhatsAppAccountViewController" id="WWF-Za-e0y" customClass="WhatsAppAccountViewController" customModule="WhatsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U7L-bM-2jh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eyj-a9-mfT">
+                                <rect key="frame" x="0.0" y="99" width="393" height="719"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="WWF-Za-e0y" id="PXP-N2-m38"/>
+                                    <outlet property="delegate" destination="WWF-Za-e0y" id="lMn-w2-FDc"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4M-YB-nx9">
+                                <rect key="frame" x="0.0" y="59" width="393" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="HLk-bI-je5"/>
+                                </constraints>
+                                <color key="barTintColor" systemColor="systemGray6Color"/>
+                                <items>
+                                    <navigationItem title="Account" id="a0P-HU-8aE">
+                                        <barButtonItem key="leftBarButtonItem" title="Settings" image="chevron.left" catalog="system" style="plain" id="ybr-se-2B9">
+                                            <connections>
+                                                <action selector="backButton:" destination="WWF-Za-e0y" id="tZ8-Yf-gLS"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="w9u-Mf-Sas"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="d4M-YB-nx9" firstAttribute="top" secondItem="w9u-Mf-Sas" secondAttribute="top" id="6v0-37-dJb"/>
+                            <constraint firstItem="eyj-a9-mfT" firstAttribute="top" secondItem="d4M-YB-nx9" secondAttribute="bottom" id="BXB-an-Keg"/>
+                            <constraint firstItem="d4M-YB-nx9" firstAttribute="leading" secondItem="U7L-bM-2jh" secondAttribute="leading" id="O45-4v-GRa"/>
+                            <constraint firstItem="w9u-Mf-Sas" firstAttribute="trailing" secondItem="d4M-YB-nx9" secondAttribute="trailing" id="Qxg-8z-ecv"/>
+                            <constraint firstItem="w9u-Mf-Sas" firstAttribute="trailing" secondItem="eyj-a9-mfT" secondAttribute="trailing" id="b6T-bn-GCS"/>
+                            <constraint firstItem="eyj-a9-mfT" firstAttribute="leading" secondItem="w9u-Mf-Sas" secondAttribute="leading" id="ft2-Nj-yLc"/>
+                            <constraint firstItem="w9u-Mf-Sas" firstAttribute="bottom" secondItem="eyj-a9-mfT" secondAttribute="bottom" id="xbK-2f-yaO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="whatsAppAccountTableView" destination="eyj-a9-mfT" id="Q4W-zh-qhf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qMh-Iz-8fH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5319.8473282442746" y="733.80281690140851"/>
         </scene>
         <!--Whats App Tab Bar Controller-->
         <scene sceneID="3fQ-0H-MEG">

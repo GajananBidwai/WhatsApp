@@ -97,9 +97,10 @@ extension WhatsAppChatsViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let chatsTableViewCell = self.whatsAppChatsTableView.dequeueReusableCell(withIdentifier: CellConstant.CellIdentifier.chatsTableViewCell) as! ChatsTableViewCell
         
-        chatsTableViewCell.userNameLabel.text = chats[indexPath.row].name
-        chatsTableViewCell.userDescription.text = chats[indexPath.row].description
-        chatsTableViewCell.dateLabel.text = chats[indexPath.row].date
+//        chatsTableViewCell.userNameLabel.text = chats[indexPath.row].name
+//        chatsTableViewCell.userDescription.text = chats[indexPath.row].description
+//        chatsTableViewCell.dateLabel.text = chats[indexPath.row].date
+        chatsTableViewCell.configureData(chat: chats[indexPath.row])
         
         if tableView.isEditing {
             let isSelected = tableView.indexPathsForSelectedRows?.contains(indexPath) ?? false
