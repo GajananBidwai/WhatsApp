@@ -744,6 +744,59 @@
             </objects>
             <point key="canvasLocation" x="6129" y="734"/>
         </scene>
+        <!--Notification Settings View Controller-->
+        <scene sceneID="A3R-fr-FZt">
+            <objects>
+                <viewController storyboardIdentifier="NotificationSettingsViewController" id="0dL-Yd-yeH" customClass="NotificationSettingsViewController" customModule="WhatsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gAY-zd-xcY">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oUd-os-fxc">
+                                <rect key="frame" x="0.0" y="59" width="393" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="d2C-rq-tPc"/>
+                                </constraints>
+                                <color key="barTintColor" systemColor="systemGray6Color"/>
+                                <items>
+                                    <navigationItem title="Notifications" id="W91-c3-EP4">
+                                        <barButtonItem key="leftBarButtonItem" image="chevron.left" catalog="system" style="plain" id="V5z-fH-yP1">
+                                            <connections>
+                                                <action selector="backButton:" destination="0dL-Yd-yeH" id="YFq-f2-leX"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IqU-wo-uzd">
+                                <rect key="frame" x="0.0" y="99" width="393" height="719"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="0dL-Yd-yeH" id="M3x-Uu-Q5d"/>
+                                    <outlet property="delegate" destination="0dL-Yd-yeH" id="ikl-u2-fXD"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Y6v-Gx-YBM"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="Y6v-Gx-YBM" firstAttribute="trailing" secondItem="oUd-os-fxc" secondAttribute="trailing" id="52V-TP-jQq"/>
+                            <constraint firstItem="oUd-os-fxc" firstAttribute="top" secondItem="Y6v-Gx-YBM" secondAttribute="top" id="7oz-Wu-rHN"/>
+                            <constraint firstItem="Y6v-Gx-YBM" firstAttribute="bottom" secondItem="IqU-wo-uzd" secondAttribute="bottom" id="B1J-HB-7Cb"/>
+                            <constraint firstItem="IqU-wo-uzd" firstAttribute="top" secondItem="oUd-os-fxc" secondAttribute="bottom" id="Gqy-8o-dLW"/>
+                            <constraint firstItem="oUd-os-fxc" firstAttribute="leading" secondItem="gAY-zd-xcY" secondAttribute="leading" id="JWb-U5-kae"/>
+                            <constraint firstItem="IqU-wo-uzd" firstAttribute="leading" secondItem="Y6v-Gx-YBM" secondAttribute="leading" id="NKa-qX-sGG"/>
+                            <constraint firstItem="Y6v-Gx-YBM" firstAttribute="trailing" secondItem="IqU-wo-uzd" secondAttribute="trailing" id="pS5-Dy-OOv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="notificationSettingTableView" destination="IqU-wo-uzd" id="f9p-FO-zSq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yU9-fD-A1E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6908" y="738"/>
+        </scene>
         <!--Whats App Tab Bar Controller-->
         <scene sceneID="3fQ-0H-MEG">
             <objects>
