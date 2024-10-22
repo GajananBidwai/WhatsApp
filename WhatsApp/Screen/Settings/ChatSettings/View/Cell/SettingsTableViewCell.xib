@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsTableViewCell" rowHeight="48" id="KGk-i7-Jjw" customClass="SettingsTableViewCell" customModule="WhatsApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="363" height="48"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="363" height="48"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BnI-jQ-68O">
+                        <rect key="frame" x="20" y="5" width="306" height="38"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olL-Gg-3g3">
+                        <rect key="frame" x="336" y="18" width="7" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="7dI-oy-uGi"/>
+                            <constraint firstAttribute="width" constant="7" id="OGZ-dh-n3f"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <buttonConfiguration key="configuration" style="plain">
+                            <imageReference key="image" image="chevron.right" catalog="system" symbolScale="medium" renderingMode="hierarchical-single">
+                                <hierarchicalColors>
+                                    <color red="0.48627450980392156" green="0.48627450980392156" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color systemColor="secondaryLabelColor"/>
+                                    <color systemColor="tertiaryLabelColor"/>
+                                </hierarchicalColors>
+                            </imageReference>
+                        </buttonConfiguration>
+                    </button>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mIn-oS-i3z">
+                        <rect key="frame" x="299" y="8.6666666666666643" width="51" height="31"/>
+                    </switch>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="olL-Gg-3g3" secondAttribute="trailing" constant="20" id="4ng-D0-9km"/>
+                    <constraint firstItem="BnI-jQ-68O" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="A4h-qC-Z4d"/>
+                    <constraint firstAttribute="trailing" secondItem="mIn-oS-i3z" secondAttribute="trailing" constant="15" id="FpA-lE-cgV"/>
+                    <constraint firstItem="olL-Gg-3g3" firstAttribute="leading" secondItem="BnI-jQ-68O" secondAttribute="trailing" constant="10" id="l7c-Mo-Xif"/>
+                    <constraint firstAttribute="bottom" secondItem="BnI-jQ-68O" secondAttribute="bottom" constant="5" id="nD3-bm-OgD"/>
+                    <constraint firstItem="olL-Gg-3g3" firstAttribute="centerY" secondItem="BnI-jQ-68O" secondAttribute="centerY" id="nk9-Jy-g6T"/>
+                    <constraint firstItem="BnI-jQ-68O" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="tS8-lT-3RN"/>
+                    <constraint firstItem="mIn-oS-i3z" firstAttribute="centerY" secondItem="BnI-jQ-68O" secondAttribute="centerY" id="vC2-kH-bzN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="rightArrowButton" destination="olL-Gg-3g3" id="tW6-5n-9ra"/>
+                <outlet property="switchButton" destination="mIn-oS-i3z" id="nlV-sR-7ZA"/>
+                <outlet property="titleLabel" destination="BnI-jQ-68O" id="SAC-xv-qao"/>
+                <outlet property="titleTrailingContarints" destination="l7c-Mo-Xif" id="qso-BN-xsk"/>
+            </connections>
+            <point key="canvasLocation" x="171.75572519083968" y="21.126760563380284"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

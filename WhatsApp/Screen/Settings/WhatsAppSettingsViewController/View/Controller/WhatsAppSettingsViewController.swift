@@ -79,6 +79,10 @@ extension WhatsAppSettingsViewController: UITableViewDataSource{
                 
                 self.navigationController?.pushViewController(whatsAppAccountViewController, animated: true)
                 
+            } else if indexPath.row == 1{
+                let chatSettingsViewController = self.storyboard?.instantiateViewController(withIdentifier: "ChatSettingsViewController") as! ChatSettingsViewController
+                
+                self.navigationController?.pushViewController(chatSettingsViewController, animated: true)
             }
         }
     }
