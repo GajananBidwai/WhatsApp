@@ -33,6 +33,13 @@ class WhatsAppContactInfoViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    
+    @IBAction func editButtonTap(_ sender: Any) {
+        let editContactViewController = self.storyboard?.instantiateViewController(withIdentifier: "EditContactViewController") as! EditContactViewController
+        
+        self.navigationController?.pushViewController(editContactViewController, animated: true)
+    }
+    
 }
 extension WhatsAppContactInfoViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -68,7 +75,7 @@ extension WhatsAppContactInfoViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let footerView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 60))
-        footerView.backgroundColor = .lightGray
+        footerView.backgroundColor = .clear
         return footerView
     }
     

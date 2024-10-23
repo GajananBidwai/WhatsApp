@@ -24,6 +24,11 @@
 		A94625272CC8B4C8003B5174 /* DataAndStoarageUsageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94625262CC8B4C8003B5174 /* DataAndStoarageUsageViewController.swift */; };
 		A94625292CC8BBBB003B5174 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94625282CC8BBBB003B5174 /* Extension.swift */; };
 		A946252D2CC8CAA6003B5174 /* StarredMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A946252C2CC8CAA6003B5174 /* StarredMessagesViewController.swift */; };
+		A94625302CC8D0BF003B5174 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A946252F2CC8D0BF003B5174 /* EditProfileViewController.swift */; };
+		A946253A2CC8E86D003B5174 /* EditContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94625392CC8E86D003B5174 /* EditContactViewController.swift */; };
+		A946253C2CC8E8D7003B5174 /* EditContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = A946253B2CC8E8D7003B5174 /* EditContact.swift */; };
+		A946253F2CC8EA19003B5174 /* EditContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A946253D2CC8EA19003B5174 /* EditContactTableViewCell.swift */; };
+		A94625402CC8EA19003B5174 /* EditContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A946253E2CC8EA19003B5174 /* EditContactTableViewCell.xib */; };
 		A94F42F12CC2331C006EEB7C /* WhatsAppContactInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94F42F02CC2331C006EEB7C /* WhatsAppContactInfoViewController.swift */; };
 		A94F42F32CC23554006EEB7C /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A94F42F22CC23554006EEB7C /* HeaderView.xib */; };
 		A94F42F52CC2381B006EEB7C /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94F42F42CC2381B006EEB7C /* HeaderView.swift */; };
@@ -111,6 +116,11 @@
 		A94625262CC8B4C8003B5174 /* DataAndStoarageUsageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAndStoarageUsageViewController.swift; sourceTree = "<group>"; };
 		A94625282CC8BBBB003B5174 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		A946252C2CC8CAA6003B5174 /* StarredMessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarredMessagesViewController.swift; sourceTree = "<group>"; };
+		A946252F2CC8D0BF003B5174 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		A94625392CC8E86D003B5174 /* EditContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactViewController.swift; sourceTree = "<group>"; };
+		A946253B2CC8E8D7003B5174 /* EditContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContact.swift; sourceTree = "<group>"; };
+		A946253D2CC8EA19003B5174 /* EditContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactTableViewCell.swift; sourceTree = "<group>"; };
+		A946253E2CC8EA19003B5174 /* EditContactTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditContactTableViewCell.xib; sourceTree = "<group>"; };
 		A94F42F02CC2331C006EEB7C /* WhatsAppContactInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsAppContactInfoViewController.swift; sourceTree = "<group>"; };
 		A94F42F22CC23554006EEB7C /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		A94F42F42CC2381B006EEB7C /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -444,6 +454,81 @@
 			path = "View Controller";
 			sourceTree = "<group>";
 		};
+		A946252E2CC8D094003B5174 /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				A94625322CC8D0CF003B5174 /* Cell */,
+				A94625312CC8D0C2003B5174 /* View Controller */,
+			);
+			path = EditProfile;
+			sourceTree = "<group>";
+		};
+		A94625312CC8D0C2003B5174 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A946252F2CC8D0BF003B5174 /* EditProfileViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		A94625322CC8D0CF003B5174 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A94625332CC8E819003B5174 /* EditContact */ = {
+			isa = PBXGroup;
+			children = (
+				A94625362CC8E845003B5174 /* View Model */,
+				A94625352CC8E83D003B5174 /* Model */,
+				A94625342CC8E823003B5174 /* View */,
+			);
+			path = EditContact;
+			sourceTree = "<group>";
+		};
+		A94625342CC8E823003B5174 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A94625382CC8E85C003B5174 /* Cell */,
+				A94625372CC8E852003B5174 /* ViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A94625352CC8E83D003B5174 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A946253B2CC8E8D7003B5174 /* EditContact.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A94625362CC8E845003B5174 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		A94625372CC8E852003B5174 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A94625392CC8E86D003B5174 /* EditContactViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A94625382CC8E85C003B5174 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A946253D2CC8EA19003B5174 /* EditContactTableViewCell.swift */,
+				A946253E2CC8EA19003B5174 /* EditContactTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		A94F42EA2CC232BE006EEB7C /* WhatsAppContactInfo */ = {
 			isa = PBXGroup;
 			children = (
@@ -736,6 +821,8 @@
 		A9F4C95B2CBCF2FA0003CF24 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				A94625332CC8E819003B5174 /* EditContact */,
+				A946252E2CC8D094003B5174 /* EditProfile */,
 				A946252A2CC8CA7F003B5174 /* StarredMessages */,
 				A91824CD2CC685250036D99D /* Settings */,
 				A91824BF2CC6333E0036D99D /* TabBar */,
@@ -958,6 +1045,7 @@
 				A993F2472CBE871000490B6D /* SFProText-Bold.ttf in Resources */,
 				A993F2502CBE871000490B6D /* SFProText-RegularItalic.ttf in Resources */,
 				A993F2522CBE871000490B6D /* SFProText-SemiboldItalic.ttf in Resources */,
+				A94625402CC8EA19003B5174 /* EditContactTableViewCell.xib in Resources */,
 				A993F2482CBE871000490B6D /* SFProText-BoldItalic.ttf in Resources */,
 				A993F24D2CBE871000490B6D /* SFProText-Medium.ttf in Resources */,
 				A993F24F2CBE871000490B6D /* SFProText-Regular.ttf in Resources */,
@@ -1096,6 +1184,7 @@
 				A9DF6EDB2CC76A9F0044C0AC /* SettingsTableViewCell.swift in Sources */,
 				A91824D62CC689F80036D99D /* Settings.swift in Sources */,
 				A9F3D79F2CBFC9EA00E541DF /* WhatsAppCallTableViewCell.swift in Sources */,
+				A946253C2CC8E8D7003B5174 /* EditContact.swift in Sources */,
 				A9415CB72CC617520066DCFB /* WhatsAppSettingsViewController.swift in Sources */,
 				A993F2322CBE7F1700490B6D /* ChatsTableViewCell.swift in Sources */,
 				A91824D12CC685800036D99D /* ChatSettingsViewController.swift in Sources */,
@@ -1103,9 +1192,11 @@
 				A993F2342CBE827300490B6D /* CellConstant.swift in Sources */,
 				A91824C22CC633740036D99D /* WhatsAppTabBarController.swift in Sources */,
 				A91824BE2CC62F2E0036D99D /* WhatsAppSettingsTableViewCell.swift in Sources */,
+				A946253F2CC8EA19003B5174 /* EditContactTableViewCell.swift in Sources */,
 				A91824CB2CC676900036D99D /* WhatsAppAccountTableViewCell.swift in Sources */,
 				A9F3D7972CBFC90400E541DF /* WhatsAppCall.swift in Sources */,
 				A9F4C96F2CBD39B60003CF24 /* AuthenticationViewController.swift in Sources */,
+				A94625302CC8D0BF003B5174 /* EditProfileViewController.swift in Sources */,
 				A91824C72CC657360036D99D /* WhatsAppAccountViewController.swift in Sources */,
 				A993F22E2CBE7C2A00490B6D /* Chats.swift in Sources */,
 				A9F4C9272CBCF2E30003CF24 /* AppDelegate.swift in Sources */,
@@ -1121,6 +1212,7 @@
 				A946252D2CC8CAA6003B5174 /* StarredMessagesViewController.swift in Sources */,
 				A9415CB92CC6183D0066DCFB /* WhatsAppSetting.swift in Sources */,
 				A9F3D79B2CBFC97400E541DF /* WhatsAppCallViewController.swift in Sources */,
+				A946253A2CC8E86D003B5174 /* EditContactViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

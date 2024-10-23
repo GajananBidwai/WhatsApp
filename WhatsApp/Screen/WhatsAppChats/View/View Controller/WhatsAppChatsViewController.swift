@@ -26,15 +26,24 @@ class WhatsAppChatsViewController: UIViewController {
     
     private var selectedIndices = Set<IndexPath>()
     
-    var chats = [Chats(name: "Gajanan Bidwai", description: "Where are you!", date: "15/10/2024"),
-                 Chats(name: "Manjeet", description: "Smart guy in the office", date: "15/10/2024"),
-                 Chats(name: "Mahesh sir", description: "Creative Devloper", date: "15/10/2024"),
-                 Chats(name: "Gajanan Bidwai", description: "Where are you!", date: "15/10/2024"),
-                 Chats(name: "Manjeet", description: "Smart guy in the office", date: "15/10/2024"),
-                 Chats(name: "Mahesh sir", description: "Creative Devloper", date: "15/10/2024"),
-                 Chats(name: "Gajanan Bidwai", description: "Where are you!", date: "15/10/2024"),
-                 Chats(name: "Manjeet", description: "Smart guy in the office", date: "15/10/2024"),
-                 Chats(name: "Mahesh sir", description: "Creative Devloper", date: "15/10/2024")
+    var profileImage = [UIImage(named: "Oval(1)"),
+                        UIImage(named: "Oval(2)"),
+                        UIImage(named: "Oval(3)"),
+                        UIImage(named: "Oval(4)"),
+                        UIImage(named: "Oval(5)"),
+                        UIImage(named: "Oval(6)"),
+                        UIImage(named: "Oval(7)"),
+                        UIImage(named: "Oval(8)")]
+    
+    var chats = [Chats(name: "Gajanan Bidwai", description: "Where are you!", date: "15/10/2024", profileImage: UIImage(named: "Oval(1)")!),
+                 Chats(name: "Manjeet", description: "Smart guy in the office", date: "15/10/2024", profileImage: UIImage(named: "Oval(1)")!),
+                 Chats(name: "Mahesh sir", description: "Creative Devloper", date: "15/10/2024", profileImage: UIImage(named: "Oval(2)")!),
+                 Chats(name: "Gajanan Bidwai", description: "Where are you!", date: "15/10/2024", profileImage: UIImage(named: "Oval(3)")!),
+                 Chats(name: "Manjeet", description: "Smart guy in the office", date: "15/10/2024", profileImage: UIImage(named: "Oval(4)")!),
+                 Chats(name: "Mahesh sir", description: "Creative Devloper", date: "15/10/2024", profileImage: UIImage(named: "Oval(5)")!),
+                 Chats(name: "Gajanan Bidwai", description: "Where are you!", date: "15/10/2024", profileImage: UIImage(named: "Oval(6)")!),
+                 Chats(name: "Manjeet", description: "Smart guy in the office", date: "15/10/2024", profileImage: UIImage(named: "Oval(7)")!),
+                 Chats(name: "Mahesh sir", description: "Creative Devloper", date: "15/10/2024", profileImage: UIImage(named: "Oval(8)")!)
     ]
     
     override func viewDidLoad() {

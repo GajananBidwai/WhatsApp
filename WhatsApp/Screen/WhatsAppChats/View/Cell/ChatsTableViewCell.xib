@@ -108,6 +108,7 @@
                 <outlet property="selectionIndicatorImageView" destination="TRf-IM-zyW" id="pl8-Ki-blL"/>
                 <outlet property="userDescription" destination="ZTi-Z9-GV0" id="sOh-Gy-2fK"/>
                 <outlet property="userNameLabel" destination="ZAz-jL-MTe" id="qLB-fR-rbW"/>
+                <outlet property="userProfileImage" destination="DaS-8b-01s" id="96V-IV-VD9"/>
             </connections>
             <point key="canvasLocation" x="-8.3969465648854964" y="28.52112676056338"/>
         </tableViewCell>
@@ -117,10 +118,10 @@
         <image name="circle" catalog="system" width="128" height="123"/>
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

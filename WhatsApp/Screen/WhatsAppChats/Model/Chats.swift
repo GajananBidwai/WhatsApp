@@ -5,10 +5,11 @@
 //  Created by abcd on 15/10/24.
 //
 
-import Foundation
 
+import UIKit
 struct Chats{
     var name: String
     var description: String
     var date: String
+    var profileImage: UIImage
 }

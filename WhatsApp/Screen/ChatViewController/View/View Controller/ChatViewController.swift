@@ -14,10 +14,8 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var lastActiveLabel: UILabel!
     @IBOutlet weak var plusButton: UIButton!
-    
-    
-    
     @IBOutlet weak var userInputTextField: UITextField!
+    
     
     
     var chats: Chats?
@@ -37,6 +35,7 @@ class ChatViewController: UIViewController {
     
     @IBAction func navigateToContactInfo(_ sender: Any) {
         let whatsAppContactInfoViewController = self.storyboard?.instantiateViewController(identifier: "WhatsAppContactInfoViewController") as! WhatsAppContactInfoViewController
+        
         
         self.navigationController?.pushViewController(whatsAppContactInfoViewController, animated: true)
     }

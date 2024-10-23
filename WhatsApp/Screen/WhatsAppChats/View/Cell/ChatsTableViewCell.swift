@@ -13,6 +13,8 @@ class ChatsTableViewCell: UITableViewCell {
     @IBOutlet weak var userDescription: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var selectionIndicatorImageView: UIImageView!
+    @IBOutlet weak var userProfileImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -36,6 +38,7 @@ class ChatsTableViewCell: UITableViewCell {
         userNameLabel.text = chat?.name
         userDescription.text = chat?.description
         dateLabel.text = chat?.date
+        userProfileImage.image = chat?.profileImage
         
     }
     

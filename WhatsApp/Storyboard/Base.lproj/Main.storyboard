@@ -382,7 +382,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7eZ-uc-OLv">
                                 <rect key="frame" x="0.0" y="99" width="393" height="719"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="cNW-hg-s9Z" id="zRo-td-vqI"/>
                                     <outlet property="delegate" destination="cNW-hg-s9Z" id="ycU-1f-I4w"/>
@@ -393,6 +393,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="snQ-sF-HNI"/>
                                 </constraints>
+                                <color key="barTintColor" systemColor="systemGray6Color"/>
                                 <items>
                                     <navigationItem title="Contact Info" id="43x-eJ-hqX">
                                         <barButtonItem key="leftBarButtonItem" image="chevron.left" catalog="system" style="plain" id="z8l-ch-nHq">
@@ -400,13 +401,17 @@
                                                 <action selector="backButton:" destination="cNW-hg-s9Z" id="nqW-su-ru8"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="edit" id="T2m-b2-ZCX"/>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="edit" id="T2m-b2-ZCX">
+                                            <connections>
+                                                <action selector="editButtonTap:" destination="cNW-hg-s9Z" id="hg7-Sh-TaZ"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wPK-IJ-3nc"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="75j-lR-ma7" firstAttribute="top" secondItem="wPK-IJ-3nc" secondAttribute="top" id="013-jE-F4u"/>
                             <constraint firstItem="wPK-IJ-3nc" firstAttribute="trailing" secondItem="7eZ-uc-OLv" secondAttribute="trailing" id="0GZ-P5-5sd"/>
@@ -425,6 +430,110 @@
             </objects>
             <point key="canvasLocation" x="3389" y="1449"/>
         </scene>
+        <!--Edit Profile View Controller-->
+        <scene sceneID="dM8-in-a9a">
+            <objects>
+                <viewController storyboardIdentifier="EditProfileViewController" id="qPD-vf-hIo" customClass="EditProfileViewController" customModule="WhatsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4fB-UO-rsh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sue-pC-2kR">
+                                <rect key="frame" x="0.0" y="59" width="393" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="YEk-NI-lKC"/>
+                                </constraints>
+                                <color key="barTintColor" systemColor="systemGray6Color"/>
+                                <items>
+                                    <navigationItem title="Edit Profile" id="ZAn-AA-CMg">
+                                        <barButtonItem key="leftBarButtonItem" image="chevron.left" catalog="system" style="plain" id="j3p-qk-I6L">
+                                            <connections>
+                                                <action selector="backButtonTap:" destination="qPD-vf-hIo" id="IMn-sq-7EL"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5ze-v0-n2B">
+                                <rect key="frame" x="0.0" y="99" width="393" height="719"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Hdd-S5-7mh"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="5ze-v0-n2B" firstAttribute="leading" secondItem="Hdd-S5-7mh" secondAttribute="leading" id="54O-As-rc9"/>
+                            <constraint firstItem="Sue-pC-2kR" firstAttribute="leading" secondItem="Hdd-S5-7mh" secondAttribute="leading" id="56n-iD-ekD"/>
+                            <constraint firstItem="5ze-v0-n2B" firstAttribute="top" secondItem="Sue-pC-2kR" secondAttribute="bottom" id="GFM-EL-zbu"/>
+                            <constraint firstAttribute="trailing" secondItem="Sue-pC-2kR" secondAttribute="trailing" id="Gok-rQ-cB2"/>
+                            <constraint firstItem="Sue-pC-2kR" firstAttribute="top" secondItem="Hdd-S5-7mh" secondAttribute="top" id="Iqh-yb-5Nm"/>
+                            <constraint firstItem="Hdd-S5-7mh" firstAttribute="trailing" secondItem="5ze-v0-n2B" secondAttribute="trailing" id="RxC-3G-1xx"/>
+                            <constraint firstItem="Hdd-S5-7mh" firstAttribute="bottom" secondItem="5ze-v0-n2B" secondAttribute="bottom" id="cv8-bj-8XN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="editProfileTableView" destination="5ze-v0-n2B" id="fIa-Xl-rQH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2g7-OQ-6vw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3407" y="2824"/>
+        </scene>
+        <!--Edit Contact View Controller-->
+        <scene sceneID="KJP-yS-d4Z">
+            <objects>
+                <viewController storyboardIdentifier="EditContactViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fNo-7O-3WU" customClass="EditContactViewController" customModule="WhatsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tMz-MT-a5I">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y37-0a-MOk">
+                                <rect key="frame" x="0.0" y="59" width="393" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="GZd-h9-mh6"/>
+                                </constraints>
+                                <color key="barTintColor" systemColor="systemGray6Color"/>
+                                <items>
+                                    <navigationItem title="Edit Contact" id="GV1-Gv-vo7">
+                                        <barButtonItem key="leftBarButtonItem" image="chevron.left" catalog="system" style="plain" id="w5e-tF-B1J">
+                                            <connections>
+                                                <action selector="backButton:" destination="fNo-7O-3WU" id="8oM-lo-dCF"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" enabled="NO" style="plain" systemItem="save" id="cKc-qq-PYY"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FhX-TG-XBp">
+                                <rect key="frame" x="0.0" y="179" width="393" height="639"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="fNo-7O-3WU" id="nPG-Ay-Fsx"/>
+                                    <outlet property="delegate" destination="fNo-7O-3WU" id="uWz-AC-SjH"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1gW-bn-TrE"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="FhX-TG-XBp" firstAttribute="leading" secondItem="1gW-bn-TrE" secondAttribute="leading" id="5Af-JC-CLa"/>
+                            <constraint firstItem="1gW-bn-TrE" firstAttribute="trailing" secondItem="FhX-TG-XBp" secondAttribute="trailing" id="ABM-uc-3lh"/>
+                            <constraint firstItem="y37-0a-MOk" firstAttribute="top" secondItem="1gW-bn-TrE" secondAttribute="top" id="PHt-rn-E26"/>
+                            <constraint firstItem="y37-0a-MOk" firstAttribute="leading" secondItem="1gW-bn-TrE" secondAttribute="leading" id="Wdh-Do-PPq"/>
+                            <constraint firstAttribute="trailing" secondItem="y37-0a-MOk" secondAttribute="trailing" id="Wr0-xb-r9l"/>
+                            <constraint firstItem="FhX-TG-XBp" firstAttribute="top" secondItem="y37-0a-MOk" secondAttribute="bottom" constant="80" id="p8P-ik-xkm"/>
+                            <constraint firstItem="1gW-bn-TrE" firstAttribute="bottom" secondItem="FhX-TG-XBp" secondAttribute="bottom" id="yew-QG-JJm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="editContactTableView" destination="FhX-TG-XBp" id="Jjw-yi-VyX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bxl-h3-AeN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3408" y="2115"/>
+        </scene>
         <!--Chat View Controller-->
         <scene sceneID="nEK-Cj-Dkb">
             <objects>
@@ -437,18 +546,20 @@
                                 <rect key="frame" x="0.0" y="772" width="393" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogZ-zy-ItC">
-                                        <rect key="frame" x="5" y="5" width="20" height="32"/>
+                                        <rect key="frame" x="10" y="5" width="25" height="32"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="20" id="oEo-wE-LNI"/>
+                                            <constraint firstAttribute="width" constant="25" id="oEo-wE-LNI"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Button" image="Add"/>
+                                        <state key="normal" title="Button">
+                                            <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
+                                        </state>
                                         <connections>
                                             <action selector="plusButtonAction:" destination="7EK-nW-D6G" eventType="touchUpInside" id="dSE-2m-Aer"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GhQ-cY-2Eq">
-                                        <rect key="frame" x="35" y="5" width="265" height="32"/>
+                                        <rect key="frame" x="45" y="5" width="255" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="QwR-oO-Dhz"/>
                                         </constraints>
@@ -486,17 +597,13 @@
                                     <constraint firstItem="u2C-ea-BG0" firstAttribute="leading" secondItem="1qv-A4-D3I" secondAttribute="trailing" constant="15" id="MNt-ER-TcL"/>
                                     <constraint firstAttribute="trailing" secondItem="u2C-ea-BG0" secondAttribute="trailing" constant="5" id="cAK-7z-Mgr"/>
                                     <constraint firstItem="GhQ-cY-2Eq" firstAttribute="leading" secondItem="ogZ-zy-ItC" secondAttribute="trailing" constant="10" id="ifd-DP-fSJ"/>
-                                    <constraint firstItem="ogZ-zy-ItC" firstAttribute="leading" secondItem="HV5-gJ-mRj" secondAttribute="leading" constant="5" id="sBl-RN-NWa"/>
+                                    <constraint firstItem="ogZ-zy-ItC" firstAttribute="leading" secondItem="HV5-gJ-mRj" secondAttribute="leading" constant="10" id="sBl-RN-NWa"/>
                                     <constraint firstItem="1qv-A4-D3I" firstAttribute="leading" secondItem="GhQ-cY-2Eq" secondAttribute="trailing" constant="20" id="teE-4q-kVX"/>
                                     <constraint firstItem="1qv-A4-D3I" firstAttribute="centerY" secondItem="u2C-ea-BG0" secondAttribute="centerY" id="wOY-Rh-SWM"/>
                                     <constraint firstItem="GhQ-cY-2Eq" firstAttribute="height" secondItem="ogZ-zy-ItC" secondAttribute="height" id="xRS-WP-67i"/>
                                     <constraint firstItem="ogZ-zy-ItC" firstAttribute="top" secondItem="HV5-gJ-mRj" secondAttribute="top" constant="5" id="ynJ-Ow-JSb"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jet-Yx-8Pw">
-                                <rect key="frame" x="0.0" y="109" width="393" height="663"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hG9-TO-4hj">
                                 <rect key="frame" x="0.0" y="59" width="393" height="50"/>
                                 <constraints>
@@ -550,12 +657,20 @@
                                     <action selector="navigateToContactInfo:" destination="7EK-nW-D6G" eventType="touchUpInside" id="YB3-nx-4gW"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackGround" translatesAutoresizingMaskIntoConstraints="NO" id="d98-hG-0x8">
+                                <rect key="frame" x="0.0" y="109" width="393" height="663"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vln-Ha-qeb">
+                                <rect key="frame" x="0.0" y="109" width="393" height="663"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pTa-nk-b3Q"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="vln-Ha-qeb" firstAttribute="top" secondItem="hG9-TO-4hj" secondAttribute="bottom" id="1WB-6o-uEp"/>
                             <constraint firstItem="hG9-TO-4hj" firstAttribute="leading" secondItem="pTa-nk-b3Q" secondAttribute="leading" id="1rt-wy-4q9"/>
-                            <constraint firstItem="HV5-gJ-mRj" firstAttribute="top" secondItem="jet-Yx-8Pw" secondAttribute="bottom" id="4ea-vS-VIX"/>
+                            <constraint firstItem="vln-Ha-qeb" firstAttribute="top" secondItem="Kw4-1c-359" secondAttribute="bottom" id="5Xv-0q-yal"/>
                             <constraint firstItem="dia-Yi-fZp" firstAttribute="leading" secondItem="T0F-lZ-zHy" secondAttribute="trailing" constant="5" id="6wI-Md-2jE"/>
                             <constraint firstItem="pTa-nk-b3Q" firstAttribute="trailing" secondItem="HV5-gJ-mRj" secondAttribute="trailing" id="8KK-kH-nyX"/>
                             <constraint firstItem="hG9-TO-4hj" firstAttribute="top" secondItem="pTa-nk-b3Q" secondAttribute="top" id="8ej-Al-NBq"/>
@@ -563,17 +678,20 @@
                             <constraint firstItem="HV5-gJ-mRj" firstAttribute="leading" secondItem="pTa-nk-b3Q" secondAttribute="leading" id="CaJ-5s-0H0"/>
                             <constraint firstItem="dia-Yi-fZp" firstAttribute="top" secondItem="T0F-lZ-zHy" secondAttribute="top" id="DJo-YP-FYv"/>
                             <constraint firstItem="hG9-TO-4hj" firstAttribute="trailing" secondItem="pTa-nk-b3Q" secondAttribute="trailing" id="EvB-G1-vp1"/>
+                            <constraint firstItem="HV5-gJ-mRj" firstAttribute="top" secondItem="vln-Ha-qeb" secondAttribute="bottom" id="F4L-1g-UWL"/>
                             <constraint firstAttribute="bottom" secondItem="HV5-gJ-mRj" secondAttribute="bottom" id="HDC-6h-XM9"/>
+                            <constraint firstItem="vln-Ha-qeb" firstAttribute="leading" secondItem="pTa-nk-b3Q" secondAttribute="leading" id="HUF-aZ-egf"/>
                             <constraint firstItem="pnT-78-S6y" firstAttribute="top" secondItem="dia-Yi-fZp" secondAttribute="bottom" constant="5" id="R75-DM-k06"/>
                             <constraint firstItem="Kw4-1c-359" firstAttribute="top" secondItem="pTa-nk-b3Q" secondAttribute="top" id="TZX-TP-r7K"/>
-                            <constraint firstItem="jet-Yx-8Pw" firstAttribute="top" secondItem="hG9-TO-4hj" secondAttribute="bottom" id="VcE-JY-BEx"/>
-                            <constraint firstItem="jet-Yx-8Pw" firstAttribute="top" secondItem="Kw4-1c-359" secondAttribute="bottom" id="Xnj-KX-YsR"/>
                             <constraint firstItem="T0F-lZ-zHy" firstAttribute="centerY" secondItem="hG9-TO-4hj" secondAttribute="centerY" id="YYM-IL-rz8"/>
                             <constraint firstItem="pnT-78-S6y" firstAttribute="leading" secondItem="dia-Yi-fZp" secondAttribute="leading" id="aXu-ph-Owk"/>
-                            <constraint firstItem="jet-Yx-8Pw" firstAttribute="leading" secondItem="pTa-nk-b3Q" secondAttribute="leading" id="fzL-P6-Ngg"/>
+                            <constraint firstItem="pTa-nk-b3Q" firstAttribute="trailing" secondItem="vln-Ha-qeb" secondAttribute="trailing" id="cgE-bg-0oi"/>
+                            <constraint firstItem="pTa-nk-b3Q" firstAttribute="trailing" secondItem="d98-hG-0x8" secondAttribute="trailing" id="dxF-7u-zh1"/>
+                            <constraint firstItem="d98-hG-0x8" firstAttribute="leading" secondItem="pTa-nk-b3Q" secondAttribute="leading" id="eNY-m6-grj"/>
+                            <constraint firstItem="d98-hG-0x8" firstAttribute="top" secondItem="hG9-TO-4hj" secondAttribute="bottom" id="gVr-aY-emR"/>
+                            <constraint firstItem="HV5-gJ-mRj" firstAttribute="top" secondItem="d98-hG-0x8" secondAttribute="bottom" id="h4z-a3-W2H"/>
                             <constraint firstItem="Kw4-1c-359" firstAttribute="leading" secondItem="pTa-nk-b3Q" secondAttribute="leading" constant="50" id="r4I-iA-jn6"/>
                             <constraint firstItem="T0F-lZ-zHy" firstAttribute="leading" secondItem="pTa-nk-b3Q" secondAttribute="leading" constant="50" id="rwl-8n-oil"/>
-                            <constraint firstItem="jet-Yx-8Pw" firstAttribute="trailing" secondItem="pTa-nk-b3Q" secondAttribute="trailing" id="rxw-bp-JdU"/>
                             <constraint firstItem="pTa-nk-b3Q" firstAttribute="trailing" secondItem="Kw4-1c-359" secondAttribute="trailing" constant="109" id="ta1-JA-7pS"/>
                         </constraints>
                     </view>
@@ -937,7 +1055,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Add" width="20" height="20"/>
+        <image name="BackGround" width="375" height="724"/>
         <image name="Call Icon" width="24" height="24"/>
         <image name="Shape" width="23" height="23"/>
         <image name="Tab 1" width="75" height="49"/>
@@ -951,6 +1069,7 @@
         <image name="chevron.right" catalog="system" width="32" height="32"/>
         <image name="mic" catalog="system" width="110" height="128"/>
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="video" catalog="system" width="128" height="82"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
