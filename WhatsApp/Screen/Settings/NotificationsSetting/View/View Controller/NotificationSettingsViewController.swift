@@ -67,12 +67,12 @@ extension NotificationSettingsViewController: UITableViewDataSource{
         if section == 0{
             let headerLabel = UILabel(frame: CGRect(x: 12, y: headerView.frame.height - 20, width: self.view.frame.width, height: 20))
             
-            labelText(labelText: headerLabel, textForHeaderFooterView: "MESSAGE NOTIFICATIONS", headerViewAndFooterView: headerView)
+            labelText.labelText(labelText: headerLabel, textForHeaderFooterView: "MESSAGE NOTIFICATIONS", headerViewAndFooterView: headerView)
             
         }else if section == 1{
             let headerLabel = UILabel(frame: CGRect(x: 12, y: headerView.frame.height - 20, width: self.view.frame.width, height: 20))
             
-            labelText(labelText: headerLabel, textForHeaderFooterView: "GROUP NOTIFICATIONS", headerViewAndFooterView: headerView)
+            labelText.labelText(labelText: headerLabel, textForHeaderFooterView: "GROUP NOTIFICATIONS", headerViewAndFooterView: headerView)
         }
        
         
@@ -86,7 +86,7 @@ extension NotificationSettingsViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let footerView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 20))
         let footerLabel = UILabel(frame: CGRect(x: 12, y: 0, width: self.view.frame.width, height: 20))
-        labelText(labelText: footerLabel, textForHeaderFooterView: "Preview message text inside new message notifications.", headerViewAndFooterView: footerView)
+        labelText.labelText(labelText: footerLabel, textForHeaderFooterView: "Preview message text inside new message notifications.", headerViewAndFooterView: footerView)
         
         return footerView
     }
@@ -95,14 +95,14 @@ extension NotificationSettingsViewController: UITableViewDataSource{
     }
     
 }
-extension NotificationSettingsViewController {
-    func labelText(labelText: UILabel, textForHeaderFooterView: String, headerViewAndFooterView: UIView) {
-        labelText.text = textForHeaderFooterView
-        labelText.numberOfLines = 2
-        labelText.font = UIFont.systemFont(ofSize: 14, weight: .light)
-        labelText.textColor = UIColor(named: "lightgrey") ?? .black
-        labelText.textAlignment = .left
-        
-        headerViewAndFooterView.addSubview(labelText)
-    }
-}
+//extension NotificationSettingsViewController {
+//    func labelText(labelText: UILabel, textForHeaderFooterView: String, headerViewAndFooterView: UIView) {
+//        labelText.text = textForHeaderFooterView
+//        labelText.numberOfLines = 2
+//        labelText.font = UIFont.systemFont(ofSize: 14, weight: .light)
+//        labelText.textColor = UIColor(named: "lightgrey") ?? .black
+//        labelText.textAlignment = .left
+//        
+//        headerViewAndFooterView.addSubview(labelText)
+//    }
+//}

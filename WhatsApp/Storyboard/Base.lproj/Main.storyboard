@@ -797,6 +797,59 @@
             </objects>
             <point key="canvasLocation" x="6908" y="738"/>
         </scene>
+        <!--Data And Stoarage Usage View Controller-->
+        <scene sceneID="nRK-yF-a10">
+            <objects>
+                <viewController storyboardIdentifier="DataAndStoarageUsageViewController" id="6OD-2a-z7A" customClass="DataAndStoarageUsageViewController" customModule="WhatsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xi2-Tw-dFs">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eHC-fp-Yqo">
+                                <rect key="frame" x="0.0" y="59" width="393" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="cxA-8p-Me7"/>
+                                </constraints>
+                                <color key="barTintColor" systemColor="systemGray6Color"/>
+                                <items>
+                                    <navigationItem title="Data And Stoarage Usage" id="jA8-Pe-fiw">
+                                        <barButtonItem key="leftBarButtonItem" image="chevron.left" catalog="system" style="plain" id="XhD-ra-r2l">
+                                            <connections>
+                                                <action selector="backButton:" destination="6OD-2a-z7A" id="GPy-rk-pnZ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sdY-EJ-PUd">
+                                <rect key="frame" x="0.0" y="99" width="393" height="719"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="6OD-2a-z7A" id="8eP-nK-eCX"/>
+                                    <outlet property="delegate" destination="6OD-2a-z7A" id="RM9-bW-JEZ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hVf-ob-XKb"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="sdY-EJ-PUd" firstAttribute="top" secondItem="eHC-fp-Yqo" secondAttribute="bottom" id="APN-pB-53C"/>
+                            <constraint firstItem="hVf-ob-XKb" firstAttribute="trailing" secondItem="sdY-EJ-PUd" secondAttribute="trailing" id="G91-xO-pxn"/>
+                            <constraint firstItem="eHC-fp-Yqo" firstAttribute="top" secondItem="hVf-ob-XKb" secondAttribute="top" id="LAq-6j-WDS"/>
+                            <constraint firstItem="eHC-fp-Yqo" firstAttribute="leading" secondItem="Xi2-Tw-dFs" secondAttribute="leading" id="NKu-40-P7H"/>
+                            <constraint firstItem="hVf-ob-XKb" firstAttribute="trailing" secondItem="eHC-fp-Yqo" secondAttribute="trailing" id="Nmy-sC-R7U"/>
+                            <constraint firstItem="sdY-EJ-PUd" firstAttribute="leading" secondItem="hVf-ob-XKb" secondAttribute="leading" id="Yp5-rB-zb5"/>
+                            <constraint firstItem="hVf-ob-XKb" firstAttribute="bottom" secondItem="sdY-EJ-PUd" secondAttribute="bottom" id="s67-hM-zY5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dataStoarageTableView" destination="sdY-EJ-PUd" id="gh4-vd-fnS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kFD-qJ-imF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7689" y="744"/>
+        </scene>
         <!--Whats App Tab Bar Controller-->
         <scene sceneID="3fQ-0H-MEG">
             <objects>
@@ -846,8 +899,8 @@
         <image name="Tab 4 (1)" width="75" height="49"/>
         <image name="Tab 5" width="75" height="49"/>
         <image name="camera" catalog="system" width="128" height="93"/>
-        <image name="chevron.left" catalog="system" width="97" height="128"/>
-        <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <image name="chevron.left" catalog="system" width="32" height="32"/>
+        <image name="chevron.right" catalog="system" width="32" height="32"/>
         <image name="mic" catalog="system" width="110" height="128"/>
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
         <image name="video" catalog="system" width="128" height="82"/>

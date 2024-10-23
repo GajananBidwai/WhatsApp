@@ -87,6 +87,10 @@ extension WhatsAppSettingsViewController: UITableViewDataSource{
                 let notificationSettingsViewController = self.storyboard?.instantiateViewController(withIdentifier: "NotificationSettingsViewController") as! NotificationSettingsViewController
                 
                 self.navigationController?.pushViewController(notificationSettingsViewController, animated: true)
+            } else if indexPath.row == 3{
+                let dataAndStoarageUsageViewController = self.storyboard?.instantiateViewController(withIdentifier: "DataAndStoarageUsageViewController") as! DataAndStoarageUsageViewController
+                
+                self.navigationController?.pushViewController(dataAndStoarageUsageViewController, animated: true)
             }
             
         }
