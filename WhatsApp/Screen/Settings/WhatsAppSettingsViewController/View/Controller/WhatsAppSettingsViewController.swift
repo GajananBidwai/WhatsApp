@@ -92,7 +92,13 @@ extension WhatsAppSettingsViewController: UITableViewDataSource{
                 
                 self.navigationController?.pushViewController(dataAndStoarageUsageViewController, animated: true)
             }
-            
+        } else if indexPath.section == 0{
+            if indexPath.row == 0{
+                let starredMessagesViewController = self.storyboard?.instantiateViewController(withIdentifier: "StarredMessagesViewController") as! StarredMessagesViewController
+                
+                self.navigationController?.pushViewController(starredMessagesViewController, animated: true)
+                
+            }
         }
     }
     

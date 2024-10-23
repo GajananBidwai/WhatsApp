@@ -23,6 +23,7 @@
 		A9415CBE2CC623FD0066DCFB /* SettingsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9415CBD2CC623FD0066DCFB /* SettingsHeaderView.xib */; };
 		A94625272CC8B4C8003B5174 /* DataAndStoarageUsageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94625262CC8B4C8003B5174 /* DataAndStoarageUsageViewController.swift */; };
 		A94625292CC8BBBB003B5174 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94625282CC8BBBB003B5174 /* Extension.swift */; };
+		A946252D2CC8CAA6003B5174 /* StarredMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A946252C2CC8CAA6003B5174 /* StarredMessagesViewController.swift */; };
 		A94F42F12CC2331C006EEB7C /* WhatsAppContactInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94F42F02CC2331C006EEB7C /* WhatsAppContactInfoViewController.swift */; };
 		A94F42F32CC23554006EEB7C /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A94F42F22CC23554006EEB7C /* HeaderView.xib */; };
 		A94F42F52CC2381B006EEB7C /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94F42F42CC2381B006EEB7C /* HeaderView.swift */; };
@@ -109,6 +110,7 @@
 		A9415CBD2CC623FD0066DCFB /* SettingsHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsHeaderView.xib; sourceTree = "<group>"; };
 		A94625262CC8B4C8003B5174 /* DataAndStoarageUsageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAndStoarageUsageViewController.swift; sourceTree = "<group>"; };
 		A94625282CC8BBBB003B5174 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		A946252C2CC8CAA6003B5174 /* StarredMessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarredMessagesViewController.swift; sourceTree = "<group>"; };
 		A94F42F02CC2331C006EEB7C /* WhatsAppContactInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsAppContactInfoViewController.swift; sourceTree = "<group>"; };
 		A94F42F22CC23554006EEB7C /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		A94F42F42CC2381B006EEB7C /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -426,6 +428,22 @@
 			path = "View Controller";
 			sourceTree = "<group>";
 		};
+		A946252A2CC8CA7F003B5174 /* StarredMessages */ = {
+			isa = PBXGroup;
+			children = (
+				A946252B2CC8CA8A003B5174 /* View Controller */,
+			);
+			path = StarredMessages;
+			sourceTree = "<group>";
+		};
+		A946252B2CC8CA8A003B5174 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A946252C2CC8CAA6003B5174 /* StarredMessagesViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
 		A94F42EA2CC232BE006EEB7C /* WhatsAppContactInfo */ = {
 			isa = PBXGroup;
 			children = (
@@ -718,6 +736,7 @@
 		A9F4C95B2CBCF2FA0003CF24 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				A946252A2CC8CA7F003B5174 /* StarredMessages */,
 				A91824CD2CC685250036D99D /* Settings */,
 				A91824BF2CC6333E0036D99D /* TabBar */,
 				A94F42EA2CC232BE006EEB7C /* WhatsAppContactInfo */,
@@ -1099,6 +1118,7 @@
 				A92065F82CC0E00F00A25C76 /* ChatViewController.swift in Sources */,
 				A993F22C2CBE6B3500490B6D /* WhatsAppChatsViewController.swift in Sources */,
 				A9FD51562CBE407A007D076F /* GlobalConstants.swift in Sources */,
+				A946252D2CC8CAA6003B5174 /* StarredMessagesViewController.swift in Sources */,
 				A9415CB92CC6183D0066DCFB /* WhatsAppSetting.swift in Sources */,
 				A9F3D79B2CBFC97400E541DF /* WhatsAppCallViewController.swift in Sources */,
 			);

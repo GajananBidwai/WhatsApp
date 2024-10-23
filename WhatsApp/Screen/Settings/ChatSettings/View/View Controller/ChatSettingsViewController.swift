@@ -75,7 +75,7 @@ extension ChatSettingsViewController: UITableViewDataSource{
         if section == 1{
             let footerLabel = UILabel(frame: CGRect(x: 20, y: 0, width: self.view.frame.width, height: 40))
     
-           labelText(labelText: footerLabel, textForHeaderFooterView: "Automatically save photos and videos you receive to your iPhone’s Camera Roll.", headerViewAndFooterView: footerView)
+            labelText(labelText: footerLabel, textForHeaderFooterView: "Automatically save photos and videos you receive to your iPhone’s Camera Roll.", headerViewAndFooterView: footerView)
         }
         return footerView
     }
