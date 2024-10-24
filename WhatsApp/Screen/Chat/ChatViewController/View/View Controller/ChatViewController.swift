@@ -54,12 +54,24 @@ class ChatViewController: UIViewController {
         
         
         
-        let cameraAction = UIAlertAction(title: "Camera", style: .default)
-        let photosAction = UIAlertAction(title: "Photo & Video Library", style: .default)
-        let documentAction = UIAlertAction(title: "Document", style: .default)
-        let locationAction = UIAlertAction(title: "Location", style: .default)
-        let contactAction = UIAlertAction(title: "Contact", style: .default)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        let cameraAction = UIAlertAction(title: "Camera", style: .default) { _ in
+            print("Camera Pressed")
+        }
+        let photosAction = UIAlertAction(title: "Photo & Video Library", style: .default) { _ in
+            print("Photo Pressed")
+        }
+        let documentAction = UIAlertAction(title: "Document", style: .default) { _ in
+            print("Document Pressed")
+        }
+        let locationAction = UIAlertAction(title: "Location", style: .default) { _ in
+            print("Location Pressed")
+        }
+        let contactAction = UIAlertAction(title: "Contact", style: .default) { _ in
+            print("Contact Pressed")
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+            print("Cancel Pressed")
+        }
         
         
         cameraAction.setValue(cameraImage?.withRenderingMode(.alwaysOriginal), forKey: "image")

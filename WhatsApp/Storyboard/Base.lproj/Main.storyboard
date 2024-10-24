@@ -200,6 +200,21 @@
             </objects>
             <point key="canvasLocation" x="848" y="744"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="cWY-qT-dyV">
+            <objects>
+                <viewController id="6U6-YV-jMl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N5P-H4-dew">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="bDh-Sp-19I"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ZG-FV-oTr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="847" y="1437"/>
+        </scene>
         <!--Whats App Call View Controller-->
         <scene sceneID="whU-wX-pqJ">
             <objects>
@@ -266,17 +281,31 @@
             </objects>
             <point key="canvasLocation" x="1584" y="744"/>
         </scene>
-        <!--View Controller-->
+        <!--Camera View Controller-->
         <scene sceneID="Aho-Vf-u78">
             <objects>
-                <viewController id="JOZ-5h-yQS" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CameraViewController" id="JOZ-5h-yQS" customClass="CameraViewController" customModule="WhatsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VC2-g9-8hl">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g8t-bd-Xny">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Hb4-O9-4XY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="g8t-bd-Xny" firstAttribute="leading" secondItem="Hb4-O9-4XY" secondAttribute="leading" id="Dma-ul-tFV"/>
+                            <constraint firstItem="g8t-bd-Xny" firstAttribute="top" secondItem="Hb4-O9-4XY" secondAttribute="top" id="KRh-k6-Ckq"/>
+                            <constraint firstItem="Hb4-O9-4XY" firstAttribute="bottom" secondItem="g8t-bd-Xny" secondAttribute="bottom" id="Lu3-tD-38k"/>
+                            <constraint firstItem="Hb4-O9-4XY" firstAttribute="trailing" secondItem="g8t-bd-Xny" secondAttribute="trailing" id="w8v-De-asY"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="Tab 3" selectedImage="Tab 3" id="cuK-5F-zy1"/>
+                    <connections>
+                        <outlet property="cameraImageView" destination="g8t-bd-Xny" id="4oe-30-fFF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7HQ-Eq-XiI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -462,7 +491,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FTa-dy-qON" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3389" y="1449"/>
+            <point key="canvasLocation" x="3389" y="2059"/>
         </scene>
         <!--Edit Profile View Controller-->
         <scene sceneID="dM8-in-a9a">
@@ -490,8 +519,11 @@
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5ze-v0-n2B">
                                 <rect key="frame" x="0.0" y="99" width="393" height="719"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="qPD-vf-hIo" id="AEm-Q5-ZtN"/>
+                                    <outlet property="delegate" destination="qPD-vf-hIo" id="nch-WZ-YQP"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Hdd-S5-7mh"/>
@@ -512,7 +544,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2g7-OQ-6vw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3407" y="2824"/>
+            <point key="canvasLocation" x="3389" y="3389"/>
         </scene>
         <!--Edit Contact View Controller-->
         <scene sceneID="KJP-yS-d4Z">
@@ -566,7 +598,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bxl-h3-AeN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3408" y="2115"/>
+            <point key="canvasLocation" x="3389" y="2713"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="nEK-Cj-Dkb">
@@ -740,7 +772,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g0V-xS-Xgj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4455.7251908396947" y="1448.5915492957747"/>
+            <point key="canvasLocation" x="3389" y="1408"/>
         </scene>
         <!--Whats App Settings View Controller-->
         <scene sceneID="ncK-W3-pX5">
@@ -841,7 +873,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qMh-Iz-8fH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5319.8473282442746" y="733.80281690140851"/>
+            <point key="canvasLocation" x="4418" y="1408"/>
         </scene>
         <!--Chat Settings View Controller-->
         <scene sceneID="wgb-uD-har">
@@ -894,7 +926,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cnl-mZ-ykz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6129" y="734"/>
+            <point key="canvasLocation" x="4418" y="2058"/>
         </scene>
         <!--Notification Settings View Controller-->
         <scene sceneID="A3R-fr-FZt">
@@ -947,7 +979,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yU9-fD-A1E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6908" y="738"/>
+            <point key="canvasLocation" x="4418" y="2713"/>
         </scene>
         <!--Data And Stoarage Usage View Controller-->
         <scene sceneID="nRK-yF-a10">
@@ -1000,7 +1032,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kFD-qJ-imF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7689" y="744"/>
+            <point key="canvasLocation" x="4418" y="3389"/>
         </scene>
         <!--Starred Messages View Controller-->
         <scene sceneID="RPH-Y4-bTl">
@@ -1047,7 +1079,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vHj-L9-QxS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8453" y="744"/>
+            <point key="canvasLocation" x="4418" y="4061"/>
         </scene>
         <!--Whats App Tab Bar Controller-->
         <scene sceneID="3fQ-0H-MEG">

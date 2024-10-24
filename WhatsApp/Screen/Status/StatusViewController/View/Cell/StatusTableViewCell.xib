@@ -84,6 +84,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cameraButton" destination="MGH-rV-94u" id="hkz-oN-KSY"/>
+                <outlet property="statusOpen" destination="Jpo-Dc-k0b" id="Pox-Jq-vQF"/>
+            </connections>
             <point key="canvasLocation" x="0.0" y="29.929577464788736"/>
         </tableViewCell>
     </objects>

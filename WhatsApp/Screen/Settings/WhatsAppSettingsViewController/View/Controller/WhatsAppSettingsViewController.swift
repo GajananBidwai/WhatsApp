@@ -33,13 +33,19 @@ class WhatsAppSettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let settingsHeaderView = SettingsHeaderView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 125))
+        var settingsHeaderView = SettingsHeaderView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 125))
         WhatsAppSettingsTableView.tableHeaderView = settingsHeaderView
         self.navigationController?.navigationBar.isHidden = true
-        
+        var tapGesture = UITapGestureRecognizer(target: self, action: #selector(navigateToEditProfile))
+        settingsHeaderView.addGestureRecognizer(tapGesture)
         
     }
-    
+    @objc func navigateToEditProfile(){
+        let editProfileViewController = self.storyboard?.instantiateViewController(withIdentifier: "EditProfileViewController") as! EditProfileViewController
+        
+        self.navigationController?.pushViewController(editProfileViewController, animated: true)
+        
+    }
 }
 extension WhatsAppSettingsViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

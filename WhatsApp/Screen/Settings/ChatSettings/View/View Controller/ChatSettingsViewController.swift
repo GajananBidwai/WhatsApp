@@ -92,7 +92,6 @@ extension ChatSettingsViewController {
         labelText.font = UIFont.systemFont(ofSize: 14, weight: .light)
         labelText.textColor = UIColor(named: "lightgrey") ?? .black
         labelText.textAlignment = .left
-        
         headerViewAndFooterView.addSubview(labelText)
     }
 }
