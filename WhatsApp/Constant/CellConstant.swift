@@ -18,6 +18,7 @@ struct CellConstant{
         static let WhatsAppAccountTableViewCell = "WhatsAppAccountTableViewCell"
         static let SettingsTableViewCell = "SettingsTableViewCell"
         static let EditContactTableViewCell = "EditContactTableViewCell"
+        static let StatusTableViewCell = "StatusTableViewCell"
     }
     
 }

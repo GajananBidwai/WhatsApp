@@ -57,47 +57,6 @@ class EditContactTableViewCell: UITableViewCell {
             deleteButton.isHidden = false
         }
         
-        
-        
-//        switch editContact.title {
-//            
-//        case .textTitle:
-//            titleLabel.isHidden = false
-//            subtitleLabel.isHidden = false
-//            
-//        case .button:
-//            moreFieldsButton.isHidden = false
-//            
-//        case .buttonWithRightArrow:
-//            buttonWithRightArrow.isHidden = false
-//            subtitleLabel.isHidden = false
-//            
-//        case nil:
-//            titleLabel.isHidden = true
-//            subtitleLabel.isHidden = true
-//            buttonWithRightArrow.isHidden = true
-//            moreFieldsButton.isHidden = true
-//            arrowButton.isHidden = true
-//        
-//        case .some(.none):
-//            titleLabel.isHidden = true
-//            subtitleLabel.isHidden = true
-//            buttonWithRightArrow.isHidden = true
-//            moreFieldsButton.isHidden = true
-//            arrowButton.isHidden = true
-//        }
-//        
-//        switch editContact.subtitle {
-//        case .rightArrowButton:
-//            arrowButton.isHidden = false
-//        case nil:
-//            <#code#>
-//        case .some(.none):
-//            <#code#>
-//        }
-        
     }
 
-    
-    
 }

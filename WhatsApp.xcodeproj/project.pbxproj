@@ -61,6 +61,9 @@
 		A9F3D79B2CBFC97400E541DF /* WhatsAppCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F3D79A2CBFC97400E541DF /* WhatsAppCallViewController.swift */; };
 		A9F3D79E2CBFC9EA00E541DF /* WhatsAppCallTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9F3D79D2CBFC9EA00E541DF /* WhatsAppCallTableViewCell.xib */; };
 		A9F3D79F2CBFC9EA00E541DF /* WhatsAppCallTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F3D79C2CBFC9EA00E541DF /* WhatsAppCallTableViewCell.swift */; };
+		A9F47DBC2CCA0CE300F15178 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F47DBB2CCA0CE300F15178 /* StatusViewController.swift */; };
+		A9F47DBF2CCA0DCC00F15178 /* StatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F47DBD2CCA0DCC00F15178 /* StatusTableViewCell.swift */; };
+		A9F47DC02CCA0DCC00F15178 /* StatusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9F47DBE2CCA0DCC00F15178 /* StatusTableViewCell.xib */; };
 		A9F4C9272CBCF2E30003CF24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F4C9262CBCF2E30003CF24 /* AppDelegate.swift */; };
 		A9F4C9292CBCF2E30003CF24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F4C9282CBCF2E30003CF24 /* SceneDelegate.swift */; };
 		A9F4C92E2CBCF2E30003CF24 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A9F4C92D2CBCF2E30003CF24 /* Base */; };
@@ -153,6 +156,9 @@
 		A9F3D79A2CBFC97400E541DF /* WhatsAppCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsAppCallViewController.swift; sourceTree = "<group>"; };
 		A9F3D79C2CBFC9EA00E541DF /* WhatsAppCallTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsAppCallTableViewCell.swift; sourceTree = "<group>"; };
 		A9F3D79D2CBFC9EA00E541DF /* WhatsAppCallTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WhatsAppCallTableViewCell.xib; sourceTree = "<group>"; };
+		A9F47DBB2CCA0CE300F15178 /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		A9F47DBD2CCA0DCC00F15178 /* StatusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusTableViewCell.swift; sourceTree = "<group>"; };
+		A9F47DBE2CCA0DCC00F15178 /* StatusTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatusTableViewCell.xib; sourceTree = "<group>"; };
 		A9F4C9232CBCF2E30003CF24 /* WhatsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9F4C9262CBCF2E30003CF24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9F4C9282CBCF2E30003CF24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -745,6 +751,56 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		A9F47DB52CCA0C9C00F15178 /* StatusViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A9F47DB82CCA0CB400F15178 /* View Model */,
+				A9F47DB72CCA0CAB00F15178 /* View */,
+				A9F47DB62CCA0CA900F15178 /* Model */,
+			);
+			path = StatusViewController;
+			sourceTree = "<group>";
+		};
+		A9F47DB62CCA0CA900F15178 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A9F47DB72CCA0CAB00F15178 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A9F47DBA2CCA0CC100F15178 /* Cell */,
+				A9F47DB92CCA0CBE00F15178 /* View Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A9F47DB82CCA0CB400F15178 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		A9F47DB92CCA0CBE00F15178 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A9F47DBB2CCA0CE300F15178 /* StatusViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		A9F47DBA2CCA0CC100F15178 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A9F47DBD2CCA0DCC00F15178 /* StatusTableViewCell.swift */,
+				A9F47DBE2CCA0DCC00F15178 /* StatusTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		A9F4C91A2CBCF2E30003CF24 = {
 			isa = PBXGroup;
 			children = (
@@ -821,6 +877,7 @@
 		A9F4C95B2CBCF2FA0003CF24 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				A9F47DB52CCA0C9C00F15178 /* StatusViewController */,
 				A94625332CC8E819003B5174 /* EditContact */,
 				A946252E2CC8D094003B5174 /* EditProfile */,
 				A946252A2CC8CA7F003B5174 /* StarredMessages */,
@@ -1027,6 +1084,7 @@
 			files = (
 				A993F24A2CBE871000490B6D /* SFProText-HeavyItalic.ttf in Resources */,
 				A993F2462CBE871000490B6D /* SFPro_Font_License.rtf in Resources */,
+				A9F47DC02CCA0DCC00F15178 /* StatusTableViewCell.xib in Resources */,
 				A91824CA2CC676900036D99D /* WhatsAppAccountTableViewCell.xib in Resources */,
 				A91824BD2CC62F2E0036D99D /* WhatsAppSettingsTableViewCell.xib in Resources */,
 				A993F2452CBE871000490B6D /* COPYRIGHT.txt in Resources */,
@@ -1180,6 +1238,7 @@
 			files = (
 				A94625272CC8B4C8003B5174 /* DataAndStoarageUsageViewController.swift in Sources */,
 				A9F4C9312CBCF2E30003CF24 /* WhatsApp.xcdatamodeld in Sources */,
+				A9F47DBF2CCA0DCC00F15178 /* StatusTableViewCell.swift in Sources */,
 				A94F42F12CC2331C006EEB7C /* WhatsAppContactInfoViewController.swift in Sources */,
 				A9DF6EDB2CC76A9F0044C0AC /* SettingsTableViewCell.swift in Sources */,
 				A91824D62CC689F80036D99D /* Settings.swift in Sources */,
@@ -1194,6 +1253,7 @@
 				A91824BE2CC62F2E0036D99D /* WhatsAppSettingsTableViewCell.swift in Sources */,
 				A946253F2CC8EA19003B5174 /* EditContactTableViewCell.swift in Sources */,
 				A91824CB2CC676900036D99D /* WhatsAppAccountTableViewCell.swift in Sources */,
+				A9F47DBC2CCA0CE300F15178 /* StatusViewController.swift in Sources */,
 				A9F3D7972CBFC90400E541DF /* WhatsAppCall.swift in Sources */,
 				A9F4C96F2CBD39B60003CF24 /* AuthenticationViewController.swift in Sources */,
 				A94625302CC8D0BF003B5174 /* EditProfileViewController.swift in Sources */,

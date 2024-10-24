@@ -21,27 +21,3 @@ struct EditContact{
     var rowType: RowType
     
 }
-
-
-
-
-
-
-
-
-//enum Title{  // ContactCellType
-//    case textTitle
-//    case button
-//    case buttonWithRightArrow
-//    case none
-//}
-//enum Subtitle{
-//    case rightArrowButton
-//    case none
-//}
-//struct EditContact{
-//    var label: String
-//    var titleType: Title?
-//    var subtitle: Subtitle?
-//    var buttonTextColor: UIColor
-//}

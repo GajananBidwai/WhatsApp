@@ -41,7 +41,7 @@ class AuthenticationViewController: UIViewController {
     }
     
   
-    func getAllCountryCodes() -> [[String]] {
+    open func getAllCountryCodes() -> [[String]] {
         var countrys = [[String]]()
         let countryList = GlobalConstants.Constants.codePrefixes
         for item in countryList {
@@ -53,7 +53,7 @@ class AuthenticationViewController: UIViewController {
     
     // MARK: - Create UIPickerView
     
-    func picker(){
+    open func picker(){
         let picker = UIPickerView()
         picker.delegate = self
         picker.dataSource = self

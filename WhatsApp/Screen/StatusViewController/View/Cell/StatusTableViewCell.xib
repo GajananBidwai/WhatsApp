@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="73" id="KGk-i7-Jjw" customClass="StatusTableViewCell" customModule="WhatsApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Oval(1)" translatesAutoresizingMaskIntoConstraints="NO" id="L0m-Y3-SR3">
+                        <rect key="frame" x="5" y="5" width="60" height="63"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="LKq-9l-msa"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hq0-oH-Ohw">
+                        <rect key="frame" x="45" y="48" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="5pp-qw-U2i"/>
+                            <constraint firstAttribute="height" constant="20" id="oR1-Z0-Lz5"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <buttonConfiguration key="configuration" style="plain" image="Add New Photo"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jpo-Dc-k0b">
+                        <rect key="frame" x="260" y="14" width="45" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="45" id="HTT-vU-cOx"/>
+                            <constraint firstAttribute="height" constant="45" id="M5u-b0-7Qe"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="Edit"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGH-rV-94u">
+                        <rect key="frame" x="205" y="14" width="45" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="4pw-IR-rRb"/>
+                            <constraint firstAttribute="width" constant="45" id="4qc-E3-PeA"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="Camera 1"/>
+                    </button>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ETG-6H-uNo">
+                        <rect key="frame" x="75" y="14.666666666666668" width="120" height="43.666666666666657"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="My Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcH-Fw-fCg">
+                                <rect key="frame" x="0.0" y="0.0" width="120" height="19.333333333333332"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add to my Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iL5-5Y-Mfv">
+                                <rect key="frame" x="0.0" y="24.333333333333336" width="120" height="19.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="L0m-Y3-SR3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="9lX-6l-4v3"/>
+                    <constraint firstItem="MGH-rV-94u" firstAttribute="leading" secondItem="ETG-6H-uNo" secondAttribute="trailing" constant="10" id="Ayb-hk-rc8"/>
+                    <constraint firstItem="Hq0-oH-Ohw" firstAttribute="bottom" secondItem="L0m-Y3-SR3" secondAttribute="bottom" id="Nxe-no-ZE5"/>
+                    <constraint firstItem="MGH-rV-94u" firstAttribute="centerY" secondItem="L0m-Y3-SR3" secondAttribute="centerY" id="RFy-BX-o1e"/>
+                    <constraint firstItem="Hq0-oH-Ohw" firstAttribute="trailing" secondItem="L0m-Y3-SR3" secondAttribute="trailing" id="Z7h-bq-HYZ"/>
+                    <constraint firstItem="ETG-6H-uNo" firstAttribute="leading" secondItem="L0m-Y3-SR3" secondAttribute="trailing" constant="10" id="cXE-YU-svr"/>
+                    <constraint firstItem="Jpo-Dc-k0b" firstAttribute="centerY" secondItem="L0m-Y3-SR3" secondAttribute="centerY" id="cbi-Wt-sbf"/>
+                    <constraint firstAttribute="bottom" secondItem="L0m-Y3-SR3" secondAttribute="bottom" constant="5" id="hpW-GC-Ci2"/>
+                    <constraint firstAttribute="trailing" secondItem="Jpo-Dc-k0b" secondAttribute="trailing" constant="15" id="mcj-Xx-IGx"/>
+                    <constraint firstItem="L0m-Y3-SR3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="nik-dm-BJF"/>
+                    <constraint firstItem="ETG-6H-uNo" firstAttribute="centerY" secondItem="L0m-Y3-SR3" secondAttribute="centerY" id="smw-LP-ktG"/>
+                    <constraint firstItem="Jpo-Dc-k0b" firstAttribute="leading" secondItem="MGH-rV-94u" secondAttribute="trailing" constant="10" id="zx6-2q-zXC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="0.0" y="29.929577464788736"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Add New Photo" width="20" height="21"/>
+        <image name="Camera 1" width="36" height="36"/>
+        <image name="Edit" width="36" height="36"/>
+        <image name="Oval(1)" width="58" height="58"/>
+    </resources>
+</document>

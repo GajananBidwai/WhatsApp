@@ -45,36 +45,36 @@ class ChatViewController: UIViewController {
         
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
-        let contactImage = UIImage(named: "Contact")
-        let locationImage = UIImage(named: "Location")
-        let documentImage = UIImage(named: "Documents")
-        let photosImage = UIImage(named: "Photos")
         let cameraImage = UIImage(named: "Camera")
+        let photosImage = UIImage(named: "Photos")
+        let documentImage = UIImage(named: "Documents")
+        let locationImage = UIImage(named: "Location")
+        let contactImage = UIImage(named: "Contact")
         
-        let contactAction = UIAlertAction(title: "Contact", style: .default) { _ in
-            let whatsAppContactInfoViewController = self.storyboard?.instantiateViewController(withIdentifier: "WhatsAppContactInfoViewController") as! WhatsAppContactInfoViewController
-            
-            whatsAppContactInfoViewController.chats = self.chats
-            
-            self.navigationController?.pushViewController(whatsAppContactInfoViewController, animated: true)
-        }
-        let locationAction = UIAlertAction(title: "Location", style: .default)
-        let documentAction = UIAlertAction(title: "Document", style: .default)
-        let photosAction = UIAlertAction(title: "Photo & Video Library", style: .default)
+        
+        
+        
         let cameraAction = UIAlertAction(title: "Camera", style: .default)
+        let photosAction = UIAlertAction(title: "Photo & Video Library", style: .default)
+        let documentAction = UIAlertAction(title: "Document", style: .default)
+        let locationAction = UIAlertAction(title: "Location", style: .default)
+        let contactAction = UIAlertAction(title: "Contact", style: .default)
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         
-        contactAction.setValue(contactImage?.withRenderingMode(.alwaysOriginal), forKey: "image")
-        locationAction.setValue(locationImage?.withRenderingMode(.alwaysOriginal), forKey: "image")
-        documentAction.setValue(documentImage?.withRenderingMode(.alwaysOriginal), forKey: "image")
-        photosAction.setValue(photosImage?.withRenderingMode(.alwaysOriginal), forKey: "image")
+        
         cameraAction.setValue(cameraImage?.withRenderingMode(.alwaysOriginal), forKey: "image")
-
-        alertController.addAction(contactAction)
-        alertController.addAction(locationAction)
-        alertController.addAction(documentAction)
-        alertController.addAction(photosAction)
+        photosAction.setValue(photosImage?.withRenderingMode(.alwaysOriginal), forKey: "image")
+        documentAction.setValue(documentImage?.withRenderingMode(.alwaysOriginal), forKey: "image")
+        locationAction.setValue(locationImage?.withRenderingMode(.alwaysOriginal), forKey: "image")
+        contactAction.setValue(contactImage?.withRenderingMode(.alwaysOriginal), forKey: "image")
+        
+        
         alertController.addAction(cameraAction)
+        alertController.addAction(photosAction)
+        alertController.addAction(documentAction)
+        alertController.addAction(locationAction)
+        alertController.addAction(contactAction)
+        
         alertController.addAction(cancelAction)
         self.present(alertController, animated: true)
         

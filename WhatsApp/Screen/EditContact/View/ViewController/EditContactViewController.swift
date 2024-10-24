@@ -57,6 +57,4 @@ extension EditContactViewController: UITableViewDataSource{
         return editContactTableViewCell
         
     }
-    
-    
 }
