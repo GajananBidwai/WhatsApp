@@ -17,6 +17,7 @@
 		A91824CB2CC676900036D99D /* WhatsAppAccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91824C82CC676900036D99D /* WhatsAppAccountTableViewCell.swift */; };
 		A91824D12CC685800036D99D /* ChatSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91824D02CC685800036D99D /* ChatSettingsViewController.swift */; };
 		A91824D62CC689F80036D99D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91824D52CC689F80036D99D /* Settings.swift */; };
+		A91E099D2CCB6A9E00CCFF2E /* Camera1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91E099C2CCB6A9E00CCFF2E /* Camera1ViewController.swift */; };
 		A92065F82CC0E00F00A25C76 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92065F72CC0E00F00A25C76 /* ChatViewController.swift */; };
 		A9415CB72CC617520066DCFB /* WhatsAppSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9415CB62CC617520066DCFB /* WhatsAppSettingsViewController.swift */; };
 		A9415CB92CC6183D0066DCFB /* WhatsAppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9415CB82CC6183D0066DCFB /* WhatsAppSetting.swift */; };
@@ -118,6 +119,7 @@
 		A91824C92CC676900036D99D /* WhatsAppAccountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WhatsAppAccountTableViewCell.xib; sourceTree = "<group>"; };
 		A91824D02CC685800036D99D /* ChatSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSettingsViewController.swift; sourceTree = "<group>"; };
 		A91824D52CC689F80036D99D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		A91E099C2CCB6A9E00CCFF2E /* Camera1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera1ViewController.swift; sourceTree = "<group>"; };
 		A92065F72CC0E00F00A25C76 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		A9415CB62CC617520066DCFB /* WhatsAppSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsAppSettingsViewController.swift; sourceTree = "<group>"; };
 		A9415CB82CC6183D0066DCFB /* WhatsAppSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsAppSetting.swift; sourceTree = "<group>"; };
@@ -346,6 +348,14 @@
 			children = (
 			);
 			path = "View Model";
+			sourceTree = "<group>";
+		};
+		A91E099B2CCB6A8500CCFF2E /* Camera1 */ = {
+			isa = PBXGroup;
+			children = (
+				A91E099C2CCB6A9E00CCFF2E /* Camera1ViewController.swift */,
+			);
+			path = Camera1;
 			sourceTree = "<group>";
 		};
 		A92065F22CC0DFCA00A25C76 /* ChatViewController */ = {
@@ -838,6 +848,7 @@
 		A9F47DC32CCA209500F15178 /* Camera */ = {
 			isa = PBXGroup;
 			children = (
+				A91E099B2CCB6A8500CCFF2E /* Camera1 */,
 				A9F47DC72CCA377C00F15178 /* ViewModel */,
 				A9F47DC62CCA377300F15178 /* View */,
 				A9F47DC52CCA377000F15178 /* Model */,
@@ -1363,6 +1374,7 @@
 				A9F4C9272CBCF2E30003CF24 /* AppDelegate.swift in Sources */,
 				A9DF6EE82CC7A7E70044C0AC /* NotificationSettingsViewController.swift in Sources */,
 				A9F47DD62CCA723100F15178 /* EditProfile.swift in Sources */,
+				A91E099D2CCB6A9E00CCFF2E /* Camera1ViewController.swift in Sources */,
 				A94625292CC8BBBB003B5174 /* Extension.swift in Sources */,
 				A9F4C9292CBCF2E30003CF24 /* SceneDelegate.swift in Sources */,
 				A91824B62CC624540036D99D /* SettingsHeaderView.swift in Sources */,
@@ -1557,6 +1569,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WM6LMW58YJ;
@@ -1576,6 +1589,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gajananbidwai.WhatsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

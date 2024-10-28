@@ -61,6 +61,7 @@ extension WhatsAppCallViewController: UITableViewDataSource{
         
         whatsAppCallTableViewCell.whatsAppCall = whatsAppCall[indexPath.row]
         whatsAppCallTableViewCell.configureData()
+        whatsAppCallTableViewCell.selectionStyle = .none
         return whatsAppCallTableViewCell
     }
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

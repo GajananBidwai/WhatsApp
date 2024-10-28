@@ -53,6 +53,8 @@ extension EditProfileViewController: UITableViewDataSource{
         
         let model = editProfile[indexPath.section][indexPath.row]
         editProfileTableViewCell.configureData(editProfile: model)
+        editProfileTableViewCell.selectionStyle = .none
+        
         
         return editProfileTableViewCell
     }

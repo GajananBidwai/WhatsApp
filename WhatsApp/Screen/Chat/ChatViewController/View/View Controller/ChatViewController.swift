@@ -15,8 +15,7 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var lastActiveLabel: UILabel!
     @IBOutlet weak var plusButton: UIButton!
     @IBOutlet weak var userInputTextField: UITextField!
-    
-    
+    @IBOutlet weak var userProfileImageView: UIImageView!
     
     var chats: Chats?
     override func viewDidLoad() {
@@ -24,11 +23,10 @@ class ChatViewController: UIViewController {
         addButtonInTextField()
         self.navigationItem.setHidesBackButton(true, animated: true)
         nameLabel.text = chats?.name
-        
+        userProfileImageView.image = chats?.profileImage
     }
     
 
-    
     @IBAction func backButtonAction(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }

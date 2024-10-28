@@ -53,15 +53,16 @@ extension WhatsAppContactInfoViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let contactInfoTableViewCell = self.contactInfoTableView.dequeueReusableCell(withIdentifier: CellConstant.CellIdentifier.ContactInfoTableViewCell) as! ContactInfoTableViewCell
-            
-//            contactInfoTableViewCell.functionalityNameLabel.text = contactInfo[indexPath.section][indexPath.row].title
-//            contactInfoTableViewCell.funtionalityStatusLabel.text = contactInfo[indexPath.section][indexPath.row].subtitle
-//            contactInfoTableViewCell.functionalityIcon.image = contactInfo[indexPath.section][indexPath.row].image
-//        
-        contactInfoTableViewCell.configureData(contactInfo: contactInfo[indexPath.section][indexPath.row])
+        let contactInfoTableViewCell = self.contactInfoTableView.dequeueReusableCell(withIdentifier: CellConstant.CellIdentifier.ContactInfoTableViewCell) as! ContactInfoTableViewCell
         
-            return contactInfoTableViewCell
+        //            contactInfoTableViewCell.functionalityNameLabel.text = contactInfo[indexPath.section][indexPath.row].title
+        //            contactInfoTableViewCell.funtionalityStatusLabel.text = contactInfo[indexPath.section][indexPath.row].subtitle
+        //            contactInfoTableViewCell.functionalityIcon.image = contactInfo[indexPath.section][indexPath.row].image
+        //
+        contactInfoTableViewCell.configureData(contactInfo: contactInfo[indexPath.section][indexPath.row])
+        contactInfoTableViewCell.selectionStyle = .none
+        
+        return contactInfoTableViewCell
         
         
     }

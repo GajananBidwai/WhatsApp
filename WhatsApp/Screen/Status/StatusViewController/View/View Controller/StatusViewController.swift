@@ -45,7 +45,7 @@ extension StatusViewController: UITableViewDataSource{
         let statusTableViewCell = self.statusTableView.dequeueReusableCell(withIdentifier: CellConstant.CellIdentifier.StatusTableViewCell) as! StatusTableViewCell
         
         statusTableViewCell.cameraButton.addTarget(self, action: #selector(openCamera), for: .touchUpInside)
-        
+        statusTableViewCell.selectionStyle = .none
         return statusTableViewCell
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -73,7 +73,10 @@ extension StatusViewController: UITableViewDataSource{
         
     }
     @objc func openCamera(){
-        OpenCamera()
+        let camera1ViewController = self.storyboard?.instantiateViewController(identifier: "Camera1ViewController") as! Camera1ViewController
+        
+        self.navigationController?.pushViewController(camera1ViewController, animated: true)
+     //   OpenCamera()
     }
     
 }

@@ -49,7 +49,7 @@ class WhatsAppChatsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         activeButtonContainerView.isHidden = true
-       
+        
     }
     
     @IBAction func editButton(_ sender: Any) {
@@ -110,7 +110,7 @@ extension WhatsAppChatsViewController: UITableViewDataSource{
 //        chatsTableViewCell.userDescription.text = chats[indexPath.row].description
 //        chatsTableViewCell.dateLabel.text = chats[indexPath.row].date
         chatsTableViewCell.configureData(chat: chats[indexPath.row])
-        
+        chatsTableViewCell.selectionStyle = .none
         if tableView.isEditing {
             let isSelected = tableView.indexPathsForSelectedRows?.contains(indexPath) ?? false
             chatsTableViewCell.updateSelectionIndicator(isSelected: isSelected)

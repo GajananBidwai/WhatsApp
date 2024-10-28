@@ -53,6 +53,7 @@ extension EditContactViewController: UITableViewDataSource{
         
         let model = editContact[indexPath.row]
         editContactTableViewCell.configureData(editContact: model)
+        editContactTableViewCell.selectionStyle = .none
         
         return editContactTableViewCell
         

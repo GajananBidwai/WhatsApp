@@ -60,7 +60,7 @@ extension DataAndStoarageUsageViewController: UITableViewDataSource{
         
         let model = dataStoarageSetting[indexPath.section][indexPath.row]
         settingsTableViewCell.configure(with: model)
-        
+        settingsTableViewCell.selectionStyle = .none
         return settingsTableViewCell
     }
     

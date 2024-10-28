@@ -49,6 +49,7 @@ extension WhatsAppAccountViewController: UITableViewDataSource{
         let whatsAppAccountTableViewCell = self.whatsAppAccountTableView.dequeueReusableCell(withIdentifier: CellConstant.CellIdentifier.WhatsAppAccountTableViewCell) as! WhatsAppAccountTableViewCell
         
         whatsAppAccountTableViewCell.accountTitleLabel.text = account[indexPath.section][indexPath.row]
+        whatsAppAccountTableViewCell.selectionStyle = .none
         
         return whatsAppAccountTableViewCell
     }

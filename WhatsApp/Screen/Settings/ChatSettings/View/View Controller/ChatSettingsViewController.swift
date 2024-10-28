@@ -56,7 +56,7 @@ extension ChatSettingsViewController: UITableViewDataSource{
         
         let model = settings[indexPath.section][indexPath.row]
         settingsTableViewCell.configure(with: model)
-        
+        settingsTableViewCell.selectionStyle = .none
         
         return settingsTableViewCell
     }

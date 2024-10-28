@@ -65,6 +65,7 @@ extension WhatsAppSettingsViewController: UITableViewDataSource{
         
         whatsAppSettingsTableViewCell.settingsIcon.image = WhatsAppSettings[indexPath.section][indexPath.row].image
         whatsAppSettingsTableViewCell.settingsTitle.text = WhatsAppSettings[indexPath.section][indexPath.row].title
+        whatsAppSettingsTableViewCell.selectionStyle = .none
         
         return whatsAppSettingsTableViewCell
     }

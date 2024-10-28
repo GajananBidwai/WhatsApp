@@ -57,6 +57,7 @@ extension NotificationSettingsViewController: UITableViewDataSource{
         let model = notificationSettings[indexPath.section][indexPath.row]
         settingsTableViewCell.configure(with: model)
         settingsTableViewCell.buttonTitle.backgroundColor = .red
+        settingsTableViewCell.selectionStyle = .none
         
         return settingsTableViewCell
     }

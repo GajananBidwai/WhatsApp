@@ -22,6 +22,8 @@
 		</dict>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>Please allow access the camera</string>
+	<string>Please allow to take photo.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Please allow to record audio.</string>
 </dict>
 </plist>
