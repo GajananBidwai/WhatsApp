@@ -24,7 +24,7 @@ class WhatsAppAccountViewController: UIViewController {
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = true
         navigationController?.navigationItem.backButtonTitle = "Account"
-        
+        whatsAppAccountTableView.showsVerticalScrollIndicator = false
     }
     
     @IBAction func backButton(_ sender: Any) {

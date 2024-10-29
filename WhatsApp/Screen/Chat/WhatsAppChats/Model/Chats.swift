@@ -12,4 +12,5 @@ struct Chats{
     var description: String
     var date: String
     var profileImage: UIImage
+    var contactNumber: String
 }

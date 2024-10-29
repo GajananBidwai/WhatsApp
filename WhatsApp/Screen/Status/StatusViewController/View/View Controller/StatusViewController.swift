@@ -24,6 +24,7 @@ class StatusViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
 //        setupCamera()
 //        setupUI()
+        statusTableView.showsVerticalScrollIndicator = false
         
     }
     

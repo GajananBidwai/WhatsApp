@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="contactLabel" destination="qhI-Cc-7j3" id="QlQ-CD-bWD"/>
                 <outlet property="nameLabel" destination="Zzt-Pz-CBX" id="wqi-at-zK0"/>
+                <outlet property="profileImageView" destination="bGW-9Y-NWt" id="M3O-Yz-u1M"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -20,7 +21,7 @@
             <rect key="frame" x="0.0" y="0.0" width="308" height="375"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UserContactImage" translatesAutoresizingMaskIntoConstraints="NO" id="bGW-9Y-NWt">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bGW-9Y-NWt">
                     <rect key="frame" x="0.0" y="0.0" width="308" height="250"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="250" id="hgq-8x-JrI"/>
@@ -159,7 +160,6 @@
     </objects>
     <resources>
         <image name="Call" width="36" height="36"/>
-        <image name="UserContactImage" width="375" height="376"/>
         <image name="Video Call" width="36" height="36"/>
         <image name="Write" width="36" height="36"/>
         <systemColor name="systemBackgroundColor">

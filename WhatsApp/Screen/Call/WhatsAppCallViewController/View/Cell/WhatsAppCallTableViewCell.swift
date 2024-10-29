@@ -26,6 +26,7 @@ class WhatsAppCallTableViewCell: UITableViewCell {
         nameLabel.text = whatsAppCall?.name
         callLabel.text = whatsAppCall?.callTitle
         dateLabel.text = whatsAppCall?.date
+        userImageView.image = whatsAppCall?.userProfileImage
     }
     
 }

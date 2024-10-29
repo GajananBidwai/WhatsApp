@@ -27,7 +27,7 @@ class EditProfileViewController: UIViewController {
         let editProfileHeaderView = EditProfileHeaderView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 280))
         
         editProfileTableView.tableHeaderView = editProfileHeaderView
-        
+        editProfileTableView.showsVerticalScrollIndicator = false
     }
     
     @IBAction func backButtonTap(_ sender: Any) {

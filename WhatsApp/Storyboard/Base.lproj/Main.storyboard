@@ -316,6 +316,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="8iW-zs-Dwe"/>
                                 </constraints>
+                                <color key="barTintColor" systemColor="systemGray6Color"/>
                                 <items>
                                     <navigationItem id="eCx-Ac-cyF">
                                         <nil key="title"/>
@@ -324,7 +325,7 @@
                                                 <action selector="editButtonTap:" destination="061-sW-3eo" id="TdD-J9-U5Y"/>
                                             </connections>
                                         </barButtonItem>
-                                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="kdk-c0-TMw">
+                                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="gsQ-HV-Rdf">
                                             <rect key="frame" x="118" y="5.6666666666666679" width="157" height="33"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -332,8 +333,8 @@
                                                 <segment title="All"/>
                                                 <segment title="Missed"/>
                                             </segments>
-                                            <color key="tintColor" systemColor="tintColor"/>
-                                            <color key="selectedSegmentTintColor" systemColor="tintColor"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="selectedSegmentTintColor" red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </segmentedControl>
                                         <barButtonItem key="rightBarButtonItem" title="Item" image="Call Icon" style="plain" id="KQ6-H2-Qo1"/>
                                     </navigationItem>
@@ -349,7 +350,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2nQ-BW-NXt"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="2nQ-BW-NXt" firstAttribute="bottom" secondItem="9YT-cq-31i" secondAttribute="bottom" id="1vH-cb-meu"/>
                             <constraint firstItem="2nQ-BW-NXt" firstAttribute="trailing" secondItem="9YT-cq-31i" secondAttribute="trailing" id="HI8-1f-Ar9"/>
@@ -362,12 +363,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="Tab 2" selectedImage="Tab 2" id="Bet-bQ-QgT"/>
                     <connections>
+                        <outlet property="callSegment" destination="gsQ-HV-Rdf" id="rcN-rP-ojb"/>
                         <outlet property="whatsAppCallsTableView" destination="9YT-cq-31i" id="IaS-TF-G0Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ak-A1-yif" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1584" y="744"/>
+            <point key="canvasLocation" x="1583.9694656488548" y="743.66197183098598"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="Aho-Vf-u78">
@@ -382,7 +384,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Hb4-O9-4XY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="g8t-bd-Xny" firstAttribute="leading" secondItem="Hb4-O9-4XY" secondAttribute="leading" id="Dma-ul-tFV"/>
                             <constraint firstItem="g8t-bd-Xny" firstAttribute="top" secondItem="Hb4-O9-4XY" secondAttribute="top" id="KRh-k6-Ckq"/>
@@ -793,14 +795,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnT-78-S6y">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tap here for contact info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnT-78-S6y">
                                 <rect key="frame" x="95" y="88" width="137" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="2Vx-Fo-Nhd"/>
                                     <constraint firstAttribute="width" constant="137" id="KfU-Bo-fI9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kw4-1c-359">
@@ -872,7 +874,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7bY-EX-Bki">
-                                <rect key="frame" x="0.0" y="59" width="393" height="40"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Yrb-6q-Zbd"/>
                                 </constraints>
@@ -882,7 +884,7 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NUJ-Tm-vPr">
-                                <rect key="frame" x="0.0" y="99" width="393" height="670"/>
+                                <rect key="frame" x="0.0" y="143" width="393" height="626"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="5dd-vD-ljS" id="Oin-gQ-WOm"/>
@@ -902,14 +904,14 @@
                             <constraint firstItem="7bY-EX-Bki" firstAttribute="leading" secondItem="Pal-nS-wsB" secondAttribute="leading" id="wP6-9w-Jgj"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="Tab 5" selectedImage="Tab 5" id="rcz-4D-pWU"/>
+                    <navigationItem key="navigationItem" id="LaN-PM-eSt"/>
                     <connections>
                         <outlet property="WhatsAppSettingsTableView" destination="NUJ-Tm-vPr" id="ABZ-vW-DiQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lja-iT-ud0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4418" y="734"/>
+            <point key="canvasLocation" x="5344.2748091603053" y="733.80281690140851"/>
         </scene>
         <!--Whats App Account View Controller-->
         <scene sceneID="2X4-Fc-YmP">
@@ -1183,7 +1185,7 @@
                         <segue destination="061-sW-3eo" kind="relationship" relationship="viewControllers" id="VB0-O5-FiO"/>
                         <segue destination="JOZ-5h-yQS" kind="relationship" relationship="viewControllers" id="KLt-HS-zU4"/>
                         <segue destination="BL9-7P-sOi" kind="relationship" relationship="viewControllers" id="m6R-12-jyG"/>
-                        <segue destination="5dd-vD-ljS" kind="relationship" relationship="viewControllers" id="Cv1-vB-u5o"/>
+                        <segue destination="kVf-WY-Ea7" kind="relationship" relationship="viewControllers" id="Cv1-vB-u5o"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FfZ-ay-Pke" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1208,6 +1210,25 @@
             </objects>
             <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PFA-oP-6ah">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kVf-WY-Ea7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Tab 5" selectedImage="Tab 5" id="rcz-4D-pWU"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cab-l6-d6C">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5dd-vD-ljS" kind="relationship" relationship="rootViewController" id="7Vg-ZW-w07"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oZO-EJ-gPU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4417.5572519083971" y="733.80281690140851"/>
+        </scene>
     </scenes>
     <resources>
         <image name="BackGround" width="375" height="724"/>
@@ -1225,7 +1246,7 @@
         <image name="Take Photo" width="71" height="71"/>
         <image name="Tip" width="327" height="230"/>
         <image name="camera" catalog="system" width="128" height="93"/>
-        <image name="chevron.left" catalog="system" width="97" height="128"/>
+        <image name="chevron.left" catalog="system" width="32" height="32"/>
         <image name="chevron.right" catalog="system" width="32" height="32"/>
         <image name="mic" catalog="system" width="110" height="128"/>
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>

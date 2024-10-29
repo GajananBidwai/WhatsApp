@@ -38,6 +38,7 @@ class WhatsAppSettingsViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
         var tapGesture = UITapGestureRecognizer(target: self, action: #selector(navigateToEditProfile))
         settingsHeaderView.addGestureRecognizer(tapGesture)
+        WhatsAppSettingsTableView.showsVerticalScrollIndicator = false
         
     }
     @objc func navigateToEditProfile(){
@@ -84,25 +85,33 @@ extension WhatsAppSettingsViewController: UITableViewDataSource{
             if indexPath.row == 0{
                 let whatsAppAccountViewController = self.storyboard?.instantiateViewController(identifier: "WhatsAppAccountViewController") as! WhatsAppAccountViewController
                 
+                whatsAppAccountViewController.hidesBottomBarWhenPushed = false
+                
                 self.navigationController?.pushViewController(whatsAppAccountViewController, animated: true)
                 
             } else if indexPath.row == 1{
                 let chatSettingsViewController = self.storyboard?.instantiateViewController(withIdentifier: "ChatSettingsViewController") as! ChatSettingsViewController
                 
+                chatSettingsViewController.hidesBottomBarWhenPushed = false
+                
                 self.navigationController?.pushViewController(chatSettingsViewController, animated: true)
             } else if indexPath.row == 2{
                 let notificationSettingsViewController = self.storyboard?.instantiateViewController(withIdentifier: "NotificationSettingsViewController") as! NotificationSettingsViewController
                 
+                notificationSettingsViewController.hidesBottomBarWhenPushed = false
+                
                 self.navigationController?.pushViewController(notificationSettingsViewController, animated: true)
             } else if indexPath.row == 3{
                 let dataAndStoarageUsageViewController = self.storyboard?.instantiateViewController(withIdentifier: "DataAndStoarageUsageViewController") as! DataAndStoarageUsageViewController
+                
+                dataAndStoarageUsageViewController.hidesBottomBarWhenPushed = false
                 
                 self.navigationController?.pushViewController(dataAndStoarageUsageViewController, animated: true)
             }
         } else if indexPath.section == 0{
             if indexPath.row == 0{
                 let starredMessagesViewController = self.storyboard?.instantiateViewController(withIdentifier: "StarredMessagesViewController") as! StarredMessagesViewController
-                
+                starredMessagesViewController.hidesBottomBarWhenPushed = true
                 self.navigationController?.pushViewController(starredMessagesViewController, animated: true)
                 
             }

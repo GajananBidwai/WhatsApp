@@ -9,14 +9,32 @@ import UIKit
 
 class WhatsAppCallViewController: UIViewController {
 
-    var whatsAppCall = [WhatsAppCall(name: "Gajanan Bidwai", callTitle: "ongoing", date: "16/10/20234"),
-                        WhatsAppCall(name: "Gajanan Bidwai", callTitle: "incoming", date: "16/10/20234"),
-                        WhatsAppCall(name: "Gajanan Bidwai", callTitle: "ongoing", date: "16/10/20234"),
-                        WhatsAppCall(name: "Gajanan Bidwai", callTitle: "incoming", date: "16/10/20234"),
-                        WhatsAppCall(name: "Gajanan Bidwai", callTitle: "ongoing", date: "16/10/20234"),
-                        WhatsAppCall(name: "Gajanan Bidwai", callTitle: "incoming", date: "16/10/20234")]
-    
-    
+    var whatsAppCall =
+    [
+        WhatsAppCall(name: "Gajanan Bidwai", callTitle: "ongoing", date: "16/10/24", userProfileImage:
+                        UIImage(named: "Oval(1)")!),
+        WhatsAppCall(name: "Gajanan Bidwai", callTitle: "ongoing", date: "16/10/24", userProfileImage:
+                        UIImage(named: "Oval(2)")!),
+        WhatsAppCall(name: "Gajanan Bidwai", callTitle: "ongoing", date: "16/10/24", userProfileImage:
+                        UIImage(named: "Oval(3)")!),
+        WhatsAppCall(name: "Gajanan Bidwai", callTitle: "ongoing", date: "16/10/24", userProfileImage:
+                        UIImage(named: "Oval(4)")!),
+        WhatsAppCall(name: "Gajanan Bidwai", callTitle: "ongoing", date: "16/10/24", userProfileImage:
+                        UIImage(named: "Oval(5)")!),
+        WhatsAppCall(name: "Gajanan Bidwai", callTitle: "ongoing", date: "16/10/24", userProfileImage:
+                        UIImage(named: "Oval(6)")!),
+        WhatsAppCall(name: "Gajanan Bidwai", callTitle: "ongoing", date: "16/10/24", userProfileImage:
+                        UIImage(named: "Oval(4)")!),
+        WhatsAppCall(name: "Gajanan Bidwai", callTitle: "ongoing", date: "16/10/24", userProfileImage:
+                        UIImage(named: "Oval(2)")!),
+        WhatsAppCall(name: "Gajanan Bidwai", callTitle: "incoming", date: "16/10/24", userProfileImage: UIImage(named: "Oval(2)")!),
+        WhatsAppCall(name: "Gajanan Bidwai", callTitle: "ongoing", date: "16/10/24", userProfileImage:
+                        UIImage(named: "Oval(3)")!),
+        WhatsAppCall(name: "Gajanan Bidwai", callTitle: "incoming", date: "16/10/24", userProfileImage: UIImage(named: "Oval(4)")!),
+        WhatsAppCall(name: "Gajanan Bidwai", callTitle: "ongoing", date: "16/10/24", userProfileImage:
+                        UIImage(named: "Oval(5)")!),
+        WhatsAppCall(name: "Gajanan Bidwai", callTitle: "incoming", date: "16/10/24", userProfileImage: UIImage(named: "Oval(6)")!)
+    ]
     
     @IBOutlet weak var whatsAppCallsTableView: UITableView!{
         didSet{
@@ -24,12 +42,33 @@ class WhatsAppCallViewController: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var callSegment: UISegmentedControl!{
+        didSet{
+            callSegment.layer.borderWidth = 1
+            callSegment.layer.borderColor = UIColor.systemBlue.cgColor
+            
+        }
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        segmentAppearance()
+        whatsAppCallsTableView.showsVerticalScrollIndicator = false
+    }
+    
+    func segmentAppearance(){
+        if callSegment.isSelected == true{
+            callSegment.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+
+            // Set color for unselected segments
+            callSegment.setTitleTextAttributes([.foregroundColor: UIColor.systemBlue], for: .normal)
+        }else{
+            callSegment.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+
+            // Set color for unselected segments
+            callSegment.setTitleTextAttributes([.foregroundColor: UIColor.systemBlue], for: .normal)
+        }
+    }
     
     @IBAction func editButtonTap(_ sender: Any) {
         let isEditing = !whatsAppCallsTableView.isEditing

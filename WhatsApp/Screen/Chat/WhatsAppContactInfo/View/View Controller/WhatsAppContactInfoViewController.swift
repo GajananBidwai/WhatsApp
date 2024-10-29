@@ -16,16 +16,23 @@ class WhatsAppContactInfoViewController: UIViewController {
         }
     }
     var chats: Chats?
-    var contactInfo = [[ContactInfo(image: UIImage(named: "Media")!, title: "Media, links and Docs", subtitle: "12"),
-                       ContactInfo(image: UIImage(named: "StarredMassage")!, title: "Starred Messages", subtitle: "none"),
-                       ContactInfo(image: UIImage(named: "ChatSearch")!, title: "Chat Search", subtitle: "")],
-                    [ContactInfo(image: UIImage(named: "Mute")!, title: "Mute", subtitle: "No")]]
+    var contactInfo = 
+    [
+        [ContactInfo(image: UIImage(named: "Media")!, title: "Media, links and Docs", subtitle: "12"),
+         ContactInfo(image: UIImage(named: "StarredMassage")!, title: "Starred Messages", subtitle: "none"),
+         ContactInfo(image: UIImage(named: "ChatSearch")!, title: "Chat Search", subtitle: "")],
+    
+        [ContactInfo(image: UIImage(named: "Mute")!, title: "Mute", subtitle: "No")]
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let headerView = HeaderView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 480))
         headerView.nameLabel.text = chats?.name
+        headerView.profileImageView.image = chats?.profileImage
+        headerView.contactLabel.text = chats?.contactNumber
         contactInfoTableView.tableHeaderView = headerView
+        contactInfoTableView.showsVerticalScrollIndicator = false
     }
     
 
@@ -54,16 +61,11 @@ extension WhatsAppContactInfoViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let contactInfoTableViewCell = self.contactInfoTableView.dequeueReusableCell(withIdentifier: CellConstant.CellIdentifier.ContactInfoTableViewCell) as! ContactInfoTableViewCell
-        
-        //            contactInfoTableViewCell.functionalityNameLabel.text = contactInfo[indexPath.section][indexPath.row].title
-        //            contactInfoTableViewCell.funtionalityStatusLabel.text = contactInfo[indexPath.section][indexPath.row].subtitle
-        //            contactInfoTableViewCell.functionalityIcon.image = contactInfo[indexPath.section][indexPath.row].image
-        //
+    
         contactInfoTableViewCell.configureData(contactInfo: contactInfo[indexPath.section][indexPath.row])
         contactInfoTableViewCell.selectionStyle = .none
         
         return contactInfoTableViewCell
-        
         
     }
     

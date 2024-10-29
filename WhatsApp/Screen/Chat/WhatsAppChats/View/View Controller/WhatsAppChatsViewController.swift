@@ -35,21 +35,21 @@ class WhatsAppChatsViewController: UIViewController {
                         UIImage(named: "Oval(7)"),
                         UIImage(named: "Oval(8)")]
     
-    var chats = [Chats(name: "Gajanan Bidwai", description: "Where are you!", date: "15/10/2024", profileImage: UIImage(named: "Oval(1)")!),
-                 Chats(name: "Manjeet", description: "Smart guy in the office", date: "15/10/2024", profileImage: UIImage(named: "Oval(1)")!),
-                 Chats(name: "Mahesh sir", description: "Creative Devloper", date: "15/10/2024", profileImage: UIImage(named: "Oval(2)")!),
-                 Chats(name: "Gajanan Bidwai", description: "Where are you!", date: "15/10/2024", profileImage: UIImage(named: "Oval(3)")!),
-                 Chats(name: "Manjeet", description: "Smart guy in the office", date: "15/10/2024", profileImage: UIImage(named: "Oval(4)")!),
-                 Chats(name: "Mahesh sir", description: "Creative Devloper", date: "15/10/2024", profileImage: UIImage(named: "Oval(5)")!),
-                 Chats(name: "Gajanan Bidwai", description: "Where are you!", date: "15/10/2024", profileImage: UIImage(named: "Oval(6)")!),
-                 Chats(name: "Manjeet", description: "Smart guy in the office", date: "15/10/2024", profileImage: UIImage(named: "Oval(7)")!),
-                 Chats(name: "Mahesh sir", description: "Creative Devloper", date: "15/10/2024", profileImage: UIImage(named: "Oval(8)")!)
+    var chats = [Chats(name: "Gajanan Bidwai", description: "Where are you!", date: "15/10/2024", profileImage: UIImage(named: "Oval(1)")!, contactNumber: "+91 9090909090"),
+                 Chats(name: "Manjeet", description: "Smart guy in the office", date: "15/10/2024", profileImage: UIImage(named: "Oval(1)")!, contactNumber: "+91 9090909090"),
+                 Chats(name: "Mahesh sir", description: "Creative Devloper", date: "15/10/2024", profileImage: UIImage(named: "Oval(2)")!, contactNumber: "+91 9090909090"),
+                 Chats(name: "Gajanan Bidwai", description: "Where are you!", date: "15/10/2024", profileImage: UIImage(named: "Oval(3)")!, contactNumber: "+91 9090909090"),
+                 Chats(name: "Manjeet", description: "Smart guy in the office", date: "15/10/2024", profileImage: UIImage(named: "Oval(4)")!, contactNumber: "+91 9090909090"),
+                 Chats(name: "Mahesh sir", description: "Creative Devloper", date: "15/10/2024", profileImage: UIImage(named: "Oval(5)")!, contactNumber: "+91 9090909090"),
+                 Chats(name: "Gajanan Bidwai", description: "Where are you!", date: "15/10/2024", profileImage: UIImage(named: "Oval(6)")!, contactNumber: "+91 9090909090"),
+                 Chats(name: "Manjeet", description: "Smart guy in the office", date: "15/10/2024", profileImage: UIImage(named: "Oval(7)")!, contactNumber: "+91 9090909090"),
+                 Chats(name: "Mahesh sir", description: "Creative Devloper", date: "15/10/2024", profileImage: UIImage(named: "Oval(8)")!, contactNumber: "+91 9090909090")
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         activeButtonContainerView.isHidden = true
-        
+        whatsAppChatsTableView.showsVerticalScrollIndicator = false
     }
     
     @IBAction func editButton(_ sender: Any) {

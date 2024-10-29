@@ -61,12 +61,12 @@
                         <color key="highlightedColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow Right" translatesAutoresizingMaskIntoConstraints="NO" id="8WV-TV-hT7">
-                        <rect key="frame" x="373" y="32.666666666666664" width="12" height="7"/>
+                        <rect key="frame" x="373" y="29" width="15" height="14"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="12" id="jsi-Bx-yRb"/>
-                            <constraint firstAttribute="height" constant="7" id="qg4-3S-Y0E"/>
+                            <constraint firstAttribute="width" constant="15" id="jsi-Bx-yRb"/>
+                            <constraint firstAttribute="height" constant="14" id="qg4-3S-Y0E"/>
                         </constraints>
-                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small" weight="thin"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="medium"/>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TRf-IM-zyW">
                         <rect key="frame" x="0.0" y="28.000000000000004" width="21" height="16.333333333333339"/>

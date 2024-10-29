@@ -11,7 +11,7 @@ class HeaderView: UIView {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var contactLabel: UILabel!
-    
+    @IBOutlet weak var profileImageView: UIImageView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)

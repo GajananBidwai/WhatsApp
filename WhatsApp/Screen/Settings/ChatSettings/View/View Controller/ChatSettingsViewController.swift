@@ -29,7 +29,7 @@ class ChatSettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        chatSettingsTableView.showsVerticalScrollIndicator = false
         
     }
     

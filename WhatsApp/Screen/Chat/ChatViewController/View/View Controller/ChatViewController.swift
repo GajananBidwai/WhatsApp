@@ -20,11 +20,45 @@ class ChatViewController: UIViewController {
     var chats: Chats?
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         addButtonInTextField()
         self.navigationItem.setHidesBackButton(true, animated: true)
         nameLabel.text = chats?.name
         userProfileImageView.image = chats?.profileImage
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
+    deinit {
+        // Remove observers when not needed
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    @objc func keyboardWillShow(notification: NSNotification) {
+            if let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect {
+                let keyboardHeight = keyboardFrame.height
+                UIView.animate(withDuration: 0.3) {
+                    self.view.frame.origin.y = -keyboardHeight + self.view.safeAreaInsets.bottom
+                }
+            }
+        }
+
+        @objc func keyboardWillHide(notification: NSNotification) {
+            UIView.animate(withDuration: 0.3) {
+                self.view.frame.origin.y = 0
+            }
+        }
+
+        override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+            IQKeyboardManager.shared.enable = false
+            
+        }
+
+        override func viewWillDisappear(_ animated: Bool) {
+            super.viewWillDisappear(animated)
+            IQKeyboardManager.shared.enable = true
+        }
     
 
     @IBAction func backButtonAction(_ sender: Any) {
@@ -33,7 +67,7 @@ class ChatViewController: UIViewController {
     
     @IBAction func navigateToContactInfo(_ sender: Any) {
         let whatsAppContactInfoViewController = self.storyboard?.instantiateViewController(identifier: "WhatsAppContactInfoViewController") as! WhatsAppContactInfoViewController
-        
+        whatsAppContactInfoViewController.chats = chats
         
         self.navigationController?.pushViewController(whatsAppContactInfoViewController, animated: true)
     }
@@ -48,8 +82,6 @@ class ChatViewController: UIViewController {
         let documentImage = UIImage(named: "Documents")
         let locationImage = UIImage(named: "Location")
         let contactImage = UIImage(named: "Contact")
-        
-        
         
         
         let cameraAction = UIAlertAction(title: "Camera", style: .default) { _ in
