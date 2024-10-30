@@ -113,7 +113,7 @@ extension WhatsAppSettingsViewController: UITableViewDataSource{
                 let starredMessagesViewController = self.storyboard?.instantiateViewController(withIdentifier: "StarredMessagesViewController") as! StarredMessagesViewController
                 starredMessagesViewController.hidesBottomBarWhenPushed = true
                 self.navigationController?.pushViewController(starredMessagesViewController, animated: true)
-                
+                 
             }
         }
     }

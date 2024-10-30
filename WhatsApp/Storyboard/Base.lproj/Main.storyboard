@@ -361,7 +361,7 @@
                             <constraint firstItem="9YT-cq-31i" firstAttribute="leading" secondItem="2nQ-BW-NXt" secondAttribute="leading" id="ysy-xS-igI"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="Tab 2" selectedImage="Tab 2" id="Bet-bQ-QgT"/>
+                    <tabBarItem key="tabBarItem" title="" image="Tab 2 (1)" selectedImage="Tab 2" id="Bet-bQ-QgT"/>
                     <connections>
                         <outlet property="callSegment" destination="gsQ-HV-Rdf" id="rcN-rP-ojb"/>
                         <outlet property="whatsAppCallsTableView" destination="9YT-cq-31i" id="IaS-TF-G0Y"/>
@@ -702,9 +702,9 @@
                                 <rect key="frame" x="0.0" y="772" width="393" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogZ-zy-ItC">
-                                        <rect key="frame" x="10" y="5" width="25" height="32"/>
+                                        <rect key="frame" x="10" y="5" width="30" height="32"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="25" id="oEo-wE-LNI"/>
+                                            <constraint firstAttribute="width" constant="30" id="oEo-wE-LNI"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button">
@@ -715,7 +715,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GhQ-cY-2Eq">
-                                        <rect key="frame" x="45" y="5" width="255" height="32"/>
+                                        <rect key="frame" x="50" y="5" width="250" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="QwR-oO-Dhz"/>
                                         </constraints>
@@ -730,7 +730,7 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal">
-                                            <imageReference key="image" image="mic" catalog="system" symbolScale="large"/>
+                                            <imageReference key="image" image="Record" symbolScale="large"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1qv-A4-D3I">
@@ -741,7 +741,7 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal">
-                                            <imageReference key="image" image="camera" catalog="system" symbolScale="large"/>
+                                            <imageReference key="image" image="Camera" symbolScale="large"/>
                                         </state>
                                     </button>
                                 </subviews>
@@ -1214,7 +1214,7 @@
         <scene sceneID="PFA-oP-6ah">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kVf-WY-Ea7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Tab 5" selectedImage="Tab 5" id="rcz-4D-pWU"/>
+                    <tabBarItem key="tabBarItem" title="" image="Tab 5" selectedImage="Tab 5 (1)" id="rcz-4D-pWU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cab-l6-d6C">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -1233,22 +1233,24 @@
     <resources>
         <image name="BackGround" width="375" height="724"/>
         <image name="Call Icon" width="24" height="24"/>
+        <image name="Camera" width="22" height="20"/>
         <image name="Cancel" width="19" height="19"/>
         <image name="Change Camera" width="38" height="33"/>
         <image name="Light" width="25" height="28"/>
         <image name="Photos" width="25" height="21"/>
+        <image name="Record" width="17" height="24"/>
         <image name="Shape" width="23" height="23"/>
         <image name="Tab 1" width="75" height="49"/>
         <image name="Tab 2" width="75" height="49"/>
+        <image name="Tab 2 (1)" width="75" height="49"/>
         <image name="Tab 3" width="75" height="49"/>
         <image name="Tab 4 (1)" width="75" height="49"/>
         <image name="Tab 5" width="75" height="49"/>
+        <image name="Tab 5 (1)" width="75" height="49"/>
         <image name="Take Photo" width="71" height="71"/>
         <image name="Tip" width="327" height="230"/>
-        <image name="camera" catalog="system" width="128" height="93"/>
-        <image name="chevron.left" catalog="system" width="32" height="32"/>
-        <image name="chevron.right" catalog="system" width="32" height="32"/>
-        <image name="mic" catalog="system" width="110" height="128"/>
+        <image name="chevron.left" catalog="system" width="97" height="128"/>
+        <image name="chevron.right" catalog="system" width="97" height="128"/>
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
         <image name="phone" catalog="system" width="128" height="115"/>
         <image name="plus" catalog="system" width="128" height="113"/>
