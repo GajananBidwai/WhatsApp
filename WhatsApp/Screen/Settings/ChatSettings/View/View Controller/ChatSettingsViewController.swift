@@ -30,13 +30,10 @@ class ChatSettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         chatSettingsTableView.showsVerticalScrollIndicator = false
-        
+        title = "Chats"
     }
     
-    @IBAction func backButton(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
     
-    }
 }
 extension ChatSettingsViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

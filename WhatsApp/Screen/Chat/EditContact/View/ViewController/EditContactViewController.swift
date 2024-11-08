@@ -29,7 +29,7 @@ class EditContactViewController: UIViewController {
         super.viewDidLoad()
         editContactTableView.allowsSelection = false
         editContactTableView.showsVerticalScrollIndicator = false
-        // Do any additional setup after loading the view.
+        
     }
     
 

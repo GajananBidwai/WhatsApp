@@ -30,7 +30,7 @@ class NotificationSettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         notificationSettingTableView.showsVerticalScrollIndicator = false
-        
+        title = "Notifications"
     }
     
     

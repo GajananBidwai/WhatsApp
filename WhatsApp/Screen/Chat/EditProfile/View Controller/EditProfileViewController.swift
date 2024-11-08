@@ -25,7 +25,7 @@ class EditProfileViewController: UIViewController {
         super.viewDidLoad()
         
         let editProfileHeaderView = EditProfileHeaderView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 280))
-        
+        title = "Edit Profile"
         editProfileTableView.tableHeaderView = editProfileHeaderView
         editProfileTableView.showsVerticalScrollIndicator = false
     }

@@ -335,6 +335,9 @@
                                             </segments>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="selectedSegmentTintColor" red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="segmentControlAction:" destination="061-sW-3eo" eventType="valueChanged" id="5Ad-Rs-nSQ"/>
+                                            </connections>
                                         </segmentedControl>
                                         <barButtonItem key="rightBarButtonItem" title="Item" image="Call Icon" style="plain" id="KQ6-H2-Qo1"/>
                                     </navigationItem>
@@ -509,7 +512,7 @@
                             <constraint firstItem="3bC-QP-FgY" firstAttribute="trailing" secondItem="Ebp-y2-WUb" secondAttribute="trailing" id="vYH-Sq-atr"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="Tab 4 (1)" selectedImage="Tab 4 (1)" id="dm7-Ve-U6Q"/>
+                    <tabBarItem key="tabBarItem" title="" image="Tab 4 (1)" selectedImage="Tab Chat" id="dm7-Ve-U6Q"/>
                     <connections>
                         <outlet property="activeButtonContainerView" destination="P2e-UU-ySa" id="4LI-hp-5qR"/>
                         <outlet property="archiveButton" destination="NUf-Qb-QoX" id="y7F-d1-om4"/>
@@ -591,24 +594,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sue-pC-2kR">
-                                <rect key="frame" x="0.0" y="59" width="393" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="YEk-NI-lKC"/>
-                                </constraints>
-                                <color key="barTintColor" systemColor="systemGray6Color"/>
-                                <items>
-                                    <navigationItem title="Edit Profile" id="ZAn-AA-CMg">
-                                        <barButtonItem key="leftBarButtonItem" image="chevron.left" catalog="system" style="plain" id="j3p-qk-I6L">
-                                            <connections>
-                                                <action selector="backButtonTap:" destination="qPD-vf-hIo" id="IMn-sq-7EL"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5ze-v0-n2B">
-                                <rect key="frame" x="0.0" y="99" width="393" height="719"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="qPD-vf-hIo" id="AEm-Q5-ZtN"/>
@@ -620,11 +607,8 @@
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="5ze-v0-n2B" firstAttribute="leading" secondItem="Hdd-S5-7mh" secondAttribute="leading" id="54O-As-rc9"/>
-                            <constraint firstItem="Sue-pC-2kR" firstAttribute="leading" secondItem="Hdd-S5-7mh" secondAttribute="leading" id="56n-iD-ekD"/>
-                            <constraint firstItem="5ze-v0-n2B" firstAttribute="top" secondItem="Sue-pC-2kR" secondAttribute="bottom" id="GFM-EL-zbu"/>
-                            <constraint firstAttribute="trailing" secondItem="Sue-pC-2kR" secondAttribute="trailing" id="Gok-rQ-cB2"/>
-                            <constraint firstItem="Sue-pC-2kR" firstAttribute="top" secondItem="Hdd-S5-7mh" secondAttribute="top" id="Iqh-yb-5Nm"/>
                             <constraint firstItem="Hdd-S5-7mh" firstAttribute="trailing" secondItem="5ze-v0-n2B" secondAttribute="trailing" id="RxC-3G-1xx"/>
+                            <constraint firstItem="5ze-v0-n2B" firstAttribute="top" secondItem="Hdd-S5-7mh" secondAttribute="top" id="W6g-rf-YdH"/>
                             <constraint firstItem="Hdd-S5-7mh" firstAttribute="bottom" secondItem="5ze-v0-n2B" secondAttribute="bottom" id="cv8-bj-8XN"/>
                         </constraints>
                     </view>
@@ -639,7 +623,7 @@
         <!--Edit Contact View Controller-->
         <scene sceneID="KJP-yS-d4Z">
             <objects>
-                <viewController storyboardIdentifier="EditContactViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fNo-7O-3WU" customClass="EditContactViewController" customModule="WhatsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditContactViewController" id="fNo-7O-3WU" customClass="EditContactViewController" customModule="WhatsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tMz-MT-a5I">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -652,7 +636,7 @@
                                 <color key="barTintColor" systemColor="systemGray6Color"/>
                                 <items>
                                     <navigationItem title="Edit Contact" id="GV1-Gv-vo7">
-                                        <barButtonItem key="leftBarButtonItem" image="chevron.left" catalog="system" style="plain" id="w5e-tF-B1J">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="w5e-tF-B1J">
                                             <connections>
                                                 <action selector="backButton:" destination="fNo-7O-3WU" id="8oM-lo-dCF"/>
                                             </connections>
@@ -873,18 +857,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7bY-EX-Bki">
-                                <rect key="frame" x="0.0" y="103" width="393" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Yrb-6q-Zbd"/>
-                                </constraints>
-                                <color key="barTintColor" systemColor="systemGray6Color"/>
-                                <items>
-                                    <navigationItem title="Settings" id="YeF-CH-HZ5"/>
-                                </items>
-                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NUJ-Tm-vPr">
-                                <rect key="frame" x="0.0" y="143" width="393" height="626"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="5dd-vD-ljS" id="Oin-gQ-WOm"/>
@@ -896,24 +870,22 @@
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="Pal-nS-wsB" firstAttribute="bottom" secondItem="NUJ-Tm-vPr" secondAttribute="bottom" id="3Pt-KR-A9P"/>
-                            <constraint firstItem="NUJ-Tm-vPr" firstAttribute="top" secondItem="7bY-EX-Bki" secondAttribute="bottom" id="I3R-93-spe"/>
-                            <constraint firstAttribute="trailing" secondItem="7bY-EX-Bki" secondAttribute="trailing" id="IDj-q1-haV"/>
                             <constraint firstItem="NUJ-Tm-vPr" firstAttribute="leading" secondItem="Pal-nS-wsB" secondAttribute="leading" id="PVU-sv-Ral"/>
-                            <constraint firstItem="7bY-EX-Bki" firstAttribute="top" secondItem="Pal-nS-wsB" secondAttribute="top" id="gWl-9x-YnR"/>
+                            <constraint firstItem="NUJ-Tm-vPr" firstAttribute="top" secondItem="Pal-nS-wsB" secondAttribute="top" id="glE-Zh-lkW"/>
                             <constraint firstItem="Pal-nS-wsB" firstAttribute="trailing" secondItem="NUJ-Tm-vPr" secondAttribute="trailing" id="oQo-d0-3R0"/>
-                            <constraint firstItem="7bY-EX-Bki" firstAttribute="leading" secondItem="Pal-nS-wsB" secondAttribute="leading" id="wP6-9w-Jgj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LaN-PM-eSt"/>
                     <connections>
                         <outlet property="WhatsAppSettingsTableView" destination="NUJ-Tm-vPr" id="ABZ-vW-DiQ"/>
+                        <segue destination="WWF-Za-e0y" kind="show" id="xLm-sf-nBE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lja-iT-ud0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5344.2748091603053" y="733.80281690140851"/>
         </scene>
-        <!--Whats App Account View Controller-->
+        <!--Account-->
         <scene sceneID="2X4-Fc-YmP">
             <objects>
                 <viewController storyboardIdentifier="WhatsAppAccountViewController" id="WWF-Za-e0y" customClass="WhatsAppAccountViewController" customModule="WhatsApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -922,42 +894,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eyj-a9-mfT">
-                                <rect key="frame" x="0.0" y="99" width="393" height="719"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="WWF-Za-e0y" id="PXP-N2-m38"/>
                                     <outlet property="delegate" destination="WWF-Za-e0y" id="lMn-w2-FDc"/>
                                 </connections>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4M-YB-nx9">
-                                <rect key="frame" x="0.0" y="59" width="393" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="HLk-bI-je5"/>
-                                </constraints>
-                                <color key="barTintColor" systemColor="systemGray6Color"/>
-                                <items>
-                                    <navigationItem title="Account" id="a0P-HU-8aE">
-                                        <barButtonItem key="leftBarButtonItem" title="Settings" image="chevron.left" catalog="system" style="plain" id="ybr-se-2B9">
-                                            <connections>
-                                                <action selector="backButton:" destination="WWF-Za-e0y" id="tZ8-Yf-gLS"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="w9u-Mf-Sas"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="d4M-YB-nx9" firstAttribute="top" secondItem="w9u-Mf-Sas" secondAttribute="top" id="6v0-37-dJb"/>
-                            <constraint firstItem="eyj-a9-mfT" firstAttribute="top" secondItem="d4M-YB-nx9" secondAttribute="bottom" id="BXB-an-Keg"/>
-                            <constraint firstItem="d4M-YB-nx9" firstAttribute="leading" secondItem="U7L-bM-2jh" secondAttribute="leading" id="O45-4v-GRa"/>
-                            <constraint firstItem="w9u-Mf-Sas" firstAttribute="trailing" secondItem="d4M-YB-nx9" secondAttribute="trailing" id="Qxg-8z-ecv"/>
+                            <constraint firstItem="eyj-a9-mfT" firstAttribute="top" secondItem="w9u-Mf-Sas" secondAttribute="top" id="Nl6-je-1S3"/>
                             <constraint firstItem="w9u-Mf-Sas" firstAttribute="trailing" secondItem="eyj-a9-mfT" secondAttribute="trailing" id="b6T-bn-GCS"/>
                             <constraint firstItem="eyj-a9-mfT" firstAttribute="leading" secondItem="w9u-Mf-Sas" secondAttribute="leading" id="ft2-Nj-yLc"/>
                             <constraint firstItem="w9u-Mf-Sas" firstAttribute="bottom" secondItem="eyj-a9-mfT" secondAttribute="bottom" id="xbK-2f-yaO"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Account" id="A2M-sZ-ngc"/>
                     <connections>
                         <outlet property="whatsAppAccountTableView" destination="eyj-a9-mfT" id="Q4W-zh-qhf"/>
                     </connections>
@@ -974,24 +928,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qmk-EN-jOh">
-                                <rect key="frame" x="0.0" y="59" width="393" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="XQy-YR-zxU"/>
-                                </constraints>
-                                <color key="barTintColor" systemColor="systemGray6Color"/>
-                                <items>
-                                    <navigationItem title="Chats" id="WME-El-Vag">
-                                        <barButtonItem key="leftBarButtonItem" image="chevron.left" catalog="system" style="plain" id="hm7-6D-BTm">
-                                            <connections>
-                                                <action selector="backButton:" destination="L6f-3W-krv" id="lyQ-aA-JqA"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5k3-6Y-QK5">
-                                <rect key="frame" x="0.0" y="99" width="393" height="719"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="L6f-3W-krv" id="BTD-xv-n7J"/>
@@ -1003,12 +941,9 @@
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="5k3-6Y-QK5" firstAttribute="leading" secondItem="23o-9D-1dQ" secondAttribute="leading" id="1z2-2w-ZXv"/>
-                            <constraint firstItem="qmk-EN-jOh" firstAttribute="leading" secondItem="23o-9D-1dQ" secondAttribute="leading" id="8kL-05-Me9"/>
                             <constraint firstItem="23o-9D-1dQ" firstAttribute="trailing" secondItem="5k3-6Y-QK5" secondAttribute="trailing" id="EoY-f5-Lp7"/>
                             <constraint firstItem="23o-9D-1dQ" firstAttribute="bottom" secondItem="5k3-6Y-QK5" secondAttribute="bottom" id="HAk-ZA-Orl"/>
-                            <constraint firstItem="qmk-EN-jOh" firstAttribute="top" secondItem="23o-9D-1dQ" secondAttribute="top" id="YVT-fL-oSr"/>
-                            <constraint firstItem="5k3-6Y-QK5" firstAttribute="top" secondItem="qmk-EN-jOh" secondAttribute="bottom" id="eiR-5X-UKv"/>
-                            <constraint firstItem="qmk-EN-jOh" firstAttribute="trailing" secondItem="23o-9D-1dQ" secondAttribute="trailing" id="lYG-oa-GWy"/>
+                            <constraint firstItem="5k3-6Y-QK5" firstAttribute="top" secondItem="23o-9D-1dQ" secondAttribute="top" id="jJc-73-gQS"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1027,24 +962,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oUd-os-fxc">
-                                <rect key="frame" x="0.0" y="59" width="393" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="d2C-rq-tPc"/>
-                                </constraints>
-                                <color key="barTintColor" systemColor="systemGray6Color"/>
-                                <items>
-                                    <navigationItem title="Notifications" id="W91-c3-EP4">
-                                        <barButtonItem key="leftBarButtonItem" image="chevron.left" catalog="system" style="plain" id="V5z-fH-yP1">
-                                            <connections>
-                                                <action selector="backButton:" destination="0dL-Yd-yeH" id="YFq-f2-leX"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IqU-wo-uzd">
-                                <rect key="frame" x="0.0" y="99" width="393" height="719"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="0dL-Yd-yeH" id="M3x-Uu-Q5d"/>
@@ -1055,12 +974,9 @@
                         <viewLayoutGuide key="safeArea" id="Y6v-Gx-YBM"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="Y6v-Gx-YBM" firstAttribute="trailing" secondItem="oUd-os-fxc" secondAttribute="trailing" id="52V-TP-jQq"/>
-                            <constraint firstItem="oUd-os-fxc" firstAttribute="top" secondItem="Y6v-Gx-YBM" secondAttribute="top" id="7oz-Wu-rHN"/>
                             <constraint firstItem="Y6v-Gx-YBM" firstAttribute="bottom" secondItem="IqU-wo-uzd" secondAttribute="bottom" id="B1J-HB-7Cb"/>
-                            <constraint firstItem="IqU-wo-uzd" firstAttribute="top" secondItem="oUd-os-fxc" secondAttribute="bottom" id="Gqy-8o-dLW"/>
-                            <constraint firstItem="oUd-os-fxc" firstAttribute="leading" secondItem="gAY-zd-xcY" secondAttribute="leading" id="JWb-U5-kae"/>
                             <constraint firstItem="IqU-wo-uzd" firstAttribute="leading" secondItem="Y6v-Gx-YBM" secondAttribute="leading" id="NKa-qX-sGG"/>
+                            <constraint firstItem="IqU-wo-uzd" firstAttribute="top" secondItem="Y6v-Gx-YBM" secondAttribute="top" id="laA-vR-Nc3"/>
                             <constraint firstItem="Y6v-Gx-YBM" firstAttribute="trailing" secondItem="IqU-wo-uzd" secondAttribute="trailing" id="pS5-Dy-OOv"/>
                         </constraints>
                     </view>
@@ -1080,24 +996,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eHC-fp-Yqo">
-                                <rect key="frame" x="0.0" y="59" width="393" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="cxA-8p-Me7"/>
-                                </constraints>
-                                <color key="barTintColor" systemColor="systemGray6Color"/>
-                                <items>
-                                    <navigationItem title="Data And Storage Usage" id="jA8-Pe-fiw">
-                                        <barButtonItem key="leftBarButtonItem" image="chevron.left" catalog="system" style="plain" id="XhD-ra-r2l">
-                                            <connections>
-                                                <action selector="backButton:" destination="6OD-2a-z7A" id="GPy-rk-pnZ"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sdY-EJ-PUd">
-                                <rect key="frame" x="0.0" y="99" width="393" height="719"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="6OD-2a-z7A" id="8eP-nK-eCX"/>
@@ -1108,11 +1008,8 @@
                         <viewLayoutGuide key="safeArea" id="hVf-ob-XKb"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="sdY-EJ-PUd" firstAttribute="top" secondItem="eHC-fp-Yqo" secondAttribute="bottom" id="APN-pB-53C"/>
                             <constraint firstItem="hVf-ob-XKb" firstAttribute="trailing" secondItem="sdY-EJ-PUd" secondAttribute="trailing" id="G91-xO-pxn"/>
-                            <constraint firstItem="eHC-fp-Yqo" firstAttribute="top" secondItem="hVf-ob-XKb" secondAttribute="top" id="LAq-6j-WDS"/>
-                            <constraint firstItem="eHC-fp-Yqo" firstAttribute="leading" secondItem="Xi2-Tw-dFs" secondAttribute="leading" id="NKu-40-P7H"/>
-                            <constraint firstItem="hVf-ob-XKb" firstAttribute="trailing" secondItem="eHC-fp-Yqo" secondAttribute="trailing" id="Nmy-sC-R7U"/>
+                            <constraint firstItem="sdY-EJ-PUd" firstAttribute="top" secondItem="hVf-ob-XKb" secondAttribute="top" id="Gob-Ud-G1i"/>
                             <constraint firstItem="sdY-EJ-PUd" firstAttribute="leading" secondItem="hVf-ob-XKb" secondAttribute="leading" id="Yp5-rB-zb5"/>
                             <constraint firstItem="hVf-ob-XKb" firstAttribute="bottom" secondItem="sdY-EJ-PUd" secondAttribute="bottom" id="s67-hM-zY5"/>
                         </constraints>
@@ -1133,22 +1030,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CW4-IB-YLo">
-                                <rect key="frame" x="0.0" y="59" width="393" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="REU-Mp-xto"/>
-                                </constraints>
-                                <color key="barTintColor" systemColor="systemGray6Color"/>
-                                <items>
-                                    <navigationItem title="Starred Messages" id="Y5B-Nx-QBh">
-                                        <barButtonItem key="leftBarButtonItem" image="chevron.left" catalog="system" style="plain" id="S3H-0v-LUp">
-                                            <connections>
-                                                <action selector="backButton:" destination="yKp-8V-FnV" id="rCX-pv-LNx"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tip" translatesAutoresizingMaskIntoConstraints="NO" id="My0-Rx-FjO">
                                 <rect key="frame" x="71.666666666666686" y="336" width="250" height="180"/>
                                 <constraints>
@@ -1160,10 +1041,7 @@
                         <viewLayoutGuide key="safeArea" id="yss-QS-VnF"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="CW4-IB-YLo" secondAttribute="trailing" id="X40-R2-Hko"/>
                             <constraint firstItem="My0-Rx-FjO" firstAttribute="centerX" secondItem="ek1-ZE-z50" secondAttribute="centerX" id="b7J-Lc-LOB"/>
-                            <constraint firstItem="CW4-IB-YLo" firstAttribute="top" secondItem="yss-QS-VnF" secondAttribute="top" id="eTW-2U-ztc"/>
-                            <constraint firstItem="CW4-IB-YLo" firstAttribute="leading" secondItem="yss-QS-VnF" secondAttribute="leading" id="s1e-2z-l2D"/>
                             <constraint firstItem="My0-Rx-FjO" firstAttribute="centerY" secondItem="ek1-ZE-z50" secondAttribute="centerY" id="uwD-ZO-bGr"/>
                         </constraints>
                     </view>
@@ -1247,28 +1125,29 @@
         <image name="Tab 4 (1)" width="75" height="49"/>
         <image name="Tab 5" width="75" height="49"/>
         <image name="Tab 5 (1)" width="75" height="49"/>
+        <image name="Tab Chat" width="75" height="49"/>
         <image name="Take Photo" width="71" height="71"/>
         <image name="Tip" width="327" height="230"/>
-        <image name="chevron.left" catalog="system" width="97" height="128"/>
-        <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <image name="chevron.left" catalog="system" width="32" height="32"/>
+        <image name="chevron.right" catalog="system" width="32" height="32"/>
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
         <image name="phone" catalog="system" width="128" height="115"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="video" catalog="system" width="128" height="82"/>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

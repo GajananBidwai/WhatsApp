@@ -22,8 +22,9 @@ class WhatsAppAccountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.isHidden = true
-        navigationController?.navigationItem.backButtonTitle = "Account"
+      //  navigationController?.navigationBar.isHidden = true
+      //  navigationController?.navigationItem.backButtonTitle = "Account"
+        title = "Account"
         whatsAppAccountTableView.showsVerticalScrollIndicator = false
     }
     

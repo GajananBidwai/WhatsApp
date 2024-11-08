@@ -150,9 +150,9 @@ extension WhatsAppChatsViewController: UITableViewDataSource{
     }
     
    //  Provide editing style (e.g., delete or custom buttons)
-    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        return .delete
-    }
+//    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+//        return .delete
+//    }
     
     // Customize editing actions (e.g., delete, archive)
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

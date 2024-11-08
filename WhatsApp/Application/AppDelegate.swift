@@ -11,12 +11,25 @@ import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
   //      IQKeyboardManager.shared.enable = true
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let whatsAppTabBarController = storyboard.instantiateViewController(identifier: "WhatsAppTabBarController") as! WhatsAppTabBarController
+        let navigationController = UINavigationController(rootViewController: whatsAppTabBarController)
+     //   let appdelegate = UIApplication.shared.delegate as! AppDelegate
+        window?.rootViewController = navigationController
+        //window?.rootViewController = whatsAppTabBarController
+        
+        
+        
+        
+        
         IQKeyboardManager.shared.enableAutoToolbar = false
         IQKeyboardManager.shared.resignOnTouchOutside = true
         IQKeyboardManager.shared.toolbarConfiguration.placeholderConfiguration.showPlaceholder = true
@@ -25,7 +38,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.playInputClicks = false
         IQKeyboardManager.shared.toolbarConfiguration.placeholderConfiguration.showPlaceholder = false
     
-  
         return true
     }
 

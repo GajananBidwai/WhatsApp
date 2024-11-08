@@ -9,7 +9,6 @@ import UIKit
 
 class WhatsAppSettingsViewController: UIViewController {
 
-    
     @IBOutlet weak var WhatsAppSettingsTableView: UITableView!{
         didSet{
             WhatsAppSettingsTableView.register(UINib(nibName: CellConstant.CellIdentifier.WhatsAppSettingsTableViewCell, bundle: nil), forCellReuseIdentifier: CellConstant.CellIdentifier.WhatsAppSettingsTableViewCell)
@@ -35,7 +34,8 @@ class WhatsAppSettingsViewController: UIViewController {
 
         var settingsHeaderView = SettingsHeaderView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 125))
         WhatsAppSettingsTableView.tableHeaderView = settingsHeaderView
-        self.navigationController?.navigationBar.isHidden = true
+        title = "Settings"
+    //    self.navigationController?.navigationBar.isHidden = true
         var tapGesture = UITapGestureRecognizer(target: self, action: #selector(navigateToEditProfile))
         settingsHeaderView.addGestureRecognizer(tapGesture)
         WhatsAppSettingsTableView.showsVerticalScrollIndicator = false
@@ -117,7 +117,4 @@ extension WhatsAppSettingsViewController: UITableViewDataSource{
             }
         }
     }
-    
-    
-    
 }

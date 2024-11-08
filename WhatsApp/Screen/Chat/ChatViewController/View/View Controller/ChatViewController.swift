@@ -25,6 +25,7 @@ class ChatViewController: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated: true)
         nameLabel.text = chats?.name
         userProfileImageView.image = chats?.profileImage
+       // self.edgesForExtendedLayout = [.all]
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)

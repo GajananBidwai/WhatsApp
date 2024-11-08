@@ -13,12 +13,9 @@ class WhatsAppSettingsTableViewCell: UITableViewCell {
     @IBOutlet weak var settingsTitle: UILabel!
     
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        
     }
-    
-  
-    
 }

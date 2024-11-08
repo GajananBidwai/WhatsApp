@@ -12,14 +12,8 @@ class StarredMessagesViewController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        title = "Starred Messages"
+       
     }
     
-    @IBAction func backButton(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
-    }
-    
-    
-
 }

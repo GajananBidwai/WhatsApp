@@ -27,6 +27,13 @@ class WhatsAppCallTableViewCell: UITableViewCell {
         callLabel.text = whatsAppCall?.callTitle
         dateLabel.text = whatsAppCall?.date
         userImageView.image = whatsAppCall?.userProfileImage
+        
+        if whatsAppCall?.callTitle == "missed"{
+            nameLabel.textColor = .red
+        }else{
+            nameLabel.textColor = .black
+        }
+        
     }
     
 }

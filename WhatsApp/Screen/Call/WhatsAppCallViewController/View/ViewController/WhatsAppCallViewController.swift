@@ -8,22 +8,22 @@
 import UIKit
 
 class WhatsAppCallViewController: UIViewController {
-
+    
     var whatsAppCall =
     [
-        WhatsAppCall(name: "Gajanan Bidwai", callTitle: "ongoing", date: "16/10/24", userProfileImage:
+        WhatsAppCall(name: "Gajanan Bidwai", callTitle: "missed", date: "16/10/24", userProfileImage:
                         UIImage(named: "Oval(1)")!),
         WhatsAppCall(name: "Gajanan Bidwai", callTitle: "ongoing", date: "16/10/24", userProfileImage:
                         UIImage(named: "Oval(2)")!),
-        WhatsAppCall(name: "Gajanan Bidwai", callTitle: "ongoing", date: "16/10/24", userProfileImage:
+        WhatsAppCall(name: "Gajanan Bidwai", callTitle: "missed", date: "16/10/24", userProfileImage:
                         UIImage(named: "Oval(3)")!),
         WhatsAppCall(name: "Gajanan Bidwai", callTitle: "ongoing", date: "16/10/24", userProfileImage:
                         UIImage(named: "Oval(4)")!),
-        WhatsAppCall(name: "Gajanan Bidwai", callTitle: "ongoing", date: "16/10/24", userProfileImage:
+        WhatsAppCall(name: "Gajanan Bidwai", callTitle: "missed", date: "16/10/24", userProfileImage:
                         UIImage(named: "Oval(5)")!),
         WhatsAppCall(name: "Gajanan Bidwai", callTitle: "ongoing", date: "16/10/24", userProfileImage:
                         UIImage(named: "Oval(6)")!),
-        WhatsAppCall(name: "Gajanan Bidwai", callTitle: "ongoing", date: "16/10/24", userProfileImage:
+        WhatsAppCall(name: "Gajanan Bidwai", callTitle: "missed", date: "16/10/24", userProfileImage:
                         UIImage(named: "Oval(4)")!),
         WhatsAppCall(name: "Gajanan Bidwai", callTitle: "ongoing", date: "16/10/24", userProfileImage:
                         UIImage(named: "Oval(2)")!),
@@ -35,6 +35,8 @@ class WhatsAppCallViewController: UIViewController {
                         UIImage(named: "Oval(5)")!),
         WhatsAppCall(name: "Gajanan Bidwai", callTitle: "incoming", date: "16/10/24", userProfileImage: UIImage(named: "Oval(6)")!)
     ]
+    var filteredWhatsAppCall: [WhatsAppCall] = []
+    
     
     @IBOutlet weak var whatsAppCallsTableView: UITableView!{
         didSet{
@@ -54,21 +56,31 @@ class WhatsAppCallViewController: UIViewController {
         super.viewDidLoad()
         segmentAppearance()
         whatsAppCallsTableView.showsVerticalScrollIndicator = false
+        updateFilterCalls()
     }
     
     func segmentAppearance(){
-        if callSegment.isSelected == true{
-            callSegment.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
-
-            // Set color for unselected segments
-            callSegment.setTitleTextAttributes([.foregroundColor: UIColor.systemBlue], for: .normal)
-        }else{
-            callSegment.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
-
-            // Set color for unselected segments
-            callSegment.setTitleTextAttributes([.foregroundColor: UIColor.systemBlue], for: .normal)
-        }
+        
+        callSegment.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+        callSegment.setTitleTextAttributes([.foregroundColor: UIColor.systemBlue], for: .normal)
+        
     }
+    func updateFilterCalls(){
+        if callSegment.selectedSegmentIndex == 0{
+            filteredWhatsAppCall = whatsAppCall
+        }else if callSegment.selectedSegmentIndex == 1{
+            filteredWhatsAppCall = whatsAppCall.filter({ $0.callTitle == "missed" })
+            
+        }
+        whatsAppCallsTableView.reloadData()
+    }
+    
+    @IBAction func segmentControlAction(_ sender: Any) {
+        updateFilterCalls()
+    }
+    
+    
+    
     
     @IBAction func editButtonTap(_ sender: Any) {
         let isEditing = !whatsAppCallsTableView.isEditing
@@ -92,13 +104,13 @@ extension WhatsAppCallViewController: UITableViewDelegate{
 }
 extension WhatsAppCallViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return whatsAppCall.count
+        return filteredWhatsAppCall.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let whatsAppCallTableViewCell = self.whatsAppCallsTableView.dequeueReusableCell(withIdentifier: CellConstant.CellIdentifier.WhatsAppCallTableViewCell) as! WhatsAppCallTableViewCell
         
-        whatsAppCallTableViewCell.whatsAppCall = whatsAppCall[indexPath.row]
+        whatsAppCallTableViewCell.whatsAppCall = filteredWhatsAppCall[indexPath.row]
         whatsAppCallTableViewCell.configureData()
         whatsAppCallTableViewCell.selectionStyle = .none
         return whatsAppCallTableViewCell
@@ -108,47 +120,26 @@ extension WhatsAppCallViewController: UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            whatsAppCall.remove(at: indexPath.row)
-            whatsAppCallsTableView.deselectRow(at: indexPath, animated: true)
-            print("Delete row at \(indexPath.row)")
-        }
-    }
-    func tableView(_ tableView: UITableView, willBeginEditingRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
-        UIView.animate(withDuration: 0.5) {
-            cell?.contentView.transform = CGAffineTransform(translationX: 20, y: 0)
-        }
-    }
-    func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath?) {
-        let cell = tableView.cellForRow(at: indexPath!)
-        UIView.animate(withDuration: 0.5) {
-            cell?.contentView.transform = CGAffineTransform.identity
+            let removedCall = filteredWhatsAppCall.remove(at: indexPath.row)
+            if let index = whatsAppCall.firstIndex(where: { $0 === removedCall }) {
+                whatsAppCall.remove(at: index)
+            }
+            tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .delete
     }
-    func tableView(_ tableView: UITableView, willEndEditingRowAt indexPath: IndexPath?) {
-        if let indexPath = indexPath {
-            // Reset all cells back to their original position
-            for i in 0..<tableView.numberOfRows(inSection: indexPath.section) {
-                if let cell = tableView.cellForRow(at: IndexPath(row: i, section: indexPath.section)) {
-                    UIView.animate(withDuration: 0.3) {
-                        cell.contentView.transform = .identity
-                    }
-                }
-            }
-        }
-    }
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completionHandler) in
-            // Handle delete action
-            self.whatsAppCall.remove(at: indexPath.row)
+            let removedCall = self.filteredWhatsAppCall.remove(at: indexPath.row)
+            if let index = self.whatsAppCall.firstIndex(where: { $0 === removedCall }) {
+                self.whatsAppCall.remove(at: index)
+            }
             self.whatsAppCallsTableView.deleteRows(at: [indexPath], with: .automatic)
             completionHandler(true)
         }
         deleteAction.image = UIImage(systemName: "trash")
-        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
-        return configuration
+        return UISwipeActionsConfiguration(actions: [deleteAction])
     }
 }

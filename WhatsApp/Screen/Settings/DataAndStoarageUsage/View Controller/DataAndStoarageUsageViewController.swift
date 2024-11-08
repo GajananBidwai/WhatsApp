@@ -33,6 +33,13 @@ class DataAndStoarageUsageViewController: UIViewController {
         super.viewDidLoad()
 
         dataStoarageTableView.showsVerticalScrollIndicator = false
+        title = "Data And Storage Usage"
+        if let customFont = UIFont(name: "SFProText-Medium", size: 16) {
+            let attributes: [NSAttributedString.Key: Any] = [
+                .font: customFont
+            ]
+            self.navigationController?.navigationBar.titleTextAttributes = attributes
+        }
     }
     
     

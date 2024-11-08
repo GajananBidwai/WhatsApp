@@ -6,9 +6,16 @@
 //
 
 import UIKit
-struct WhatsAppCall{
+class WhatsAppCall {
     var name: String
     var callTitle: String
     var date: String
-    var userProfileImage : UIImage
+    var userProfileImage: UIImage
+    
+    init(name: String, callTitle: String, date: String, userProfileImage: UIImage) {
+        self.name = name
+        self.callTitle = callTitle
+        self.date = date
+        self.userProfileImage = userProfileImage
+    }
 }
