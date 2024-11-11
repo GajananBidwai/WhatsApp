@@ -38,11 +38,20 @@ class WhatsAppCallViewController: UIViewController {
     var filteredWhatsAppCall: [WhatsAppCall] = []
     
     
+    
+    
+    @IBOutlet weak var addCallButton: UIBarButtonItem!
+    
+    @IBOutlet weak var editButton: UIBarButtonItem!
+    
     @IBOutlet weak var whatsAppCallsTableView: UITableView!{
         didSet{
             whatsAppCallsTableView.register(UINib(nibName: CellConstant.CellIdentifier.WhatsAppCallTableViewCell, bundle: nil), forCellReuseIdentifier: CellConstant.CellIdentifier.WhatsAppCallTableViewCell)
         }
     }
+    
+    
+    
     
     @IBOutlet weak var callSegment: UISegmentedControl!{
         didSet{
@@ -87,10 +96,14 @@ class WhatsAppCallViewController: UIViewController {
         whatsAppCallsTableView.setEditing(isEditing, animated: true)
         
         if whatsAppCallsTableView.isEditing{
-            navigationItem.leftBarButtonItem?.title = "Done"
+            editButton.title = "Done"
+            addCallButton.title = "Clear"
+            addCallButton.image = nil
             whatsAppCallsTableView.reloadData()
         }else{
-            navigationItem.leftBarButtonItem?.title = "Edit"
+            editButton.title = "Edit"
+            addCallButton.title = nil
+            addCallButton.image = UIImage(named: "Call Icon")
         }
         whatsAppCallsTableView.reloadData()
     }

@@ -7,6 +7,9 @@
 
 import UIKit
 import IQKeyboardManagerSwift
+import ContactsUI
+import MapKit
+import MobileCoreServices
 class ChatViewController: UIViewController {
 
     
@@ -85,19 +88,24 @@ class ChatViewController: UIViewController {
         let contactImage = UIImage(named: "Contact")
         
         
-        let cameraAction = UIAlertAction(title: "Camera", style: .default) { _ in
+        let cameraAction = UIAlertAction(title: "Camera", style: .default) { [weak self] _ in
+            self?.openCamera()
             print("Camera Pressed")
         }
-        let photosAction = UIAlertAction(title: "Photo & Video Library", style: .default) { _ in
+        let photosAction = UIAlertAction(title: "Photo & Video Library", style: .default) {[weak self] _ in
+            self?.openGallery()
             print("Photo Pressed")
         }
-        let documentAction = UIAlertAction(title: "Document", style: .default) { _ in
+        let documentAction = UIAlertAction(title: "Document", style: .default) { [weak self] _ in
+            self?.openDocument()
             print("Document Pressed")
         }
-        let locationAction = UIAlertAction(title: "Location", style: .default) { _ in
+        let locationAction = UIAlertAction(title: "Location", style: .default) { [weak self] _ in
+            self?.openLocation()
             print("Location Pressed")
         }
-        let contactAction = UIAlertAction(title: "Contact", style: .default) { _ in
+        let contactAction = UIAlertAction(title: "Contact", style: .default) { [weak self] _ in
+            self?.openContact()
             print("Contact Pressed")
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
@@ -131,6 +139,92 @@ class ChatViewController: UIViewController {
    //     button.addTarget(self, action: #selector(self.refresh), for: .touchUpInside)
         userInputTextField.rightView = button
         userInputTextField.rightViewMode = .always
+    }
+    
+}
+extension ChatViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    
+    func openCamera(){
+        if (UIImagePickerController.availableMediaTypes(for: .camera) != nil){
+            let imagePickerController = UIImagePickerController()
+            imagePickerController.delegate = self
+            imagePickerController.allowsEditing = true
+            imagePickerController.sourceType = .camera
+            present(imagePickerController, animated: true)
+        }else{
+            let alert = UIAlertController(title: "Camera", message: "Your device doesn't Support Camera", preferredStyle: .alert)
+            let okayAction = UIAlertAction(title: "Okay", style: .cancel)
+            alert.addAction(okayAction)
+            present(alert, animated: true)
+        }
+    }
+    
+    func openGallery(){
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+            let imagePickerController = UIImagePickerController()
+            imagePickerController.delegate = self
+            imagePickerController.sourceType = .photoLibrary
+            imagePickerController.allowsEditing = true
+            present(imagePickerController, animated: true)
+        }else{
+            let alert = UIAlertController(title: "Photos", message: "Your Device doesn't support Gallery ", preferredStyle: .alert)
+            let okayAction = UIAlertAction(title: "Okay", style: .cancel)
+            alert.addAction(okayAction)
+            present(alert, animated: true)
+        }
+    }
+    func openLocation(){
+        let latitude: CLLocationDegrees = 18.677490
+        let longitude: CLLocationDegrees = 74.116530
+        let regionDistance: CLLocationDistance = 1000
+        let coordinates = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        let placeMark = MKPlacemark(coordinate: coordinates)
+        let mapItem = MKMapItem(placemark: placeMark)
+        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+        
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+        ]
+        mapItem.name = "Neo Soft Pune"
+        mapItem.openInMaps(launchOptions: options)
+        
+    }
+    
+}
+
+extension ChatViewController: CNContactPickerDelegate{
+    func openContact(){
+        let conactPicker = CNContactPickerViewController()
+        conactPicker.delegate = self
+        present(conactPicker, animated: true)
+    }
+    func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
+        print("Contact Selected \(contact.givenName),\(contact.familyName)")
+    }
+    func contactPickerDidCancel(_ picker: CNContactPickerViewController) {
+        print("Contact picker was canceled")
+    }
+}
+
+extension ChatViewController: UIDocumentPickerDelegate{
+    
+    func openDocument(){
+        let documentTypes = ["public.item"]
+        let documentPicker = UIDocumentPickerViewController(documentTypes: documentTypes, in: .import)
+        documentPicker.delegate = self
+        documentPicker.allowsMultipleSelection = true
+        present(documentPicker, animated: true)
+        
+    }
+    
+    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+        guard let selectedFiles = urls.first else { return}
+        
+        print("Selected File Url \(selectedFiles)")
+    }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        print("Document Picker Was Canceled")
     }
     
 }

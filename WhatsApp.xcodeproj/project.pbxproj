@@ -55,6 +55,8 @@
 		A993F2502CBE871000490B6D /* SFProText-RegularItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A993F2412CBE871000490B6D /* SFProText-RegularItalic.ttf */; };
 		A993F2512CBE871000490B6D /* SFProText-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A993F2422CBE871000490B6D /* SFProText-Semibold.ttf */; };
 		A993F2522CBE871000490B6D /* SFProText-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A993F2432CBE871000490B6D /* SFProText-SemiboldItalic.ttf */; };
+		A9D540732CDE0F5B00D1DE9E /* TypeAStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D540722CDE0F5B00D1DE9E /* TypeAStatusViewController.swift */; };
+		A9D540752CDE1B0100D1DE9E /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D540742CDE1B0100D1DE9E /* UIColor + Extension.swift */; };
 		A9DF6EDB2CC76A9F0044C0AC /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DF6ED92CC76A9F0044C0AC /* SettingsTableViewCell.swift */; };
 		A9DF6EDC2CC76A9F0044C0AC /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9DF6EDA2CC76A9F0044C0AC /* SettingsTableViewCell.xib */; };
 		A9DF6EE82CC7A7E70044C0AC /* NotificationSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DF6EE72CC7A7E70044C0AC /* NotificationSettingsViewController.swift */; };
@@ -157,6 +159,8 @@
 		A993F2412CBE871000490B6D /* SFProText-RegularItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-RegularItalic.ttf"; sourceTree = "<group>"; };
 		A993F2422CBE871000490B6D /* SFProText-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Semibold.ttf"; sourceTree = "<group>"; };
 		A993F2432CBE871000490B6D /* SFProText-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		A9D540722CDE0F5B00D1DE9E /* TypeAStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAStatusViewController.swift; sourceTree = "<group>"; };
+		A9D540742CDE1B0100D1DE9E /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 		A9DF6ED92CC76A9F0044C0AC /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		A9DF6EDA2CC76A9F0044C0AC /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
 		A9DF6EE72CC7A7E70044C0AC /* NotificationSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingsViewController.swift; sourceTree = "<group>"; };
@@ -696,6 +700,53 @@
 			path = "San Francisco Pro Text";
 			sourceTree = "<group>";
 		};
+		A9D540682CDE0EC000D1DE9E /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		A9D540692CDE0EFC00D1DE9E /* TypeAStatus */ = {
+			isa = PBXGroup;
+			children = (
+				A9D5406D2CDE0F3100D1DE9E /* Model */,
+				A9D5406C2CDE0F2800D1DE9E /* ViewModel */,
+				A9D5406A2CDE0F1B00D1DE9E /* View */,
+			);
+			path = TypeAStatus;
+			sourceTree = "<group>";
+		};
+		A9D5406A2CDE0F1B00D1DE9E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A9D5406B2CDE0F2200D1DE9E /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A9D5406B2CDE0F2200D1DE9E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A9D540722CDE0F5B00D1DE9E /* TypeAStatusViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A9D5406C2CDE0F2800D1DE9E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A9D5406D2CDE0F3100D1DE9E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A9DF6EDD2CC7A76A0044C0AC /* NotificationsSetting */ = {
 			isa = PBXGroup;
 			children = (
@@ -832,6 +883,7 @@
 		A9F47DC12CCA200500F15178 /* Status */ = {
 			isa = PBXGroup;
 			children = (
+				A9D540692CDE0EFC00D1DE9E /* TypeAStatus */,
 				A9F47DB52CCA0C9C00F15178 /* StatusViewController */,
 			);
 			path = Status;
@@ -990,6 +1042,7 @@
 		A9F4C95B2CBCF2FA0003CF24 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				A9D540682CDE0EC000D1DE9E /* New Group */,
 				A9F4C9622CBD39390003CF24 /* Authentication */,
 				A9F47DC12CCA200500F15178 /* Status */,
 				A9F47DC22CCA203300F15178 /* Call */,
@@ -1012,6 +1065,7 @@
 			isa = PBXGroup;
 			children = (
 				A94625282CC8BBBB003B5174 /* Extension.swift */,
+				A9D540742CDE1B0100D1DE9E /* UIColor + Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1360,6 +1414,7 @@
 				A993F2322CBE7F1700490B6D /* ChatsTableViewCell.swift in Sources */,
 				A91824D12CC685800036D99D /* ChatSettingsViewController.swift in Sources */,
 				A94F42F82CC24D7D006EEB7C /* ContactInfoTableViewCell.swift in Sources */,
+				A9D540732CDE0F5B00D1DE9E /* TypeAStatusViewController.swift in Sources */,
 				A993F2342CBE827300490B6D /* CellConstant.swift in Sources */,
 				A91824C22CC633740036D99D /* WhatsAppTabBarController.swift in Sources */,
 				A91824BE2CC62F2E0036D99D /* WhatsAppSettingsTableViewCell.swift in Sources */,
@@ -1383,6 +1438,7 @@
 				A92065F82CC0E00F00A25C76 /* ChatViewController.swift in Sources */,
 				A993F22C2CBE6B3500490B6D /* WhatsAppChatsViewController.swift in Sources */,
 				A9FD51562CBE407A007D076F /* GlobalConstants.swift in Sources */,
+				A9D540752CDE1B0100D1DE9E /* UIColor + Extension.swift in Sources */,
 				A946252D2CC8CAA6003B5174 /* StarredMessagesViewController.swift in Sources */,
 				A9F47DCF2CCA6D3B00F15178 /* EditProfileHeaderView.swift in Sources */,
 				A9415CB92CC6183D0066DCFB /* WhatsAppSetting.swift in Sources */,
