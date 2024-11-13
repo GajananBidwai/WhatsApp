@@ -174,20 +174,24 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
         }
     }
     func openLocation(){
-        let latitude: CLLocationDegrees = 18.677490
-        let longitude: CLLocationDegrees = 74.116530
-        let regionDistance: CLLocationDistance = 1000
-        let coordinates = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        let placeMark = MKPlacemark(coordinate: coordinates)
-        let mapItem = MKMapItem(placemark: placeMark)
-        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+//        let latitude: CLLocationDegrees = 18.677490
+//        let longitude: CLLocationDegrees = 74.116530
+//        let regionDistance: CLLocationDistance = 1000
+//        let coordinates = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+//        let placeMark = MKPlacemark(coordinate: coordinates)
+//        let mapItem = MKMapItem(placemark: placeMark)
+//        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+//        
+//        let options = [
+//            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+//            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+//        ]
+//        mapItem.name = "Neo Soft Pune"
+//        mapItem.openInMaps(launchOptions: options)
         
-        let options = [
-            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
-            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
-        ]
-        mapItem.name = "Neo Soft Pune"
-        mapItem.openInMaps(launchOptions: options)
+        let mapViewController = self.storyboard?.instantiateViewController(identifier: "MapViewController") as! MapViewController
+        
+        self.present(mapViewController, animated: true)
         
     }
     

@@ -25,10 +25,10 @@ class TypeAStatusViewController: UIViewController, UITextViewDelegate {
     
     private let placeholderLabel: UILabel = {
         let label = UILabel()
-        label.text = "Type your status"
-        label.font = UIFont.systemFont(ofSize: 20)
+        label.text = "Type a status"
+        label.font = UIFont.systemFont(ofSize: 26)
         label.textAlignment = .center
-        label.textColor = .lightGray
+        label.textColor = .white
         return label
     }()
     
@@ -38,9 +38,9 @@ class TypeAStatusViewController: UIViewController, UITextViewDelegate {
         statusTextView.layer.cornerRadius = 8
         statusTextView.clipsToBounds = true
         statusTextView.font = fontStyles[currentFontIndex]
+        UITextView.appearance().tintColor = UIColor.white
         setupPlaceholder()
     }
-    
     
     @IBAction func backButton(_ sender: Any) {
         navigationController?.popViewController(animated: true)
@@ -57,6 +57,7 @@ class TypeAStatusViewController: UIViewController, UITextViewDelegate {
         
         view.backgroundColor = selectedColor
         statusTextView.backgroundColor = selectedColor
+      //  statusTextView.backgroundColor = .red
     }
     
     private func setupPlaceholder() {

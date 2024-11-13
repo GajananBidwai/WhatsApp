@@ -21,6 +21,8 @@ struct CellConstant{
         static let StatusTableViewCell = "StatusTableViewCell"
         static let EditProfileHeaderView = "EditProfileHeaderView"
         static let EditProfileTableViewCell = "EditProfileTableViewCell"
+        static let PlacesTableViewCell = "PlacesTableViewCell"
+        static let CurrentLocationTableViewCell = "CurrentLocationTableViewCell"
     }
     
 }

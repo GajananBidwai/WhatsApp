@@ -36,6 +36,11 @@
 		A94F42F82CC24D7D006EEB7C /* ContactInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94F42F62CC24D7D006EEB7C /* ContactInfoTableViewCell.swift */; };
 		A94F42F92CC24D7D006EEB7C /* ContactInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A94F42F72CC24D7D006EEB7C /* ContactInfoTableViewCell.xib */; };
 		A94F42FB2CC250F0006EEB7C /* ContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94F42FA2CC250F0006EEB7C /* ContactInfo.swift */; };
+		A951BCCA2CE47F290057572D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951BCC92CE47F290057572D /* MapViewController.swift */; };
+		A951BCCD2CE4975C0057572D /* PlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951BCCB2CE4975C0057572D /* PlacesTableViewCell.swift */; };
+		A951BCCE2CE4975C0057572D /* PlacesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A951BCCC2CE4975C0057572D /* PlacesTableViewCell.xib */; };
+		A951BCD12CE4A86E0057572D /* CurrentLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951BCCF2CE4A86E0057572D /* CurrentLocationTableViewCell.swift */; };
+		A951BCD22CE4A86E0057572D /* CurrentLocationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A951BCD02CE4A86E0057572D /* CurrentLocationTableViewCell.xib */; };
 		A993F22C2CBE6B3500490B6D /* WhatsAppChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A993F22B2CBE6B3500490B6D /* WhatsAppChatsViewController.swift */; };
 		A993F22E2CBE7C2A00490B6D /* Chats.swift in Sources */ = {isa = PBXBuildFile; fileRef = A993F22D2CBE7C2A00490B6D /* Chats.swift */; };
 		A993F2312CBE7F1700490B6D /* ChatsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A993F2302CBE7F1700490B6D /* ChatsTableViewCell.xib */; };
@@ -140,6 +145,11 @@
 		A94F42F62CC24D7D006EEB7C /* ContactInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoTableViewCell.swift; sourceTree = "<group>"; };
 		A94F42F72CC24D7D006EEB7C /* ContactInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactInfoTableViewCell.xib; sourceTree = "<group>"; };
 		A94F42FA2CC250F0006EEB7C /* ContactInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfo.swift; sourceTree = "<group>"; };
+		A951BCC92CE47F290057572D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A951BCCB2CE4975C0057572D /* PlacesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewCell.swift; sourceTree = "<group>"; };
+		A951BCCC2CE4975C0057572D /* PlacesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlacesTableViewCell.xib; sourceTree = "<group>"; };
+		A951BCCF2CE4A86E0057572D /* CurrentLocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationTableViewCell.swift; sourceTree = "<group>"; };
+		A951BCD02CE4A86E0057572D /* CurrentLocationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentLocationTableViewCell.xib; sourceTree = "<group>"; };
 		A993F22B2CBE6B3500490B6D /* WhatsAppChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsAppChatsViewController.swift; sourceTree = "<group>"; };
 		A993F22D2CBE7C2A00490B6D /* Chats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chats.swift; sourceTree = "<group>"; };
 		A993F22F2CBE7F1700490B6D /* ChatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsTableViewCell.swift; sourceTree = "<group>"; };
@@ -620,6 +630,34 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		A951BCC62CE47EE10057572D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A951BCC82CE47EED0057572D /* Cell */,
+				A951BCC72CE47EE90057572D /* View Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A951BCC72CE47EE90057572D /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A951BCC92CE47F290057572D /* MapViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		A951BCC82CE47EED0057572D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A951BCCB2CE4975C0057572D /* PlacesTableViewCell.swift */,
+				A951BCCC2CE4975C0057572D /* PlacesTableViewCell.xib */,
+				A951BCCF2CE4A86E0057572D /* CurrentLocationTableViewCell.swift */,
+				A951BCD02CE4A86E0057572D /* CurrentLocationTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		A993F2252CBE6AD500490B6D /* WhatsAppChats */ = {
 			isa = PBXGroup;
 			children = (
@@ -700,11 +738,12 @@
 			path = "San Francisco Pro Text";
 			sourceTree = "<group>";
 		};
-		A9D540682CDE0EC000D1DE9E /* New Group */ = {
+		A9D540682CDE0EC000D1DE9E /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				A951BCC62CE47EE10057572D /* View */,
 			);
-			path = "New Group";
+			path = Map;
 			sourceTree = "<group>";
 		};
 		A9D540692CDE0EFC00D1DE9E /* TypeAStatus */ = {
@@ -1042,7 +1081,7 @@
 		A9F4C95B2CBCF2FA0003CF24 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				A9D540682CDE0EC000D1DE9E /* New Group */,
+				A9D540682CDE0EC000D1DE9E /* Map */,
 				A9F4C9622CBD39390003CF24 /* Authentication */,
 				A9F47DC12CCA200500F15178 /* Status */,
 				A9F47DC22CCA203300F15178 /* Call */,
@@ -1264,8 +1303,10 @@
 				A9DF6EDC2CC76A9F0044C0AC /* SettingsTableViewCell.xib in Resources */,
 				A94F42F32CC23554006EEB7C /* HeaderView.xib in Resources */,
 				A94F42F92CC24D7D006EEB7C /* ContactInfoTableViewCell.xib in Resources */,
+				A951BCCE2CE4975C0057572D /* PlacesTableViewCell.xib in Resources */,
 				A993F24E2CBE871000490B6D /* SFProText-MediumItalic.ttf in Resources */,
 				A993F2472CBE871000490B6D /* SFProText-Bold.ttf in Resources */,
+				A951BCD22CE4A86E0057572D /* CurrentLocationTableViewCell.xib in Resources */,
 				A993F2502CBE871000490B6D /* SFProText-RegularItalic.ttf in Resources */,
 				A993F2522CBE871000490B6D /* SFProText-SemiboldItalic.ttf in Resources */,
 				A94625402CC8EA19003B5174 /* EditContactTableViewCell.xib in Resources */,
@@ -1402,6 +1443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A94625272CC8B4C8003B5174 /* DataAndStoarageUsageViewController.swift in Sources */,
+				A951BCCD2CE4975C0057572D /* PlacesTableViewCell.swift in Sources */,
 				A9F4C9312CBCF2E30003CF24 /* WhatsApp.xcdatamodeld in Sources */,
 				A9F47DBF2CCA0DCC00F15178 /* StatusTableViewCell.swift in Sources */,
 				A9F47DD22CCA713100F15178 /* EditProfileTableViewCell.swift in Sources */,
@@ -1412,8 +1454,10 @@
 				A946253C2CC8E8D7003B5174 /* EditContact.swift in Sources */,
 				A9415CB72CC617520066DCFB /* WhatsAppSettingsViewController.swift in Sources */,
 				A993F2322CBE7F1700490B6D /* ChatsTableViewCell.swift in Sources */,
+				A951BCD12CE4A86E0057572D /* CurrentLocationTableViewCell.swift in Sources */,
 				A91824D12CC685800036D99D /* ChatSettingsViewController.swift in Sources */,
 				A94F42F82CC24D7D006EEB7C /* ContactInfoTableViewCell.swift in Sources */,
+				A951BCCA2CE47F290057572D /* MapViewController.swift in Sources */,
 				A9D540732CDE0F5B00D1DE9E /* TypeAStatusViewController.swift in Sources */,
 				A993F2342CBE827300490B6D /* CellConstant.swift in Sources */,
 				A91824C22CC633740036D99D /* WhatsAppTabBarController.swift in Sources */,

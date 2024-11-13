@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="59" id="KGk-i7-Jjw" customClass="PlacesTableViewCell" customModule="WhatsApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BXY-Nv-e9c">
+                        <rect key="frame" x="10" y="4.6666666666666679" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="67T-U0-yn5"/>
+                            <constraint firstAttribute="height" constant="50" id="ni9-id-Cx6"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YC2-Dq-rbf">
+                        <rect key="frame" x="70" y="29.666666666666671" width="300" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLY-vG-QNE">
+                        <rect key="frame" x="70" y="4.6666666666666679" width="300" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="wSF-fW-UX5"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="DLY-vG-QNE" firstAttribute="top" secondItem="BXY-Nv-e9c" secondAttribute="top" id="51z-jg-wUd"/>
+                    <constraint firstItem="YC2-Dq-rbf" firstAttribute="leading" secondItem="DLY-vG-QNE" secondAttribute="leading" id="EVG-Iz-oPq"/>
+                    <constraint firstAttribute="trailing" secondItem="DLY-vG-QNE" secondAttribute="trailing" constant="5" id="Muw-dT-u7R"/>
+                    <constraint firstItem="YC2-Dq-rbf" firstAttribute="top" secondItem="DLY-vG-QNE" secondAttribute="bottom" constant="5" id="SGb-4p-vQE"/>
+                    <constraint firstItem="YC2-Dq-rbf" firstAttribute="trailing" secondItem="DLY-vG-QNE" secondAttribute="trailing" id="SNs-dJ-OzK"/>
+                    <constraint firstItem="BXY-Nv-e9c" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="YtJ-Qx-hl9"/>
+                    <constraint firstItem="BXY-Nv-e9c" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="fP0-rp-Dsk"/>
+                    <constraint firstItem="YC2-Dq-rbf" firstAttribute="height" secondItem="DLY-vG-QNE" secondAttribute="height" multiplier="1.05" id="h3G-wR-68W"/>
+                    <constraint firstItem="DLY-vG-QNE" firstAttribute="leading" secondItem="BXY-Nv-e9c" secondAttribute="trailing" constant="10" id="zU2-qv-fX7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="placeAddressLabel" destination="YC2-Dq-rbf" id="6qX-R5-To7"/>
+                <outlet property="placeImageView" destination="BXY-Nv-e9c" id="49R-EZ-pak"/>
+                <outlet property="placeNameLabel" destination="DLY-vG-QNE" id="0EJ-W5-j3j"/>
+            </connections>
+            <point key="canvasLocation" x="180.91603053435114" y="25"/>
+        </tableViewCell>
+    </objects>
+</document>

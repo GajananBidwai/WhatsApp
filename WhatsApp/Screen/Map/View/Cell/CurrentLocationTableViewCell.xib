@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="104" id="KGk-i7-Jjw" customClass="CurrentLocationTableViewCell" customModule="WhatsApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="346" height="104"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="346" height="104"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle (2)" translatesAutoresizingMaskIntoConstraints="NO" id="dUw-6A-1HU">
+                        <rect key="frame" x="5" y="30" width="60" height="60"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="62x-pu-51W"/>
+                            <constraint firstAttribute="height" constant="60" id="UDe-hk-k46"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send your current location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9b-59-sZ5">
+                        <rect key="frame" x="70" y="30" width="271" height="23"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accuracy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pzi-7V-UgU">
+                        <rect key="frame" x="70" y="58.000000000000007" width="271" height="19.333333333333336"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nearby places" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A21-fi-qWJ">
+                        <rect key="frame" x="5" y="5" width="336" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="anu-Kc-vP5"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="A21-fi-qWJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="48F-gu-9jD"/>
+                    <constraint firstAttribute="trailing" secondItem="A21-fi-qWJ" secondAttribute="trailing" constant="5" id="AMB-F1-REC"/>
+                    <constraint firstAttribute="trailing" secondItem="L9b-59-sZ5" secondAttribute="trailing" constant="5" id="APt-rh-r0I"/>
+                    <constraint firstItem="Pzi-7V-UgU" firstAttribute="leading" secondItem="L9b-59-sZ5" secondAttribute="leading" id="BRB-TD-oZp"/>
+                    <constraint firstItem="dUw-6A-1HU" firstAttribute="top" secondItem="A21-fi-qWJ" secondAttribute="bottom" constant="10" id="CyL-gx-I0W"/>
+                    <constraint firstItem="Pzi-7V-UgU" firstAttribute="trailing" secondItem="L9b-59-sZ5" secondAttribute="trailing" id="LKI-cp-GFG"/>
+                    <constraint firstItem="dUw-6A-1HU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="aav-LT-cde"/>
+                    <constraint firstItem="L9b-59-sZ5" firstAttribute="top" secondItem="dUw-6A-1HU" secondAttribute="top" id="bOD-bX-gDx"/>
+                    <constraint firstItem="L9b-59-sZ5" firstAttribute="leading" secondItem="dUw-6A-1HU" secondAttribute="trailing" constant="5" id="bxR-vq-cs0"/>
+                    <constraint firstItem="Pzi-7V-UgU" firstAttribute="top" secondItem="L9b-59-sZ5" secondAttribute="bottom" constant="5" id="iOz-Co-JA6"/>
+                    <constraint firstItem="A21-fi-qWJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="ySC-Bg-zC1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <point key="canvasLocation" x="116.03053435114504" y="-19.718309859154932"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="circle (2)" width="32" height="32"/>
+    </resources>
+</document>

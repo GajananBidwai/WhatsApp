@@ -25,5 +25,9 @@
 	<string>Please allow to take photo.</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Please allow to record audio.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need your location to show nearby places.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>We need your location to show nearby places.</string>
 </dict>
 </plist>

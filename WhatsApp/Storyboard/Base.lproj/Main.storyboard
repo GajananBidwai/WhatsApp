@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -302,6 +303,83 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ZG-FV-oTr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="847" y="1437"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="BrB-mK-MaH">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="CLM-HO-img" customClass="MapViewController" customModule="WhatsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iyd-S3-GKk">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y7V-2L-PPK">
+                                <rect key="frame" x="0.0" y="59" width="393" height="330"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="330" id="0ck-Xd-HZ1"/>
+                                </constraints>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LGh-mC-0lL">
+                                <rect key="frame" x="0.0" y="457" width="393" height="361"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" red="0.057550409821075107" green="0.014002545510959365" blue="0.15338936237373735" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="CLM-HO-img" id="DRH-Pi-n9b"/>
+                                    <outlet property="delegate" destination="CLM-HO-img" id="LkD-kg-5kI"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rsZ-2C-ABH">
+                                <rect key="frame" x="0.0" y="397" width="393" height="60"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location (1)" translatesAutoresizingMaskIntoConstraints="NO" id="456-C1-Bsq">
+                                        <rect key="frame" x="5" y="5" width="60" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="WN1-D1-V76"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share live location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPg-6Q-iuP">
+                                        <rect key="frame" x="70" y="5" width="318" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="1j4-0s-XA6"/>
+                                    <constraint firstItem="HPg-6Q-iuP" firstAttribute="bottom" secondItem="456-C1-Bsq" secondAttribute="bottom" id="4cG-YV-bOa"/>
+                                    <constraint firstItem="456-C1-Bsq" firstAttribute="leading" secondItem="rsZ-2C-ABH" secondAttribute="leading" constant="5" id="5Ns-L3-5bg"/>
+                                    <constraint firstAttribute="bottom" secondItem="456-C1-Bsq" secondAttribute="bottom" constant="5" id="CR6-H1-aBR"/>
+                                    <constraint firstItem="HPg-6Q-iuP" firstAttribute="leading" secondItem="456-C1-Bsq" secondAttribute="trailing" constant="5" id="P00-8b-elR"/>
+                                    <constraint firstItem="456-C1-Bsq" firstAttribute="top" secondItem="rsZ-2C-ABH" secondAttribute="top" constant="5" id="ZVo-Nx-NYy"/>
+                                    <constraint firstAttribute="trailing" secondItem="HPg-6Q-iuP" secondAttribute="trailing" constant="5" id="aud-Qg-Eb2"/>
+                                    <constraint firstItem="HPg-6Q-iuP" firstAttribute="top" secondItem="456-C1-Bsq" secondAttribute="top" id="lpK-Ha-Yny"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="79R-xC-9XH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LGh-mC-0lL" firstAttribute="top" secondItem="rsZ-2C-ABH" secondAttribute="bottom" id="Je7-7Z-BJf"/>
+                            <constraint firstItem="rsZ-2C-ABH" firstAttribute="leading" secondItem="Y7V-2L-PPK" secondAttribute="leading" id="M1R-4g-EyD"/>
+                            <constraint firstItem="Y7V-2L-PPK" firstAttribute="top" secondItem="79R-xC-9XH" secondAttribute="top" id="SGf-8H-qb2"/>
+                            <constraint firstItem="rsZ-2C-ABH" firstAttribute="top" secondItem="Y7V-2L-PPK" secondAttribute="bottom" constant="8" symbolic="YES" id="SaT-7e-YFx"/>
+                            <constraint firstItem="Y7V-2L-PPK" firstAttribute="leading" secondItem="79R-xC-9XH" secondAttribute="leading" id="a3a-6c-oHC"/>
+                            <constraint firstItem="LGh-mC-0lL" firstAttribute="bottom" secondItem="79R-xC-9XH" secondAttribute="bottom" id="iBI-w5-jk3"/>
+                            <constraint firstItem="LGh-mC-0lL" firstAttribute="leading" secondItem="79R-xC-9XH" secondAttribute="leading" id="jkn-a7-uiV"/>
+                            <constraint firstItem="79R-xC-9XH" firstAttribute="trailing" secondItem="Y7V-2L-PPK" secondAttribute="trailing" id="ses-9W-1gT"/>
+                            <constraint firstItem="LGh-mC-0lL" firstAttribute="trailing" secondItem="79R-xC-9XH" secondAttribute="trailing" id="xMv-vo-zJf"/>
+                            <constraint firstItem="rsZ-2C-ABH" firstAttribute="trailing" secondItem="Y7V-2L-PPK" secondAttribute="trailing" id="yZd-60-8ja"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="Y7V-2L-PPK" id="wIS-OJ-odW"/>
+                        <outlet property="nearByLocationTableView" destination="LGh-mC-0lL" id="Pee-tP-TQt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uBA-e3-VNI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1794.6564885496182" y="1443.661971830986"/>
         </scene>
         <!--Whats App Call View Controller-->
         <scene sceneID="whU-wX-pqJ">
@@ -730,8 +808,8 @@
                                     <constraint firstAttribute="width" constant="240" id="ArG-4R-iLp"/>
                                     <constraint firstAttribute="height" constant="128" id="tB7-rz-1A5"/>
                                 </constraints>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -1213,32 +1291,30 @@
         <image name="Take Photo" width="71" height="71"/>
         <image name="Text" width="20" height="23"/>
         <image name="Tip" width="327" height="230"/>
-        <image name="chevron.left" catalog="system" width="32" height="32"/>
-        <image name="chevron.right" catalog="system" width="32" height="32"/>
+        <image name="chevron.left" catalog="system" width="97" height="128"/>
+        <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <image name="location (1)" width="64" height="64"/>
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
         <image name="phone" catalog="system" width="128" height="115"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="video" catalog="system" width="128" height="82"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
